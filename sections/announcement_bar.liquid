@@ -15,6 +15,7 @@
 
   assign justify = section.settings.justify
   assign gap = section.settings.gap
+  assign fontsize = section.settings.fontsize
 
 %}
 
@@ -32,7 +33,7 @@
     align-items: center;
     justify-content: {{justify}};
     gap: {{gap}}px;
-    font-size: 
+    font-size: {{ fontsize }}px ;
 }
 {% endstyle %}
 
