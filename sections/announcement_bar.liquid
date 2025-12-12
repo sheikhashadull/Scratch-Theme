@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="announcement">
+<div class="announcement">
+    <div class="container">
         {% content_for 'blocks' %}
     </div>
 </div>
@@ -10,12 +10,12 @@
 %}
 
 
-{% comment %} {% style %}
+{% style %}
   .announcement {
     background-color: {{ bg_color }};
     padding: {{ padding }}px 0;
   }
-{% endstyle %} {% endcomment %}
+{% endstyle %}
 
 {% schema %}
     {
