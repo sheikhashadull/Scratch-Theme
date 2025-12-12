@@ -54,7 +54,8 @@
         "text_color": "#ffffff",
         "padding": 10,
         "justify": "center",
-        "gap": 24
+        "gap": 24,
+        "fontsize": 14
       }
     }
   },
