@@ -15,30 +15,17 @@
       "type": "header",
       "settings": {}
     },
-    "announcement_bar_ifcGzW": {
+    "announcement_bar_EqqUaE": {
       "type": "announcement_bar",
-      "blocks": {
-        "announcement_item_Dn4xem": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p> Free Shipping on Orders over $65</p>"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_item_Dn4xem"
-      ],
       "name": "Announcement Bar",
       "settings": {
-        "bg_color": "#9e7c7c",
+        "bg_color": "#844d4d",
         "padding": 10
       }
     }
   },
   "order": [
     "header",
-    "announcement_bar_ifcGzW"
+    "announcement_bar_EqqUaE"
   ]
 }
