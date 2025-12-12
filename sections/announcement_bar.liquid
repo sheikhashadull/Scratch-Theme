@@ -17,8 +17,6 @@
   assign gap = section.settings.gap
   assign fontsize = section.settings.fontsize
 
-  assign textt_color = block.settings.textt_color
-
 %}
 
 
@@ -29,9 +27,6 @@
   }
   .{{ section.id }} {
     color: {{ text_color }};
-  }
-  .{{ section.id }} p{
-    color: {{ textt_color }};
   }
   .moving {
     display: flex;
@@ -59,6 +54,12 @@
                 "type": "color",
                 "id": "text_color",
                 "label": "Text Color",
+            },
+            {
+                "type": "checkbox",
+                "id": "scroll",
+                "label": "Scrolling Effect",
+                "default": false
             },
             {
                 "type": "range",
