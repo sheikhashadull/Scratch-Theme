@@ -1,6 +1,6 @@
-<div class="{{ section.id }} announcement">
+<div class=" announcement">
     <div class="container">
-        <div class="moving">
+        <div class=" {{ section.id }} moving">
             {% content_for 'blocks' %}
         </div>
     </div>
@@ -15,7 +15,8 @@
 
   assign justify = section.settings.justify
   assign gap = section.settings.gap
-  assign fontsize = section.settings.fontsize
+
+  assign scroll = section.settings.scroll
 
 %}
 
@@ -35,6 +36,10 @@
     gap: {{gap}}px;
     font-size: {{ fontsize }}px ;
 }
+
+{% if scroll == true %}
+  
+{% endif %}
 {% endstyle %}
 
 {% schema %}
