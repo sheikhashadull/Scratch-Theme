@@ -50,7 +50,8 @@
       ],
       "name": "Announcement Bar",
       "settings": {
-        "bg_color": "#844d4d",
+        "bg_color": "#4bb45b",
+        "text_color": "#ffffff",
         "padding": 64
       }
     }
