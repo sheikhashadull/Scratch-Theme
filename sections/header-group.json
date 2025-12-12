@@ -18,38 +18,23 @@
     "announcement_bar_ifcGzW": {
       "type": "announcement_bar",
       "blocks": {
-        "announcement_item_Ux4pyq": {
+        "announcement_item_Dn4xem": {
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
             "item": "<p> Free Shipping on Orders over $65</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_q6zzpx": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p> Free Shipping on Orders over $65</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_bfytpN": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p> Free Shipping on Orders <strong>Over $65</strong></p>"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_item_Ux4pyq",
-        "announcement_item_q6zzpx",
-        "announcement_item_bfytpN"
+        "announcement_item_Dn4xem"
       ],
       "name": "Announcement Bar",
-      "settings": {}
+      "settings": {
+        "bg_color": "#9e7c7c",
+        "padding": 10
+      }
     }
   },
   "order": [
