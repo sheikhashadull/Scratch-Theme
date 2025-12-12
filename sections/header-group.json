@@ -62,7 +62,7 @@
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
-            "item": "<p> Free Shipping on Orders over $65</p>"
+            "item": "<p>Free returns within 30 days</p>"
           },
           "blocks": {}
         }
