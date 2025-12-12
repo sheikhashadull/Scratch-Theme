@@ -52,6 +52,7 @@
       "settings": {
         "bg_color": "#454d46",
         "text_color": "#ffffff",
+        "scroll": true,
         "padding": 10,
         "justify": "center",
         "gap": 24,
