@@ -18,6 +18,22 @@
     "announcement_bar_EqqUaE": {
       "type": "announcement_bar",
       "blocks": {
+        "announcement_item_AMJhkT": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p> Free Shipping on Orders over $65</p>"
+          },
+          "blocks": {}
+        },
+        "announcement_item_tanPGX": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p> Free Shipping on Orders over $65</p>"
+          },
+          "blocks": {}
+        },
         "announcement_item_w7j4ge": {
           "type": "announcement-item",
           "name": "Announcement Item",
@@ -28,6 +44,8 @@
         }
       },
       "block_order": [
+        "announcement_item_AMJhkT",
+        "announcement_item_tanPGX",
         "announcement_item_w7j4ge"
       ],
       "name": "Announcement Bar",
