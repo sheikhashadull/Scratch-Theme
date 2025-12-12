@@ -1,4 +1,4 @@
-<div class="announcement">
+<div class="{{ section.id }} announcement">
     <div class="container">
         {% content_for 'blocks' %}
     </div>
@@ -16,6 +16,8 @@
   .announcement {
     background-color: {{ bg_color }};
     padding: {{ padding }}px 0;
+  }
+  .{{ section.id }} p{
     color: {{ text_color }};
   }
 {% endstyle %}
