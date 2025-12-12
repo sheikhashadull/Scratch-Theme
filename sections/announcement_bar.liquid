@@ -40,8 +40,14 @@
 {% if scroll == true %}
     .{{ section.id }} {
         animation: Scrolling 20s linear infinite;
-
-
+    }
+    @keyframe Scrolling {
+        0%{
+            transform: translate (0);
+        }
+        100%{
+            transform: translateX (-100%);
+        }
     }
   
 {% endif %}
