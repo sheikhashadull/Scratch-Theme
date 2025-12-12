@@ -80,9 +80,9 @@
         "bg_color": "#454d46",
         "text_color": "#ffffff",
         "scroll": true,
-        "padding": 10,
+        "padding": 14,
         "justify": "center",
-        "gap": 50,
+        "gap": 48,
         "fontsize": 14
       }
     }
