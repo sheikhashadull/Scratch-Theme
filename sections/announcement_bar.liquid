@@ -2,6 +2,19 @@
     {% content_for 'blocks' %}
 </div>
 
+{% liquid
+  assign bg_color = section.settings.bg_color
+  assign padding = section.settings.padding
+%}
+
+
+{% style %}
+  div {
+    background-color: {{ bg_color }},
+    padding: {{ padding }}px 0,
+  }
+{% endstyle %}
+
 {% schema %}
     {
         "name": "Announcement Bar",
@@ -18,7 +31,7 @@
             {
                 "type": "range",
                 "id": "padding",
-                "label": "PaddingX",
+                "label": "Padding",
                 "default": 10,
                 "unit": "px",
                 "min": 0,
