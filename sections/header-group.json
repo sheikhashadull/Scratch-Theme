@@ -54,7 +54,7 @@
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
-            "item": "<p> Free Shipping on Orders over $65</p>"
+            "item": "<p>We ship worldwide 🌍</p>"
           },
           "blocks": {}
         },
