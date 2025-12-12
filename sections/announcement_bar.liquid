@@ -6,6 +6,8 @@
 
 {% liquid
   assign bg_color = section.settings.bg_color
+  assign text_color = section.settings.text_color
+  
   assign padding = section.settings.padding
 %}
 
@@ -29,6 +31,11 @@
                 "type": "color",
                 "id": "bg_color",
                 "label": "Backgound Color",
+            },
+            {
+                "type": "color",
+                "id": "text_color",
+                "label": "Text Color",
             },
             {
                 "type": "range",
