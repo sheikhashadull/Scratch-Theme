@@ -7,7 +7,7 @@
 {% liquid
   assign bg_color = section.settings.bg_color
   assign text_color = section.settings.text_color
-  
+
   assign padding = section.settings.padding
 %}
 
@@ -16,6 +16,7 @@
   .announcement {
     background-color: {{ bg_color }};
     padding: {{ padding }}px 0;
+    color: {{ text_color }};
   }
 {% endstyle %}
 
