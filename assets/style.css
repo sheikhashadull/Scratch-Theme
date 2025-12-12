@@ -8,3 +8,6 @@
     height: auto;
     margin: auto;
 }
+.announcement {
+    display: flex;
+  }
