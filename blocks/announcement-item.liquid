@@ -1,0 +1,22 @@
+
+{{ block.settings.item }}
+
+{% schema %}
+    {
+        "name": "Announcement Item",
+        "limit": 5,
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "item",
+                "label": "Item",
+                "default": "<p> Free Shipping on Orders over $65</p>"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Announcement Item"
+            }
+        ]
+    }
+{% endschema %}

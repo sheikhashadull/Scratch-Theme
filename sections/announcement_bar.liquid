@@ -1,0 +1,26 @@
+<div>
+    {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+    {
+        "name": "Announcement Bar",
+        "enabled_on": {
+            "groups": ["header"]
+        },
+        "limit": 1,
+        "settings": [
+        
+        ],
+        "blocks": [
+            {
+                "type": "@theme"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Announcement Bar"
+            }
+        ]
+    }
+{% endschema %}
