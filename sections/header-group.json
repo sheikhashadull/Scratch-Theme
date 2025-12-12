@@ -50,10 +50,11 @@
       ],
       "name": "Announcement Bar",
       "settings": {
-        "bg_color": "#4bb45b",
+        "bg_color": "#454d46",
         "text_color": "#ffffff",
-        "padding": 64,
-        "justify": "space-between"
+        "padding": 8,
+        "justify": "center",
+        "gap": 24
       }
     }
   },
