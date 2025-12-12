@@ -15,7 +15,6 @@
 
   assign justify = section.settings.justify
 
-
 %}
 
 
@@ -30,7 +29,7 @@
   .moving {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: {{justify}};
     gap: 20px;
 }
 {% endstyle %}
