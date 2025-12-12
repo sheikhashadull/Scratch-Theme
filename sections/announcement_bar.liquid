@@ -17,6 +17,8 @@
   assign gap = section.settings.gap
   assign fontsize = section.settings.fontsize
 
+  assign textt_color = block.settings.textt_color
+
 %}
 
 
@@ -27,6 +29,9 @@
   }
   .{{ section.id }} {
     color: {{ text_color }};
+  }
+  .{{ section.id }} p{
+    color: {{ textt_color }};
   }
   .moving {
     display: flex;
