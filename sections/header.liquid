@@ -13,12 +13,12 @@
             </div>
             <div class="account">
                 {% render 'btn',
-                    btntext: btntext,
-                    btnlink: btnlink,
-                    btncolor: btncolor,
-                    btnredius: btnredius,
-                    btnpaddingx: btnpaddingx,
-                    btnpaddingy: btnpaddingy
+                    btntext: section.settings.btntext,
+                    btnlink: section.settings.btnlink,
+                    btncolor: section.settings.btncolor,
+                    btnredius: section.settings.btnredius,
+                    btnpaddingx: section.settings.btnpaddingx,
+                    btnpaddingy: section.settings.btnpaddingy
                 %}
 
                 <div class="icon">
@@ -34,6 +34,7 @@
 {% liquid
   assign bgcolor = section.settings.bgcolor
   assign padding = section.settings.padding
+
   assign btntext = section.settings.btntext
   assign btnlink = section.settings.btnlink
   assign btncolor = section.settings.btncolor
