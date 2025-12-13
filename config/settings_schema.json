@@ -14,13 +14,8 @@
                 "type": "image_picker",
                 "id": "logo",
                 "label": "Logo"
-            }
-        ]
-    },
-    {
-        "name": "Logo Width",
-        "settings": [
-            {
+            },
+             {
                 "type": "range",
                 "id": "width",
                 "label": "Logo Width",
@@ -31,5 +26,5 @@
                 "step": 2
             }
         ]
-    }
+    },
 ]
