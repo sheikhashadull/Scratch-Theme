@@ -6,6 +6,8 @@
     font-family: "Nunito", sans-serif;
     list-style: none;
     text-decoration: none;
+    color: black;
+
 }
 .container{
     max-width: 1200px;
@@ -28,7 +30,6 @@ nav{
 .menu ul {
     display: flex;
     gap: 20px;
-    color: black;
 }
 .account {
     display: flex;
