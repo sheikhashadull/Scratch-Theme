@@ -4,7 +4,7 @@
             <div class="logo">
                 <a href="">
                     {% if settings.logo != blank %}
-                    <img src="{{ settings.logo | image_url }}" alt="">
+                    <img src="{{ settings.logo | image_url }}" alt="{{ shop.url }}">
                     {% else %}
                         {{ shop.url }}
                     {% endif %}
