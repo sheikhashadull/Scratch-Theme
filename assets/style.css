@@ -28,6 +28,7 @@ nav{
 .menu ul {
     display: flex;
     gap: 20px;
+    color: black;
 }
 .account {
     display: flex;
