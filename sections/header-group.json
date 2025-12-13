@@ -11,10 +11,6 @@
   "name": "Header",
   "type": "header",
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {}
-    },
     "announcement_bar_EqqUaE": {
       "type": "announcement_bar",
       "blocks": {
@@ -85,10 +81,14 @@
         "justify": "center",
         "gap": 48
       }
+    },
+    "header": {
+      "type": "header",
+      "settings": {}
     }
   },
   "order": [
-    "header",
-    "announcement_bar_EqqUaE"
+    "announcement_bar_EqqUaE",
+    "header"
   ]
 }
