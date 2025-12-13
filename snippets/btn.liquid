@@ -1,14 +1,14 @@
-<a class="btn" href="{{ btnlink | default: '#' }}">
+<a 
+  href="{{ btnlink | default: '#' }}" 
+  class="btn-header" 
+  style="
+    background-color: {{ btncolor }};
+    padding: {{ btnpaddingy }}px {{ btnpaddingx }}px;
+    border-radius: {{ btnredius }}px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+  "
+>
   {{ btntext | default: 'Take the Quiz' }}
 </a>
-
-{% style %}
-.btn {
-  display: inline-block;
-  background-color: {{ btncolor }};
-  padding: {{ btnpaddingy }}px {{ btnpaddingx }}px;
-  border-radius: {{ btnredius }}px;
-  text-decoration: none;
-  color: #000; /* চাইলে পরিবর্তন করা যাবে */
-}
-{% endstyle %}
