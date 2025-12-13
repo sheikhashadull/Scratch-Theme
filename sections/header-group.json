@@ -86,7 +86,8 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "bgcolor": "#fde1ef"
+        "bgcolor": "#fde1ef",
+        "padding": 20
       }
     }
   },
