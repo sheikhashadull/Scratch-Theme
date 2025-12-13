@@ -25,7 +25,7 @@
                 <div class="icon">
                     <a href="{{ routes.predictive_search_url }}"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="{{ routes.cart_url }}"><i class="fa-solid fa-bag-shopping"></i></a>
-                    <a href="{{ routes.account_login_url }}"><i class="fa-regular fa-user"></i></a>
+                    <a href="{% if customer %} {{ routes.account_url}} {% else %} {{ routes.account_login_url }} {% endif %}"><i class="fa-regular fa-user"></i></a>
                     
                     
                     
