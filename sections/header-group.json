@@ -88,8 +88,8 @@
       "settings": {
         "bgcolor": "#fde1ef",
         "padding": 14,
-        "btn_text": "add",
-        "btn_link": ""
+        "btn_text": "hello",
+        "btn_link": "#"
       }
     }
   },
