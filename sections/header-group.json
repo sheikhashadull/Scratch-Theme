@@ -91,8 +91,8 @@
         "btntext": "fafgghg",
         "btnlink": "",
         "btncolor": "#d2a0b6",
-        "btnpaddingx": 94,
-        "btnpaddingy": 74,
+        "btnpaddingx": 34,
+        "btnpaddingy": 24,
         "btnredius": 66
       }
     }
