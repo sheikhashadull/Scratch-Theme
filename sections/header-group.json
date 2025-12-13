@@ -73,7 +73,7 @@
       ],
       "name": "Announcement Bar",
       "settings": {
-        "bg_color": "#ffc4e6",
+        "bg_color": "#ffd1eb",
         "text_color": "#ea5a94",
         "scroll": true,
         "fontsize": 16,
