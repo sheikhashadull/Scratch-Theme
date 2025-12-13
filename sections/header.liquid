@@ -25,11 +25,13 @@
 
 {% liquid
     assign bgcolor = section.settings.bgcolor
+    assign padding = section.settings.padding
 %}
 
 {% style %}
   header{
     background-color: {{ bgcolor }};
+    padding: {{ padding }}px 0;
   }
 {% endstyle %}
 
