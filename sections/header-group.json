@@ -88,11 +88,12 @@
       "settings": {
         "bgcolor": "#fde1ef",
         "padding": 14,
-        "btn_text": "hghgh",
-        "btn_link": "#",
-        "btncolor": "#712343",
-        "btn_paddingx": 10,
-        "btn_paddingy": 10
+        "btntext": "faf",
+        "btnlink": "",
+        "btncolor": "#dc558c",
+        "btnpaddingx": 10,
+        "btnpaddingy": 10,
+        "btnredius": 10
       }
     }
   },
