@@ -3,8 +3,8 @@
         <nav>
             <div class="logo">
                 .l<div class="logos">
-                    {% if logo != blank %}
-                    <img src="{{ logo | image_url }}" alt="{{ shop.url }}">
+                    {% if section.logo != blank %}
+                    <img src="{{ section.logo | image_url }}" alt="{{ shop.url }}">
                     {% else %}
                         {{ shop.url }}
                     {% endif %}
