@@ -11,6 +11,7 @@
   assign text_color = section.settings.text_color
 
   assign padding = section.settings.padding
+  assign fontsize = section.settings.fontsize
 
 
   assign justify = section.settings.justify
@@ -79,6 +80,16 @@
                 "id": "scroll",
                 "label": "Scrolling Effect",
                 "default": false
+            },
+            {
+                "type": "range",
+                "id": "fontsize",
+                "label": "Text Size",
+                "default": 16,
+                "unit": "px",
+                "min": 0,
+                "max": 50,
+                "step": 2
             },
             {
                 "type": "range",
