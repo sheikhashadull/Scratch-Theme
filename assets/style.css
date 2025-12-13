@@ -19,7 +19,7 @@ nav{
 }
 .logo {
     display: flex;
-    gap: 50px;
+    gap: 500px;
     align-items: center;
 }
 .menu ul {
