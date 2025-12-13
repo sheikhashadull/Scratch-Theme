@@ -2,13 +2,11 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <div class="logos">
-                    {% if settings.logo != blank %}
+                {% if settings.logo != blank %}
                     <img src="{{ settings.logo | image_url }}" alt="{{ shop.url }}">
-                    {% else %}
-                        {{ shop.url }}
-                    {% endif %}
-                </div>
+                {% else %}
+                    {{ shop.url }}
+                {% endif %}
                 <div class="menu">
                     <ul>
                         <li><a href="">Shop All</a></li>
