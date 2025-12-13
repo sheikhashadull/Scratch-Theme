@@ -89,7 +89,10 @@
         "bgcolor": "#fde1ef",
         "padding": 14,
         "btn_text": "hello",
-        "btn_link": "#"
+        "btn_link": "#",
+        "btncolor": "",
+        "btn_paddingx": 10,
+        "btn_paddingy": 10
       }
     }
   },
