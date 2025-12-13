@@ -89,7 +89,7 @@
         "bg_color": "#facfe8",
         "text_color": "#ea5a94",
         "scroll": true,
-        "fontsize": 20,
+        "fontsize": 18,
         "padding": 10,
         "justify": "center",
         "gap": 48
