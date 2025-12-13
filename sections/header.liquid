@@ -15,6 +15,7 @@
                 {% render 'btn',
                     text: btn_text,
                     link: btn_link,
+                    btncolor: btncolor,
                     PaddingX: btn_paddingx,
                     PaddingY: btn_paddingy,
                 %}
@@ -35,6 +36,7 @@
     assign btn_text = section.settings.btn_text
     assign btn_url = section.settings.btn_url
 
+    assign btncolor = section.settings.btncolor
     assign btn_paddingx = section.settings.btn_paddingx
     assign btn_paddingy = section.settings.btn_paddingy
 %}
