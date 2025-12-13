@@ -24,8 +24,14 @@
 </header>
 
 {% liquid
-    assign variable_name = value
+    assign bgcolor = section.settings.bgcolor
 %}
+
+{% style %}
+  header{
+    background-color: {{ bgcolor }};
+  }
+{% endstyle %}
 
 {% schema %}
     {
