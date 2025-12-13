@@ -1,11 +1,19 @@
-<a class="btn" href="">Take the Quiz</a>
+<a class="btn" href="/pages/quiz">Take the Quiz</a>
 
 {% style %}
 .btn {
-    display: inline-block;
-    background-color: #525036;
-    padding: 12px 24px;
-    border-radius: 10px;
-    color: white;
+  display: inline-block;
+  background-color: #525036;
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #3f3d2a;
+  transform: translateY(-2px);
 }
 {% endstyle %}
