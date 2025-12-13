@@ -26,14 +26,6 @@
           },
           "blocks": {}
         },
-        "announcement_item_nfdnL3": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p> Free Shipping on Orders over $65</p>"
-          },
-          "blocks": {}
-        },
         "announcement_item_LiFnYc": {
           "type": "announcement-item",
           "name": "Announcement Item",
@@ -77,7 +69,6 @@
       },
       "block_order": [
         "announcement_item_f86RcC",
-        "announcement_item_nfdnL3",
         "announcement_item_LiFnYc",
         "announcement_item_ixztw9",
         "announcement_item_XQrmJy",
