@@ -86,7 +86,6 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "logo": "shopify://shop_images/PNG-_Transparent.png",
         "bgcolor": "#ffe9f6",
         "iconcolor": "#fde1ef",
         "padding": 14,
