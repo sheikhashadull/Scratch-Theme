@@ -3,8 +3,8 @@
         <nav>
             <div class="logo">
                 .l<div class="logos">
-                    {% if section.logo != blank %}
-                    <img src="{{ section.logo | image_url }}" alt="{{ shop.url }}">
+                    {% if settings.logo != blank %}
+                    <img src="{{ settings.logo | image_url }}" alt="{{ shop.url }}">
                     {% else %}
                         {{ shop.url }}
                     {% endif %}
@@ -44,8 +44,6 @@
 {% liquid
   assign bgcolor = section.settings.bgcolor
   assign padding = section.settings.padding
-
-  assign logo = section.settings.logo
 %}
 
 {% style %}
@@ -65,11 +63,6 @@
         "groups": ["header"]},
         "limit": 1,
         "settings": [
-            {
-                "type": "image_picker",
-                "id": "logo",
-                "label": "Logo",
-            },
             {
                 "type": "color",
                 "id": "bgcolor",
