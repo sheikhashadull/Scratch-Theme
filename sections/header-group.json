@@ -86,12 +86,12 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "bgcolor": "#fde1ef",
+        "bgcolor": "#e14392",
         "padding": 14,
-        "btntext": "faf",
+        "btntext": "fafgghg",
         "btnlink": "",
-        "btncolor": "#b63067",
-        "btnpaddingx": 88,
+        "btncolor": "#d11b66",
+        "btnpaddingx": 86,
         "btnpaddingy": 74,
         "btnredius": 66
       }
