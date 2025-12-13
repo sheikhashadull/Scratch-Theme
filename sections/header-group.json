@@ -90,7 +90,7 @@
         "padding": 14,
         "btn_text": "hello",
         "btn_link": "#",
-        "btncolor": "",
+        "btncolor": "#cc286a",
         "btn_paddingx": 10,
         "btn_paddingy": 10
       }
