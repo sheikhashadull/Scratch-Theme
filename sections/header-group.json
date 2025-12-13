@@ -22,7 +22,7 @@
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
-            "item": "<p><strong> Free Shipping on Orders over $65</strong></p>"
+            "item": "<p> Free Shipping on Orders over $65</p>"
           },
           "blocks": {}
         },
@@ -83,7 +83,7 @@
         "padding": 14,
         "justify": "center",
         "gap": 48,
-        "fontsize": 14
+        "fontsize": 22
       }
     }
   },
