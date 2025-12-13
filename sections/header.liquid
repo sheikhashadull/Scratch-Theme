@@ -2,7 +2,13 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <img src="{{ logo | img_url: 'medium' }}" alt="{{ shop.name }}">
+                <a href="">
+                    {% if settings.logo != blank %}
+                    <img src="{{ settings.logo | image_url }}" alt="">
+                    {% else %}
+                        {{ shop.url }}
+                    {% endif %}
+                </a>
                 <div class="menu">
                     <ul>
                         <li><a href="">Shop All</a></li>
