@@ -17,7 +17,7 @@
             },
              {
                 "type": "range",
-                "id": "width",
+                "id": "logowidth",
                 "label": "Logo Width",
                 "default": 10,
                 "unit": "px",
