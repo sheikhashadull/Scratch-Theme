@@ -1,10 +1,11 @@
-<a
-  class="btn"
-  href="{{ link | default: '#' }}"
-  style="
-    background-color: {{ btncolor }};
-    padding: {{ paddingy }}px {{ paddingx }}px;
-  "
->
-  {{ text | default: 'Take the Quiz' }}
-</a>
+<a class="btn" href="{{ link }}">{{ text | default: 'Take the Quiz' }}</a>
+
+{% style %}
+
+.btn {
+    display: inline-block;
+    background-color:{{ btncolor }};
+    padding: {{btn_paddingx}}px {{btn_paddingy}}px;
+    border-radius: 10px;
+}
+{% endstyle %}
