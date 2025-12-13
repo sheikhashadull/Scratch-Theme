@@ -76,7 +76,7 @@
         "bg_color": "#facfe8",
         "text_color": "#ea5a94",
         "scroll": true,
-        "fontsize": 18,
+        "fontsize": 16,
         "padding": 10,
         "justify": "center",
         "gap": 48
@@ -85,7 +85,9 @@
     "header_npp4QG": {
       "type": "header",
       "name": "Header Menu",
-      "settings": {}
+      "settings": {
+        "bgcolor": "#fde1ef"
+      }
     }
   },
   "order": [
