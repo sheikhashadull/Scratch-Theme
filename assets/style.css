@@ -17,3 +17,28 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+.logo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    gap: 20px;
+}
+a.btn {
+    display: inline-block;
+    background-color: #525036;
+    padding: 12px 24px;
+    border-radius: 10px;
+    color: white;
+}
+.account {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.icon {
+    display: flex;
+    gap: 10px;
+}
