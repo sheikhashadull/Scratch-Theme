@@ -90,10 +90,10 @@
         "padding": 14,
         "btntext": "fafgghg",
         "btnlink": "",
-        "btncolor": "#9f8591",
-        "btnpaddingx": 34,
-        "btnpaddingy": 24,
-        "btnredius": 66
+        "btncolor": "#a95079",
+        "btnpaddingx": 20,
+        "btnpaddingy": 12,
+        "btnredius": 14
       }
     }
   },

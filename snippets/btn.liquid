@@ -1,14 +1,11 @@
-<a 
-  href="{{ btnlink | default: '#' }}" 
-  class="btn-header" 
-  style="
-    background-color: {{ btncolor }};
-    padding: {{ btnpaddingy }}px {{ btnpaddingx }}px;
-    border-radius: {{ btnredius }}px;
-    text-decoration: none;
-    color: #000;
+<a class="btn" href="{{ btnlink }}">{{ btntext | default: 'Take the Quiz' }}</a>
+
+{% style %}
+
+.btn {
     display: inline-block;
-  "
->
-  {{ btntext | default: 'Take the Quiz' }}
-</a>
+    background-color: {{ btncolor }};
+    padding: {{ btnpaddingx }}px {{ btnpaddingy}} px;
+    border-radius: {{ btnredius }}px;
+}
+{% endstyle %}
