@@ -1,1 +1,92 @@
 <h1>Hello</h1>
+
+{% schema %}
+    {
+        "name": "Hero Banner",
+        "enabled_on": {
+        "groups": ["aside"]},
+        "limit": 1,
+        "settings": [
+            {
+                "type": "color",
+                "id": "bgcolor",
+                "label": "Background Color",
+                "default": "#FFE9F6"
+            },
+            {
+                "type": "color",
+                "id": "iconcolor",
+                "label": "Icon Color",
+                "default": "#FDE1EF"
+            },
+            {
+                "type": "range",
+                "id": "padding",
+                "label": "Padding",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "text",
+                "id": "btntext",
+                "label": "Header Button Text",
+                "default": "Take the Quiz"
+            },
+            {
+                "type": "url",
+                "id": "btnlink",
+                "label": "Header Button Link"
+            },
+            {
+                "type": "color",
+                "id": "btncolor",
+                "label": "Button Color",
+                "default": "#FDE1EF"
+            },
+            {
+                "type": "color",
+                "id": "btntextcolor",
+                "label": "Button Text Color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "btnpaddingx",
+                "label": "Button PaddingX",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "range",
+                "id": "btnpaddingy",
+                "label": "Button PaddingY",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "range",
+                "id": "btnredius",
+                "label": "Button Redius",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+        ],
+        "presets": [
+            {
+                "name": "Hero Banner"
+            }
+        ]
+    }
+{% endschema %}
