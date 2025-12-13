@@ -13,13 +13,15 @@
             </div>
             <div class="account">
                 {% render 'btn',
-  text: btn_text,
-  link: btn_link,
-  btncolor: btncolor,
-  PaddingX: btn_paddingx,
-  PaddingY: btn_paddingy,
-%}
+                    text: btntext,
+                    link: btnlink,
 
+                    btncolor: btncolor,
+                    btnredius: btnredius,
+
+                    Paddingx: btnpaddingx,
+                    btnpaddingy: btnpaddingy,
+                %}
                 <div class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-bag-shopping"></i>
@@ -34,12 +36,14 @@
     assign bgcolor = section.settings.bgcolor
     assign padding = section.settings.padding
 
-    assign btn_text = section.settings.btn_text
-    assign btn_url = section.settings.btn_url
+    assign btntext = section.settings.btntext
+    assign btnurl = section.settings.btnurl
 
     assign btncolor = section.settings.btncolor
-    assign btn_paddingx = section.settings.btn_paddingx
-    assign btn_paddingy = section.settings.btn_paddingy
+    assign btnredius = section.settings.btnredius
+
+    assign btnpaddingx = section.settings.btnpaddingx
+    assign btnpaddingy = section.settings.btnpaddingy
 %}
 
 {% style %}
@@ -74,13 +78,13 @@
             },
             {
                 "type": "text",
-                "id": "btn_text",
+                "id": "btntext",
                 "label": "Header Button Text",
                 "default": "Take the Quiz"
             },
             {
                 "type": "url",
-                "id": "btn_link",
+                "id": "btnlink",
                 "label": "Header Button Link"
             },
             {
@@ -91,7 +95,7 @@
             },
             {
                 "type": "range",
-                "id": "btn_paddingx",
+                "id": "btnpaddingx",
                 "label": "Button PaddingX",
                 "default": 10,
                 "unit": "px",
@@ -101,8 +105,18 @@
             },
             {
                 "type": "range",
-                "id": "btn_paddingy",
+                "id": "btnpaddingy",
                 "label": "Button PaddingY",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "range",
+                "id": "btnredius",
+                "label": "Button Redius",
                 "default": 10,
                 "unit": "px",
                 "min": 0,
