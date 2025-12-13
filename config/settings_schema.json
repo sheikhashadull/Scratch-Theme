@@ -6,5 +6,15 @@
         "theme_version": "1.0.0",
         "theme_documentation_url": "https://shopiify-dev-stores.myshopify.com/",
         "theme_support_url": "https://shopiify-dev-stores.myshopify.com/"
+    },
+    {
+        "name": "Logo",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+            }
+        ]
     }
 ]
