@@ -82,13 +82,14 @@
         "gap": 48
       }
     },
-    "header": {
+    "header_npp4QG": {
       "type": "header",
+      "name": "Header Menu",
       "settings": {}
     }
   },
   "order": [
     "announcement_bar_EqqUaE",
-    "header"
+    "header_npp4QG"
   ]
 }
