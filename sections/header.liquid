@@ -3,7 +3,7 @@
         <nav>
             <div class="logo">
                 {% if settings.logo != blank %}
-                    <img src="{{ settings.logo | image_url }}" alt="{{ shop.url }}">
+                    <img src="{{ settings.logo | image_url }}" alt="{{ shop.url }} width: 100px ">
                 {% else %}
                     {{ shop.url }}
                 {% endif %}
