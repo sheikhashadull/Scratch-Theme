@@ -23,13 +23,23 @@
     </div>
 </header>
 
+{% liquid
+    assign variable_name = value
+%}
+
 {% schema %}
     {
         "name": "Header Menu",
         "enabled_on": {
         "groups": ["header"]},
         "limit": 1,
-        "settings": [],
+        "settings": [
+            {
+                "type": "color",
+                "id": "bgcolor",
+                "label": "Background Color"
+            }
+        ],
         "presets": [
             {
                 "name": "Header Menu"
