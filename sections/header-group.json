@@ -74,7 +74,7 @@
       "name": "Announcement Bar",
       "settings": {
         "bg_color": "#ffd1eb",
-        "text_color": "#ea5a94",
+        "text_color": "#cf427b",
         "scroll": true,
         "fontsize": 16,
         "padding": 10,
