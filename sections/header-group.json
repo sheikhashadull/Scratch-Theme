@@ -87,7 +87,9 @@
       "name": "Header Menu",
       "settings": {
         "bgcolor": "#fde1ef",
-        "padding": 14
+        "padding": 14,
+        "btn_text": "add",
+        "btn_link": ""
       }
     }
   },
