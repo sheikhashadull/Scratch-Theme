@@ -15,7 +15,7 @@
                                 <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">
                                     {{ link.title }}
                                 </a>
-                                <i class="fa-solid fa-angle-down"></i>
+                                
 
                                 {% if link.links != blank %}
                                     <ul class="dropdown">
@@ -24,6 +24,7 @@
                                                 <a href="{{ childlink.url }}">
                                                     {{ childlink.title }}
                                                 </a>
+                                                <i class="fa-solid fa-angle-down"></i>
                                             </li>
                                         {% endfor %}
                                     </ul>
