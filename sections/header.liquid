@@ -9,6 +9,13 @@
                 {% endif %}
                 <div class="menu">
                     <ul>
+                        {% for link in linklists.main-menu.links %}
+                            {{ link.title }}
+                        {% endfor %}
+
+                        {% comment %} {% for link in linklists.main-menu.links %}
+                            {{ link.title | link_to: link.url }}
+                        {%- endfor %} {% endcomment %}
                         <li><a href="">Shop All</a></li>
                         <li><a href="">Real Results</a></li>
                         <li><a href="">Build My Bundle</a></li>
