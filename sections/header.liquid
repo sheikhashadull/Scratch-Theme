@@ -1,7 +1,6 @@
 <header>
   <div class="container">
     <nav>
-      <!-- Logo -->
       <div class="logo">
         {% if settings.logo != blank %}
           <img 
@@ -14,7 +13,6 @@
           {{ shop.url }}
         {% endif %}
         
-        <!-- Menu -->
         <div class="menu">
           <ul>
             {% for link in linklists.main-menu.links %}
@@ -28,7 +26,6 @@
         </div>
       </div>
 
-      <!-- Account / Button / Icons -->
       <div class="account">
         {% render 'btn',
           btntext: section.settings.btntext,
@@ -60,6 +57,8 @@
   assign bgcolor = section.settings.bgcolor
   assign padding = section.settings.padding
   assign iconcolor = section.settings.iconcolor
+
+  assign menucolor = section.settings.menucolor
 %}
 
 {% style %}
@@ -95,8 +94,8 @@
     },
     {
       "type": "color",
-      "id": "menu",
-      "label": "Icon Color",
+      "id": "menucolor",
+      "label": "Menu Color",
       "default": "#FDE1EF"
     },
     {
