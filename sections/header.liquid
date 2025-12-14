@@ -3,40 +3,18 @@
         <nav>
             <div class="logo">
                 {% if settings.logo != blank %}
-                    <img src="{{ settings.logo | image_url }}" width="{{ settings.logowidth }}px" height="auto" alt="{{ shop.url }}"/>
+                    <img src="{{ settings.logo | image_url }}" width= "{{ settings.logowidth }} px"  height= "auto" alt="{{ shop.url }}"/>
                 {% else %}
                     {{ shop.url }}
                 {% endif %}
-
                 <div class="menu">
                     <ul>
                         {% for link in linklists.main-menu.links %}
-                            <li class="menu-item">
-                                <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">
-                                    {{ link.title }}
-                                </a>
-                                {% if link.links != blank %}
-                                    <i class="fa-solid fa-angle-down"></i>
-                                {% endif %}
-                                {% if link.links != blank %}
-                                    <ul class="dropdown">
-                                        {% for childlink in link.links %}
-                                            <li>
-                                                <a href="{{ childlink.url }}">
-                                                    {{ childlink.title }}
-                                                </a>
-                                            </li>
-                                            
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-
-                            </li>
+                            <li><a class="{% if link.active %}active{% endif %}" href="{{ link_url }}">{{ link.title }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
             </div>
-
             <div class="account">
                 {% render 'btn',
                     btntext: section.settings.btntext,
@@ -51,9 +29,10 @@
                 <div class="icon">
                     <a href="{{ routes.predictive_search_url }}"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="{{ routes.cart_url }}"><i class="fa-solid fa-bag-shopping"></i></a>
-                    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
+                    <a href="{% if customer %} {{ routes.account_url}} {% else %} {{ routes.account_login_url }} {% endif %}"><i class="fa-regular fa-user"></i></a>
+                    
+                    
+                    
                 </div>
             </div>
         </nav>
@@ -66,97 +45,102 @@
 %}
 
 {% style %}
-
+  header{
+    background-color: {{ bgcolor }};
+    padding: {{ padding }}px 0;
+  }
+  .icon{
+    color: {{ iconcolor }};
+  }
 {% endstyle %}
 
 {% schema %}
-{
-    "name": "Header Menu",
-    "enabled_on": {
-        "groups": ["header"]
-    },
-    "limit": 1,
-    "settings": [
-        {
-            "type": "color",
-            "id": "bgcolor",
-            "label": "Background Color",
-            "default": "#FFE9F6"
-        },
-        {
-            "type": "color",
-            "id": "iconcolor",
-            "label": "Icon Color",
-            "default": "#FDE1EF"
-        },
-        {
-            "type": "range",
-            "id": "padding",
-            "label": "Padding",
-            "default": 10,
-            "unit": "px",
-            "min": 0,
-            "max": 120,
-            "step": 2
-        },
-        {
-            "type": "text",
-            "id": "btntext",
-            "label": "Header Button Text",
-            "default": "Take the Quiz"
-        },
-        {
-            "type": "url",
-            "id": "btnlink",
-            "label": "Header Button Link"
-        },
-        {
-            "type": "color",
-            "id": "btncolor",
-            "label": "Button Color",
-            "default": "#FDE1EF"
-        },
-        {
-            "type": "color",
-            "id": "btntextcolor",
-            "label": "Button Text Color",
-            "default": "#ffffff"
-        },
-        {
-            "type": "range",
-            "id": "btnpaddingx",
-            "label": "Button PaddingX",
-            "default": 10,
-            "unit": "px",
-            "min": 0,
-            "max": 120,
-            "step": 2
-        },
-        {
-            "type": "range",
-            "id": "btnpaddingy",
-            "label": "Button PaddingY",
-            "default": 10,
-            "unit": "px",
-            "min": 0,
-            "max": 120,
-            "step": 2
-        },
-        {
-            "type": "range",
-            "id": "btnredius",
-            "label": "Button Redius",
-            "default": 10,
-            "unit": "px",
-            "min": 0,
-            "max": 120,
-            "step": 2
-        }
-    ],
-    "presets": [
-        {
-            "name": "Header Menu"
-        }
-    ]
-}
+    {
+        "name": "Header Menu",
+        "enabled_on": {
+        "groups": ["header"]},
+        "limit": 1,
+        "settings": [
+            {
+                "type": "color",
+                "id": "bgcolor",
+                "label": "Background Color",
+                "default": "#FFE9F6"
+            },
+            {
+                "type": "color",
+                "id": "iconcolor",
+                "label": "Icon Color",
+                "default": "#FDE1EF"
+            },
+            {
+                "type": "range",
+                "id": "padding",
+                "label": "Padding",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "text",
+                "id": "btntext",
+                "label": "Header Button Text",
+                "default": "Take the Quiz"
+            },
+            {
+                "type": "url",
+                "id": "btnlink",
+                "label": "Header Button Link"
+            },
+            {
+                "type": "color",
+                "id": "btncolor",
+                "label": "Button Color",
+                "default": "#FDE1EF"
+            },
+            {
+                "type": "color",
+                "id": "btntextcolor",
+                "label": "Button Text Color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "range",
+                "id": "btnpaddingx",
+                "label": "Button PaddingX",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "range",
+                "id": "btnpaddingy",
+                "label": "Button PaddingY",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+            {
+                "type": "range",
+                "id": "btnredius",
+                "label": "Button Redius",
+                "default": 10,
+                "unit": "px",
+                "min": 0,
+                "max": 120,
+                "step": 2
+            },
+        ],
+        "presets": [
+            {
+                "name": "Header Menu"
+            }
+        ]
+    }
 {% endschema %}
