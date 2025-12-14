@@ -56,8 +56,8 @@
 {% liquid
   assign bgcolor = section.settings.bgcolor
   assign padding = section.settings.padding
-  assign iconcolor = section.settings.iconcolor
 
+  assign iconcolor = section.settings.iconcolor
   assign menucolor = section.settings.menucolor
 %}
 
@@ -69,6 +69,9 @@
 
   .icon i {
     color: {{ iconcolor }};
+  }
+  .menu a {
+    color: {{ menucolor }};
   }
 {% endstyle %}
 
