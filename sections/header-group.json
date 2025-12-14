@@ -89,7 +89,7 @@
         "bgcolor": "#ffe7f5",
         "iconcolor": "#d91376",
         "menucolor": "#d91376",
-        "padding": 10,
+        "padding": 4,
         "btntext": "Take the Quiz",
         "btnlink": "",
         "btncolor": "#d91376",
