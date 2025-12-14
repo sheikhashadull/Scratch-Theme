@@ -22,10 +22,10 @@
                                         {% for childlink in link.links %}
                                             <li>
                                                 <a href="{{ childlink.url }}">
-                                                    {{ childlink.title }}
+                                                    {{ childlink.title }} <i class="fa-solid fa-angle-down"></i>
                                                 </a>
                                             </li>
-                                            <i class="fa-solid fa-angle-down"></i>
+                                            
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
