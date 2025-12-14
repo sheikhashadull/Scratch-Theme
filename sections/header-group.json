@@ -86,7 +86,7 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "bgcolor": "#ffe7f5",
+        "bgcolor": "#fff1f9",
         "iconcolor": "#d91376",
         "menucolor": "#d91376",
         "padding": 4,
