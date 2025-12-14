@@ -22,14 +22,14 @@
                                         {% for childlink in link.links %}
                                             <li>
                                                 <a href="{{ childlink.url }}">
-                                                    {{ childlink.title }} 
+                                                    {{ childlink.title }}
                                                 </a>
                                             </li>
                                             
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
-<i class="fa-solid fa-angle-down"></i>
+
                             </li>
                         {% endfor %}
                     </ul>
@@ -74,6 +74,13 @@ header{
 }
 
 /* ===== DROPDOWN ===== */
+.menu-item > a::after{
+    content: "▾";          /* dropdown icon */
+    font-size: 12px;
+    margin-left: 6px;
+    opacity: 0.6;
+    transition: transform 0.25s ease;
+}
 .dropdown{
     position: absolute;
     top: calc(100% + 10px);
