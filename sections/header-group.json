@@ -86,8 +86,8 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "bgcolor": "#ffd1eb",
-        "iconcolor": "#93255c",
+        "bgcolor": "#ffe7f5",
+        "iconcolor": "#cf427b",
         "padding": 10,
         "btntext": "Take the Quiz",
         "btnlink": "",
