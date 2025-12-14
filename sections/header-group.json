@@ -82,25 +82,25 @@
         "gap": 48
       }
     },
-    "header_npp4QG": {
+    "header_FPcpfW": {
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "bgcolor": "#ffe9f6",
-        "iconcolor": "#fde1ef",
-        "padding": 0,
-        "btntext": "",
+        "bgcolor": "#FFE9F6",
+        "iconcolor": "#FDE1EF",
+        "padding": 10,
+        "btntext": "Take the Quiz",
         "btnlink": "",
-        "btncolor": "#ea5a94",
+        "btncolor": "#FDE1EF",
         "btntextcolor": "#ffffff",
-        "btnpaddingx": 12,
-        "btnpaddingy": 26,
+        "btnpaddingx": 10,
+        "btnpaddingy": 10,
         "btnredius": 10
       }
     }
   },
   "order": [
     "announcement_bar_EqqUaE",
-    "header_npp4QG"
+    "header_FPcpfW"
   ]
 }
