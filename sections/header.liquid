@@ -1,68 +1,219 @@
+<header>
+    <div class="container">
+        <nav>
+            {% for block in section.blocks %}
+                {% case block.type %}
+
+                    {% when 'logo' %}
+                        <div class="logo">
+                            {% if block.settings.logo_image != blank %}
+                                <img src="{{ block.settings.logo_image | image_url }}" width="{{ block.settings.logo_width }}px" height="auto" alt="{{ shop.name }}" />
+                            {% else %}
+                                {{ shop.name }}
+                            {% endif %}
+                        </div>
+
+                    {% when 'menu' %}
+                        <div class="menu">
+                            <ul>
+                                {% for link in linklists[block.settings.menu_list].links %}
+                                    <li><a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                    {% when 'button' %}
+                        <div class="account-button">
+                            {% render 'btn',
+                                btntext: block.settings.btn_text,
+                                btnlink: block.settings.btn_link,
+                                btncolor: block.settings.btn_color,
+                                btntextcolor: block.settings.btn_textcolor,
+                                btnredius: block.settings.btn_radius,
+                                btnpaddingx: block.settings.btn_paddingx,
+                                btnpaddingy: block.settings.btn_paddingy
+                            %}
+                        </div>
+
+                    {% when 'icons' %}
+                        <div class="icon">
+                            {% if block.settings.show_search %}
+                                <a href="{{ routes.predictive_search_url }}"><i class="fa-solid fa-magnifying-glass" style="color:{{ block.settings.icon_color }}"></i></a>
+                            {% endif %}
+                            {% if block.settings.show_cart %}
+                                <a href="{{ routes.cart_url }}"><i class="fa-solid fa-bag-shopping" style="color:{{ block.settings.icon_color }}"></i></a>
+                            {% endif %}
+                            {% if block.settings.show_account %}
+                                <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}"><i class="fa-regular fa-user" style="color:{{ block.settings.icon_color }}"></i></a>
+                            {% endif %}
+                        </div>
+
+                {% endcase %}
+            {% endfor %}
+        </nav>
+    </div>
+</header>
+
+{% liquid
+  assign bgcolor = section.settings.bgcolor
+  assign padding = section.settings.padding
+%}
+
+{% style %}
+header{
+    background-color: {{ bgcolor }};
+    padding: {{ padding }}px 0;
+}
+{% endstyle %}
+
 {% schema %}
 {
-  "name": "Header Menu",
-  "settings": [
-    {
-      "type": "color",
-      "id": "bgcolor",
-      "label": "ব্যাকগ্রাউন্ড কালার",
-      "default": "#FFE9F6"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "logo",
-      "name": "লোগো",
-      "settings": [
+    "name": "Header Menu",
+    "settings": [
         {
-          "type": "image_picker",
-          "id": "logo_image",
-          "label": "লোগো আপলোড করুন"
+            "type": "color",
+            "id": "bgcolor",
+            "label": "ব্যাকগ্রাউন্ড কালার",
+            "default": "#FFE9F6"
         },
         {
-          "type": "range",
-          "id": "logo_width",
-          "label": "লোগোর প্রস্থ",
-          "default": 120,
-          "min": 50,
-          "max": 400,
-          "step": 5,
+            "type": "range",
+            "id": "padding",
+            "label": "Padding",
+            "default": 10,
+            "min": 0,
+            "max": 120,
+            "step": 2,
+            "unit": "px"
         }
-      ]
-    },
-    {
-      "type": "menu",
-      "name": "মেনু",
-      "settings": [
+    ],
+    "blocks": [
         {
-          "type": "link_list",
-          "id": "menu_list",
-          "label": "মেনু নির্বাচন করুন"
-        }
-      ]
-    },
-    {
-      "type": "button",
-      "name": "হেডার বাটন",
-      "settings": [
-        {
-          "type": "text",
-          "id": "btn_text",
-          "label": "বাটনের লেখা",
-          "default": "Click Me"
+            "type": "logo",
+            "name": "লোগো",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "logo_image",
+                    "label": "লোগো আপলোড করুন"
+                },
+                {
+                    "type": "range",
+                    "id": "logo_width",
+                    "label": "লোগোর প্রস্থ",
+                    "default": 120,
+                    "min": 50,
+                    "max": 400,
+                    "step": 5
+                }
+            ]
         },
         {
-          "type": "url",
-          "id": "btn_link",
-          "label": "বাটনের লিংক"
+            "type": "menu",
+            "name": "মেনু",
+            "settings": [
+                {
+                    "type": "link_list",
+                    "id": "menu_list",
+                    "label": "মেনু নির্বাচন করুন"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "name": "হেডার বাটন",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "btn_text",
+                    "label": "বাটনের লেখা",
+                    "default": "Take the Quiz"
+                },
+                {
+                    "type": "url",
+                    "id": "btn_link",
+                    "label": "বাটনের লিংক"
+                },
+                {
+                    "type": "color",
+                    "id": "btn_color",
+                    "label": "বাটনের কালার",
+                    "default": "#FDE1EF"
+                },
+                {
+                    "type": "color",
+                    "id": "btn_textcolor",
+                    "label": "বাটনের লেখা কালার",
+                    "default": "#ffffff"
+                },
+                {
+                    "type": "range",
+                    "id": "btn_radius",
+                    "label": "বাটনের রেডিয়াস",
+                    "default": 10,
+                    "min":0,
+                    "max":120,
+                    "step":2,
+                    "unit":"px"
+                },
+                {
+                    "type": "range",
+                    "id": "btn_paddingx",
+                    "label": "Padding X",
+                    "default": 10,
+                    "min":0,
+                    "max":120,
+                    "step":2,
+                    "unit":"px"
+                },
+                {
+                    "type": "range",
+                    "id": "btn_paddingy",
+                    "label": "Padding Y",
+                    "default": 10,
+                    "min":0,
+                    "max":120,
+                    "step":2,
+                    "unit":"px"
+                }
+            ]
+        },
+        {
+            "type": "icons",
+            "name": "আইকনস",
+            "settings": [
+                {
+                    "type": "color",
+                    "id": "icon_color",
+                    "label": "আইকন কালার",
+                    "default": "#FDE1EF"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_search",
+                    "label": "Search Icon দেখান",
+                    "default": true
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_cart",
+                    "label": "Cart Icon দেখান",
+                    "default": true
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_account",
+                    "label": "Account Icon দেখান",
+                    "default": true
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Header Menu"
-    }
-  ]
+    ],
+    "presets": [
+        {
+            "name": "Header Menu",
+            "category": "Header"
+        }
+    ]
 }
 {% endschema %}
