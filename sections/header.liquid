@@ -15,8 +15,9 @@
                                 <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">
                                     {{ link.title }}
                                 </a>
-                                
-
+                                {% if link.links != blank %}
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                {% endif %}
                                 {% if link.links != blank %}
                                     <ul class="dropdown">
                                         {% for childlink in link.links %}
@@ -74,13 +75,6 @@ header{
 }
 
 /* ===== DROPDOWN ===== */
-.menu-item > a::after{
-    content: "▾";          /* dropdown icon */
-    font-size: 12px;
-    margin-left: 6px;
-    opacity: 0.6;
-    transition: transform 0.25s ease;
-}
 .dropdown{
     position: absolute;
     top: calc(100% + 10px);
