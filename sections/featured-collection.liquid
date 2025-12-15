@@ -1,0 +1,123 @@
+<section class="featured-collection">
+  <div class="page-width">
+    <div class="section-header">
+      <h2>Featured Collection</h2>
+      <a href="#" class="view-all">View all</a>
+    </div>
+
+    <div class="collection-grid">
+      <!-- Product item -->
+      {% for item in collections %}
+        <div class="product-card">
+        <a href="#">
+          <div class="product-image">
+            {% if item.image.src %}
+                <img src="{{ item.image.src | image_url }}" alt="{{item.title}}" width="auto" height="auto">
+                
+            {% endif %}
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">{{ item.title }}</h3> 
+            <span class="product-price">{{ item.price }}</span>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+    { 
+        "name": "Featured Collection",
+        "class": "featured_collection",
+        "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "Featured Collection"
+            }
+        ]
+    }
+{% endschema %}
+
+
+<style>
+    .featured-collection {
+    padding: 60px 0;
+    }
+    .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    }
+
+    .view-all {
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    }
+
+    .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    }
+
+    .product-card a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+    .product-image {
+    overflow: hidden;
+    border-radius: 8px;
+    }
+
+    .product-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+    }
+
+    .product-card:hover img {
+    transform: scale(1.05);
+    }
+
+    .product-info {
+    padding-top: 12px;
+    text-align: center;
+    }
+
+    .product-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    }
+
+    .product-price {
+    font-size: 14px;
+    color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+
+    @media (max-width: 480px) {
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+    }
+
+</style>

@@ -1,0 +1,280 @@
+<footer class="pp-footer">
+  <div class="pp-footer__container">
+
+    {% for block in section.blocks %}
+      {% case block.type %}
+
+        {% when 'info' %}
+          <div class="pp-footer__col brand">
+            {% if settings.logo != blank %}
+              <img 
+                src="{{ settings.logo | image_url }}" 
+                width="{{ settings.logo_width }}px" 
+                alt="{{ shop.name }}"
+                height="auto"
+              />
+            {% else %}
+              <strong>{{ shop.name }}</strong>
+            {% endif %}
+
+            <div class="pp-footer__desc">
+              {{ block.settings.content }}
+            </div>
+          </div>
+
+        {% when 'link' %}
+          <div class="pp-footer__col">
+            <h4 class="pp-footer__title">{{ block.settings.title }}</h4>
+            <ul class="pp-footer__list">
+              {% for link in block.settings.menu.links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+
+      {% endcase %}
+    {% endfor %}
+
+    <!-- Newsletter -->
+    <div class="pp-footer__col newsletter">
+      <h4 class="pp-footer__title">Newsletter</h4>
+      <p class="pp-footer__desc small">
+        Subscribe for exclusive offers & updates.
+      </p>
+      <form class="pp-footer__form">
+        <input type="email" placeholder="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="pp-footer__bottom">
+    <p>© {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+
+    <div class="pp-footer__social">
+      {% for block in section.blocks %}
+        {% if block.type == 'social_link' %}
+          <a href="{{ block.settings.url }}">
+            {{ block.settings.title }}
+          </a>
+          {% else %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</footer>
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "class": "footer",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "info",
+      "name": "Company Info",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>High quality products crafted for modern lifestyle and everyday comfort.</p>"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "Important Links",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Quick Links"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "social_link",
+      "name": "Social Links",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Social Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Social Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    :root {
+  --footer-bg: #0b1220;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --accent: #38bdf8;
+  --border: #1f2937;
+  --max-width: 1200px;
+}
+
+.pp-footer {
+  background: var(--footer-bg);
+  color: var(--text-secondary);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* GRID */
+.pp-footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 24px 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pp-footer__title {
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.pp-footer__desc {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.pp-footer__list {
+  list-style: none;
+}
+
+.pp-footer__list li + li {
+  margin-top: 12px;
+}
+
+.pp-footer__list a {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.pp-footer__list a:hover {
+  color: var(--accent);
+  padding-left: 4px;
+}
+
+/* NEWSLETTER */
+.pp-footer__form {
+  margin-top: 18px;
+  display: flex;
+  height: 44px;
+}
+
+.pp-footer__form input {
+  flex: 1;
+  padding: 0 14px;
+  border: none;
+  outline: none;
+  border-radius: 6px 0 0 6px;
+}
+
+.pp-footer__form button {
+  padding: 0 18px;
+  background: var(--accent);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+}
+
+/* BOTTOM */
+.pp-footer__bottom {
+  border-top: 1px solid var(--border);
+  padding: 22px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.pp-footer__social a {
+  margin-left: 16px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.pp-footer__social a:hover {
+  color: var(--accent);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .pp-footer__container {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .newsletter {
+    grid-column: span 3;
+    max-width: 420px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pp-footer__container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 64px 20px 48px;
+  }
+
+  .pp-footer__desc {
+    max-width: 100%;
+  }
+
+  .pp-footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .pp-footer__social a {
+    margin: 0 8px;
+  }
+}
+
+</style>

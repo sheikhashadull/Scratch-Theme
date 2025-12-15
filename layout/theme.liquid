@@ -6,8 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    {{'style.css' | | asset_url | stylesheet_tag}}
+    {{'style.css' | asset_url | stylesheet_tag}}
+
     {{ content_for_header }}
+    <style>
+        :root {
+        --page-width: {{ settings.page_width }}px;
+        }
+    </style>
 </head>
 <body>
     {% sections 'header-group' %}

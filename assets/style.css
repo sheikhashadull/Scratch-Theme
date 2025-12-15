@@ -7,11 +7,11 @@
     list-style: none;
     text-decoration: none;
 }
-.container{
-    max-width: 1200px;
-    height: auto;
-    margin: auto;
+.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -23,9 +23,61 @@ nav{
     align-items: center;
 }
 .menu ul {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
+
+/* Parent menu items */
+.menu li {
+  position: relative;
+}
+
+.menu li a:hover {
+  color: #15a038;
+}
+
+/* Dropdown container */
+.menu li .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ff9fcf3b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.027);
+  min-width: 200px;
+  z-index: 999;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+/* Dropdown items */
+.menu li .dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-weight: 400;
+  transition:  0.3s ease, color 0.3s ease;
+}
+
+.menu li .dropdown li a:hover {
+  color: #ffffff;
+  background-color: #D91376;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.menu li.has-dropdown:hover > .dropdown {
+  display: block;
+
+}
+
+/* Dropdown arrow for parent items */
+.menu li.has-dropdown > a::after {
+  content: "⏷";
+  font-size: 15px;
+  margin-left: 5px;
+}
+
 .account {
     display: flex;
     align-items: center;
