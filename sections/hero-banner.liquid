@@ -24,24 +24,11 @@
         </div>
     </div>
 </div>
-
-<div class="reviewsection">
-    <div class="page-width">
-        <div class="flex">
-            {% for block in section.blocks %}
-                <div class="{{ block.id }}">
-                    <i class="fa-solid fa-star"></i>
-                    <p>{{ block.settings.review }} <span>{{ block.settings.customer }}</span></p>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-
 <style>
     .banner{
         position: relative;
+        width: 100%;
+        min-height: 80vh;
     }
     .herobanner{
         position: absolute;
@@ -67,8 +54,7 @@
         display: inline-block;
         border-radius: 50px;
         color: white;
-    }
-
+    },
 </style>
 
 {% schema %}
