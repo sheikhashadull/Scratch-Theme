@@ -7,6 +7,8 @@
 
   assign buttontext = section.settings.buttontext
   assign btnlink = section.settings.btnlink
+
+  assign reviewcolor = section.settings.reviewcolor
 %}
 
 <div class="banner">
@@ -22,13 +24,36 @@
                 {% endif %}
             </div>
         </div>
+        <div class="reviewSection">
+            <div class="page-width">
+                <div class="review-content">
+                    <div class="swiper review_slider">
+                        <div class="swiper-wrapper">
+                            {% for block in section.blocks %}
+                                <div class="flex swiper-slide">
+                                    {% render 'icons' %} 
+                                    <p>{{ block.settings.review }} <span>{{ block.settings.customer }}</span></p>                 
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    var swiper = new Swiper(".review_slider", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    });
+</script>
+
 <style>
     .banner{
         position: relative;
         width: 100%;
-        min-height: 80vh;
     }
     .herobanner{
         position: absolute;
@@ -54,7 +79,39 @@
         display: inline-block;
         border-radius: 50px;
         color: white;
-    },
+    }
+    .reviewSection{
+        background-color: {{ reviewcolor }} ;
+        padding: 40px 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .review-content {
+        display: flex;
+        gap: 15%;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        background-color: #ffffff38;
+        padding: 40px;
+    }
+    .flex p {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+        color: rgb(147 79 41);
+    }
+
+    .flex span {
+        font-weight: 400;
+    }
 </style>
 
 {% schema %}
@@ -88,37 +145,40 @@
                 "type": "text",
                 "id": "buttontext",
                 "label": "Button Text",
-                "default": "Order Your Kit Now",
+                "default": "Order Your Kit Now"
             },
             {
                 "type": "url",
                 "id": "btnlink",
-                "label": "Button Link",
+                "label": "Button Link"
             },
             {
-                "type": "color_scheme",
-                "id": "color_scheme",
-                "label": "Color Scheme",
-                "default": "scheme-1",
+                "type": "header",
+                "content": "Section Style",
+            },
+            {
+                "type": "color",
+                "id": "reviewcolor",
+                "label": "Review Bg Color",
+                "default": "#FFE1B5"
             },
         ],
         "blocks": [
             {
                 "type": "review",
                 "name": "Review",
-                "limit": 3,
                 "settings": [
                     {
                         "type": "textarea",
                         "id": "review",
                         "label": "Review",
-                        "default": "I’ve never tasted pickles this good outside a deli!",
+                        "default": "I’ve never tasted pickles this good outside a deli!"
                     },
                     {
                         "type": "text",
                         "id": "customer",
                         "label": "Customer Name",
-                        "default": "David.L",
+                        "default": "David.L"
                     },
                 ]
             },

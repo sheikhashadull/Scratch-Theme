@@ -11,77 +11,6 @@
   "name": "Header",
   "type": "header",
   "sections": {
-    "announcement_bar_EqqUaE": {
-      "type": "announcement_bar",
-      "blocks": {
-        "announcement_item_f86RcC": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p> Free Shipping on Orders over $65</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_LiFnYc": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p>New collection just dropped — shop now!</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_ixztw9": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p>Limited-time offer: Buy 1 Get 1 50% off</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_XQrmJy": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p>Flash Sale: Up to 40% OFF — ends tonight!</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_eThCNF": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p>We ship worldwide 🌍</p>"
-          },
-          "blocks": {}
-        },
-        "announcement_item_VaBgFF": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "item": "<p>Free returns within 30 days</p>"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_item_f86RcC",
-        "announcement_item_LiFnYc",
-        "announcement_item_ixztw9",
-        "announcement_item_XQrmJy",
-        "announcement_item_eThCNF",
-        "announcement_item_VaBgFF"
-      ],
-      "name": "Announcement Bar",
-      "settings": {
-        "bg_color": "#ffd1eb",
-        "text_color": "#cf427b",
-        "scroll": true,
-        "fontsize": 16,
-        "padding": 10,
-        "justify": "center",
-        "gap": 48
-      }
-    },
     "header_FPcpfW": {
       "type": "header",
       "name": "Header Menu",
@@ -101,7 +30,6 @@
     }
   },
   "order": [
-    "announcement_bar_EqqUaE",
     "header_FPcpfW"
   ]
 }
