@@ -13,17 +13,13 @@
       "type": "hero-banner",
       "name": "Custom Hero",
       "settings": {
-        "heading": "Your Hero Heading",
-        "subheading": "Describe your product or offer in one clear sentence.",
-        "bgcolor": "#FFE9F6",
-        "padding": 80,
-        "btntext": "Shop Now",
+        "herobanner": "shopify://shop_images/Group_120_1200x_a39b3472-6053-424d-8a33-ebbd0d344a4e.png",
+        "logo": "shopify://shop_images/Group_67_1200x_7d4b693a-8e58-4415-8936-2810dd03eb98.svg",
+        "title": "Make Deli-Grade Pickles at Home",
+        "subtitle": "⏳in just one minute!",
+        "buttontext": "Order Your Kit Now",
         "btnlink": "",
-        "btncolor": "#000000",
-        "btntextcolor": "#ffffff",
-        "btnpaddingx": 24,
-        "btnpaddingy": 14,
-        "btnradius": 8
+        "color_scheme": ""
       }
     }
   },
