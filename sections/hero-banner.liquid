@@ -17,8 +17,23 @@
             <div class="herobanner-content">
                 <p>{{ subtitle }}</p>
                 <h1>{{ title }}</h1>
-                <a href="{{ btnlink }}">{{ buttontext }}</a>
+                {% if buttontext != blank %}
+                    <a href="{{ btnlink }}">{{ buttontext }}</a>
+                {% endif %}
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="reviewsection">
+    <div class="page-width">
+        <div class="flex">
+            {% for block in section.blocks %}
+                <div class="{{ block.id }}">
+                    <i class="fa-solid fa-star"></i>
+                    <p>{{ block.settings.review }} <span>{{ block.settings.customer }}</span></p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -35,6 +50,25 @@
         width: 100%;
         height: 100%;
     }
+    .herobanner-content {
+        width: 400px;
+        margin-top: 80px;
+    }
+    .herobanner-content h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-size: 62px;
+        line-height: 96%;
+        margin: 10px 0 40px;
+    }
+    .herobanner-content a {
+        background-color: #FF8E09;
+        padding: 13px 30px;
+        display: inline-block;
+        border-radius: 50px;
+        color: white;
+    }
+
 </style>
 
 {% schema %}
