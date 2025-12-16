@@ -1,0 +1,112 @@
+{% liquid
+  assign herobanner = section.settings.herobanner
+  assign logo = section.settings.logo
+
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+
+  assign buttontext = section.settings.buttontext
+  assign btnlink = section.settings.btnlink
+%}
+
+<div class="banner">
+    <img src="{{ herobanner | image_url }}" width="100%" height="auto" alt="">
+    <div class="herobanner">
+        <div class="page-width">
+            <img src="{{ logo | image_url }}" width="auto" height="auto" alt="">
+            <div class="herobanner-content">
+                <p>{{ subtitle }}</p>
+                <h1>{{ title }}</h1>
+                <a href="{{ btnlink }}">{{ buttontext }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .banner{
+        position: relative;
+    }
+    .herobanner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "Hero Banner",
+        "class": "hero_banner",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "herobanner",
+                "label": "Hero Banner"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Hero Title",
+                "default": "Make Deli-Grade Pickles at Home"
+            },
+            {
+                "type": "textarea",
+                "id": "subtitle",
+                "label": "Sub Title",
+                "default": "⏳in just one minute!"
+            },
+            {
+                "type": "text",
+                "id": "buttontext",
+                "label": "Button Text",
+                "default": "Order Your Kit Now",
+            },
+            {
+                "type": "url",
+                "id": "btnlink",
+                "label": "Button Link",
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color Scheme",
+                "default": "scheme-1",
+            },
+        ],
+        "blocks": [
+            {
+                "type": "review",
+                "name": "Review",
+                "limit": 3,
+                "settings": [
+                    {
+                        "type": "textarea",
+                        "id": "review",
+                        "label": "Review",
+                        "default": "I’ve never tasted pickles this good outside a deli!",
+                    },
+                    {
+                        "type": "text",
+                        "id": "customer",
+                        "label": "Customer Name",
+                        "default": "David.L",
+                    },
+                ]
+            },
+        ],
+        "presets": [
+            {
+                "name": "Hero Banner"
+            }
+        ]
+    }
+{% endschema %}

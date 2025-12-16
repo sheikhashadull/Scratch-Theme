@@ -1,0 +1,106 @@
+<section class="featured-collection">
+  <div class="page-width">
+    <div class="section-header">
+      <h2>Featured Collection</h2>
+      <a href="#" class="view-all">{{ product_url }}</a>
+    </div>
+
+    <div class="collection-grid">
+      {% for product in collections.all.products %}
+        <div class="product-card">
+          <div class="product-image">
+            <img src="{{ product.featured_media | image_url }}" alt="{{ product.title }}" width="auto" height="auto">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">{{ product.title }}</h3>
+            <p class="product-price">{{ product.price | money_with_currency }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Featured Product",
+        "class": "featured_product",
+        "settings": [ ],
+        "presets": [
+            { 
+                "name": "Featured Product" 
+            }
+        ]
+    }
+{% endschema %}
+
+<style>
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.section-header .view-all {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Grid layout */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Product card */
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product info */
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+</style>

@@ -12,6 +12,14 @@
     <style>
         :root {
         --page-width: {{ settings.page_width }}px;
+        {% for scheme in settings.color_schemes %}
+            .color-{{ scheme.id }} {
+                --color-background: {{ scheme.settings.background }};
+                --color-text: {{ scheme.settings.text }};
+                --color-button: {{ scheme.settings.button }};
+                --color-button-text: {{ scheme.settings.button_text }};
+            }
+        {% endfor %}
         }
     </style>
 </head>
