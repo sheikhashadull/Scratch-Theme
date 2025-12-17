@@ -58,6 +58,7 @@
       "name": "Custom Hero",
       "settings": {
         "herobanner": "shopify://shop_images/Group_120_1200x_a39b3472-6053-424d-8a33-ebbd0d344a4e.png",
+        "herobanner_phone": "shopify://shop_images/Go_Pickle-13_websize_1_1200x_93cd1fb8-64c5-425b-bdc7-8d5819ce7957.png",
         "logo": "shopify://shop_images/Group_67_1200x_7d4b693a-8e58-4415-8936-2810dd03eb98.svg",
         "title": "Make Deli-Grade Pickles at Home",
         "subtitle": "⏳in just one minute!",
