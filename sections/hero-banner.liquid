@@ -10,6 +10,10 @@
   assign btnlink = section.settings.btnlink
 
   assign reviewcolor = section.settings.reviewcolor
+
+  assign color_scheme = section.settings.color_scheme
+
+
 %}
 
 <div class="banner">
@@ -215,6 +219,13 @@
                 "label": "Review Bg Color",
                 "default": "#FFE1B5"
             },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color scheme",
+                "default": "scheme_1"
+            }
+
         ],
         "blocks": [
             {
