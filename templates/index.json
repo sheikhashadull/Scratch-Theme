@@ -11,6 +11,50 @@
   "sections": {
     "hero_banner_Kq3rW9": {
       "type": "hero-banner",
+      "blocks": {
+        "review_7R877b": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_tkK64h": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_hhCT43": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_azaU7r": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_kneAVH": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        }
+      },
+      "block_order": [
+        "review_7R877b",
+        "review_tkK64h",
+        "review_hhCT43",
+        "review_azaU7r",
+        "review_kneAVH"
+      ],
       "name": "Custom Hero",
       "settings": {
         "herobanner": "shopify://shop_images/Group_120_1200x_a39b3472-6053-424d-8a33-ebbd0d344a4e.png",
@@ -19,7 +63,7 @@
         "subtitle": "⏳in just one minute!",
         "buttontext": "Order Your Kit Now",
         "btnlink": "",
-        "color_scheme": ""
+        "reviewcolor": "#ffe1b5"
       }
     }
   },
