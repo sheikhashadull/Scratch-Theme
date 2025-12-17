@@ -9,6 +9,8 @@
  */
 {
   "current": {
+    "logo_width": 160,
+    "page_width": 1200,
     "color_schemes": {
       "scheme_1": {
         "background": "#ffffff",
@@ -16,6 +18,7 @@
         "button": "#000000",
         "button_text": "#ffffff"
       }
-    }
+    },
+    "content_for_index": []
   }
 }
