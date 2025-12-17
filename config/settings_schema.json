@@ -43,32 +43,32 @@
         ]
     },
     {
+        "name": "Colors",
+        "settings": [
+        {
+            "type": "color_scheme",
+            "id": "scheme_1",
+            "label": "Default scheme",
+            "default": "scheme_1"
+        }
+        ]
+    },
+
+    {
         "name": "color_schemes",
         "settings": [
-            {
-                "type": "color",
-                "id": "background",
-                "label": "Background",
-                "default": "#ffffff"
-            },
-            {
-                "type": "color",
-                "id": "text",
-                "label": "Text",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "button",
-                "label": "Button",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "button_text",
-                "label": "Button text",
-                "default": "#ffffff"
-            }
+        {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text",
+            "label": "Text",
+            "default": "#000000"
+        }
         ]
     }
 
