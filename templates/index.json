@@ -9,38 +9,59 @@
  */
 {
   "sections": {
-    "hero_banner_Kq3rW9": {
+    "hero_banner_XQ6rim": {
       "type": "hero-banner",
       "blocks": {
-        "review_7R877b": {
+        "review_8Tejcb": {
           "type": "review",
           "settings": {
             "review": "I’ve never tasted pickles this good outside a deli!",
             "customer": "David.L"
           }
         },
-        "review_tkK64h": {
+        "review_MGXcTR": {
           "type": "review",
           "settings": {
             "review": "I’ve never tasted pickles this good outside a deli!",
             "customer": "David.L"
           }
         },
-        "review_hhCT43": {
+        "review_xakDqb": {
           "type": "review",
           "settings": {
             "review": "I’ve never tasted pickles this good outside a deli!",
             "customer": "David.L"
           }
         },
-        "review_azaU7r": {
+        "review_J4yNUY": {
           "type": "review",
           "settings": {
             "review": "I’ve never tasted pickles this good outside a deli!",
             "customer": "David.L"
           }
         },
-        "review_kneAVH": {
+        "review_id9hDg": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_fwYxCV": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_eP36Fi": {
+          "type": "review",
+          "settings": {
+            "review": "I’ve never tasted pickles this good outside a deli!",
+            "customer": "David.L"
+          }
+        },
+        "review_RkRVh4": {
           "type": "review",
           "settings": {
             "review": "I’ve never tasted pickles this good outside a deli!",
@@ -49,13 +70,16 @@
         }
       },
       "block_order": [
-        "review_7R877b",
-        "review_tkK64h",
-        "review_hhCT43",
-        "review_azaU7r",
-        "review_kneAVH"
+        "review_8Tejcb",
+        "review_MGXcTR",
+        "review_xakDqb",
+        "review_J4yNUY",
+        "review_id9hDg",
+        "review_fwYxCV",
+        "review_eP36Fi",
+        "review_RkRVh4"
       ],
-      "name": "Custom Hero",
+      "name": "Hero Banner",
       "settings": {
         "herobanner": "shopify://shop_images/Group_120_1200x_a39b3472-6053-424d-8a33-ebbd0d344a4e.png",
         "herobanner_phone": "shopify://shop_images/Go_Pickle-13_websize_1_1200x_93cd1fb8-64c5-425b-bdc7-8d5819ce7957.png",
@@ -64,7 +88,7 @@
         "subtitle": "⏳in just one minute!",
         "buttontext": "Order Your Kit Now",
         "btnlink": "",
-        "reviewcolor": "#ffe1b5"
+        "reviewcolor": "#FFE1B5"
       }
     },
     "list_section_MM7frU": {
@@ -156,7 +180,7 @@
     }
   },
   "order": [
-    "hero_banner_Kq3rW9",
+    "hero_banner_XQ6rim",
     "list_section_MM7frU",
     "image_banner_4jz68p"
   ]
