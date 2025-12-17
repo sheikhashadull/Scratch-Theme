@@ -17,9 +17,7 @@
     "color_schemes": {
       "scheme_1": {
         "background": "#ffffff",
-        "text": "#121212",
-        "button": "#000000",
-        "button_text": "#ffffff"
+        "text": "#000000"
       }
     },
     "content_for_index": []
