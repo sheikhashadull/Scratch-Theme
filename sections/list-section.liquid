@@ -1,0 +1,115 @@
+{% liquid
+  assign bg_color = section.settings.bg_color
+  assign title = section.settings.title
+  assign section_padding = section.settings.section_padding
+%}
+<section>
+    <div class="page-width">
+        <h1>{{ title }}</h1>
+        <div class="list-content">
+           <div class="list-content">
+            {% for block in section.blocks %}
+                <div class="list-item" {{ block.shopify_attributes }}>
+                    <h3>
+                        {{ block.settings.list_emoji }}
+                        {{ block.settings.list_title }}
+                    </h3>
+                    <p>{{ block.settings.list_content }}</p>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+        background-color:{{ bg_color }} ;
+        padding: {{ section_padding }}px 0;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 62px;
+        line-height: 96%;
+        margin: 10px 0 40px;
+        text-align: center;
+    }
+    .list-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: -4px;
+    }
+    .list-item {
+        width: 33%;
+        padding: 50px 0;
+    }
+    .list-item h3{
+        margin-bottom: 10px; 
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "List Section",
+        "class": "list_section",
+        "settings": [
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Section Background",
+                "default": "#ffffff"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Hero Title",
+                "default": "Why You'll Love Our Pickling Kit"
+            },
+            {
+                "type": "range",
+                "id": "section_padding",
+                "min": 30,
+                "max": 120,
+                "step": 10,
+                "unit": "px",
+                "label": "Section Padding",
+                "default": 30
+            },
+        
+        ],
+        "blocks": [
+            {
+                "type": "review",
+                "name": "Review",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "list_emoji",
+                        "label": "List Emoji",
+                        "default": "🥪"
+                    },
+                    {
+                        "type": "text",
+                        "id": "list_title",
+                        "label": "List Title",
+                        "default": "Authentic Deli Flavor"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "list_content",
+                        "label": "List Content",
+                        "default": "Get that signature crunch and bold taste at home"
+                    },
+                ]
+            },
+        ],
+        "presets": [
+            {
+                "name": "List Section"
+            }
+        ]
+    }
+{% endschema %}

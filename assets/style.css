@@ -12,3 +12,7 @@
   max-width: var(--page-width);
   margin: auto;
 }
+
+h1, h2{
+        font-family: "Bebas Neue", sans-serif;
+}
