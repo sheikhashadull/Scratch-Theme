@@ -136,12 +136,15 @@
     }
 @media (max-width: 575px) {
     .herobanner-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         width: 375px;
         text-align: center;
-        margin: 50px auto 0;
     }
     .herobanner-content h1 {
-        order: 1;
+        order: -1;
         margin: 0;
     }
     .herobanner-content p{
