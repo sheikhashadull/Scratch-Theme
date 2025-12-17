@@ -20,7 +20,7 @@
             <img src="{{ logo | image_url }}" width="auto" height="auto" alt="" class="brand_logo">
             <div class="herobanner-content">
                 <p>{{ subtitle }}</p>
-                <h1 class="title">{{ title }}</h1>
+                <h1>{{ title }}</h1>
                 {% if buttontext != blank %}
                     <a href="{{ btnlink }}">{{ buttontext }}</a>
                 {% endif %}
@@ -88,6 +88,7 @@
         font-size: 62px;
         line-height: 100%;
         margin: 10px 0 40px;
+        text-align: left;
     }
     .herobanner-content a {
         background-color: #FF8E09;
