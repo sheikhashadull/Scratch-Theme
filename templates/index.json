@@ -69,6 +69,73 @@
     },
     "list_section_MM7frU": {
       "type": "list-section",
+      "blocks": {
+        "review_94wNgb": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        },
+        "review_CF9Ywd": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        },
+        "review_yRAbiy": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        },
+        "review_VRJXhF": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        },
+        "review_R9mCY7": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        },
+        "review_VtxUyf": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        },
+        "review_XLrqcw": {
+          "type": "review",
+          "settings": {
+            "list_emoji": "🥪",
+            "list_title": "Authentic Deli Flavor",
+            "list_content": "Get that signature crunch and bold taste at home"
+          }
+        }
+      },
+      "block_order": [
+        "review_94wNgb",
+        "review_CF9Ywd",
+        "review_yRAbiy",
+        "review_VRJXhF",
+        "review_R9mCY7",
+        "review_VtxUyf",
+        "review_XLrqcw"
+      ],
       "name": "List Section",
       "settings": {
         "bg_color": "#ffffff",
