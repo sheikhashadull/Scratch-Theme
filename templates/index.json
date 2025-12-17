@@ -66,9 +66,19 @@
         "btnlink": "",
         "reviewcolor": "#ffe1b5"
       }
+    },
+    "list_section_MM7frU": {
+      "type": "list-section",
+      "name": "List Section",
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "Why You'll Love Our Pickling Kit",
+        "section_padding": 30
+      }
     }
   },
   "order": [
-    "hero_banner_Kq3rW9"
+    "hero_banner_Kq3rW9",
+    "list_section_MM7frU"
   ]
 }
