@@ -1,0 +1,32 @@
+{% liquid
+  assign title = section.settings.title
+%}
+
+<div class="">
+    <div class="page-width">
+        <div class="multicolumn">
+            <h1 class="title">{{ title }}</h1>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Multiple Column",
+        "class": "multicolumn",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Hero Title",
+                "default": "Our Winning Organic Spice Blends"
+            },
+        
+        ],
+        "presets": [
+            {
+                "name": "Multiple Column"
+            }
+        ]
+    }
+{% endschema %}
