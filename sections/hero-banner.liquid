@@ -70,7 +70,8 @@
 <style>
     .banner{
         position: relative;
-        width: 100%;
+        max-width: 100%;
+        
     }
     .herobanner{
         position: absolute;
@@ -130,17 +131,15 @@
         display: block;
     }
     .herobanner_img_phone{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+        display: none;
     }
 @media (max-width: 575px) {
     .herobanner-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        width: 375px;
+        justify-content: space-between;
+        width: 400px;
         text-align: center;
     }
     .herobanner-content h1 {
