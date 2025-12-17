@@ -13,31 +13,39 @@
 %}
 
 <div class="banner">
-    <img class="herobanner_img" src="{{ herobanner | image_url }}" width="100%" height="auto" alt="">
-    <img class="herobanner_img_phone" src="{{ herobanner_phone | image_url }}" width="100%" height="auto" alt="">
+    {% if herobanner != blank %}
+        <img class="herobanner_img" src="{{ herobanner | image_url }}" width="100%" height="auto" alt="">
+    {% endif %}
+
+    {% if herobanner_phone != blank %}
+        <img class="herobanner_img_phone" src="{{ herobanner_phone | image_url }}" width="100%" height="auto" alt="">
+    {% endif %}
+
     <div class="herobanner">
         <div class="page-width">
             <img src="{{ logo | image_url }}" width="auto" height="auto" alt="" class="brand_logo">
             <div class="herobanner-content">
                 <p>{{ subtitle }}</p>
                 <h1>{{ title }}</h1>
-                {% if buttontext != blank %}
-                    <a href="{{ btnlink }}">{{ buttontext }}</a>
-                {% endif %}
+                <div class="btn">
+                    {% if buttontext != blank %}
+                        <a href="{{ btnlink }}">{{ buttontext }}</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
-        <div class="reviewSection">
-            <div class="page-width">
-                <div class="review-content">
-                    <div class="swiper review_slider">
-                        <div class="swiper-wrapper">
-                            {% for block in section.blocks %}
-                                <div class="flex swiper-slide">
-                                    {% render 'icons' %} 
-                                    <p>{{ block.settings.review }} <span>{{ block.settings.customer }}</span></p>                 
-                                </div>
-                            {% endfor %}
-                        </div>
+    </div>
+    <div class="reviewSection">
+        <div class="page-width">
+            <div class="review-content">
+                <div class="swiper review_slider">
+                    <div class="swiper-wrapper">
+                        {% for block in section.blocks %}
+                            <div class="flex swiper-slide">
+                                {% render 'icons' %} 
+                                <p>{{ block.settings.review }} <span>{{ block.settings.customer }}</span></p>                 
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -90,19 +98,10 @@
         margin: 10px 0 40px;
         text-align: left;
     }
-    .herobanner-content a {
-        background-color: #FF8E09;
-        padding: 13px 30px;
-        display: inline-block;
-        border-radius: 50px;
-        color: white;
-    }
     .reviewSection{
         background-color: {{ reviewcolor }} ;
-        padding: 40px 0;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        padding: 50px 0;
+
         width: 100%;
     }
     .review-content {

@@ -16,3 +16,11 @@
 h1, h2{
         font-family: "Bebas Neue", sans-serif;
 }
+
+.btn a{
+        background-color: #FF8E09;
+        padding: 13px 30px;
+        display: inline-block;
+        border-radius: 50px;
+        color: white;
+    }
