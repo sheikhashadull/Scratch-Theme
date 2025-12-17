@@ -53,23 +53,17 @@
         }
         ]
     },
-
     {
-        "name": "color_schemes",
-        "settings": [
+    "name": "Colors",
+    "settings": [
         {
-            "type": "color",
-            "id": "background",
-            "label": "Background",
-            "default": "#ffffff"
-        },
-        {
-            "type": "color",
-            "id": "text",
-            "label": "Text",
-            "default": "#000000"
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Default color scheme",
+        "default": "scheme_1"
         }
-        ]
+    ]
     }
+
 
 ]
