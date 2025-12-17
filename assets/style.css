@@ -25,4 +25,8 @@ h1, h2{
         display: inline-block;
         border-radius: 50px;
         color: white;
-    }
+}
+.color-scheme_1 {
+  background: var(--bg);
+  color: var(--text);
+}
