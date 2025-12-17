@@ -1,5 +1,6 @@
 {% liquid
   assign herobanner = section.settings.herobanner
+  assign herobanner_phone = section.settings.herobanner_phone
   assign logo = section.settings.logo
 
   assign title = section.settings.title
@@ -12,13 +13,14 @@
 %}
 
 <div class="banner">
-    <img src="{{ herobanner | image_url }}" width="100%" height="auto" alt="">
+    <img class="herobanner_img" src="{{ herobanner | image_url }}" width="100%" height="auto" alt="">
+    <img class="herobanner_img_phone" src="{{ herobanner_phone | image_url }}" width="100%" height="100%" alt="">
     <div class="herobanner">
         <div class="page-width">
-            <img src="{{ logo | image_url }}" width="auto" height="auto" alt="">
+            <img src="{{ logo | image_url }}" width="auto" height="auto" alt="" class="brand_logo">
             <div class="herobanner-content">
                 <p>{{ subtitle }}</p>
-                <h1>{{ title }}</h1>
+                <h1 class="title">{{ title }}</h1>
                 {% if buttontext != blank %}
                     <a href="{{ btnlink }}">{{ buttontext }}</a>
                 {% endif %}
@@ -45,8 +47,23 @@
 
 <script>
     var swiper = new Swiper(".review_slider", {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 100,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+        },
+      },
     });
 </script>
 
@@ -54,6 +71,7 @@
     .banner{
         position: relative;
         width: 100%;
+        
     }
     .herobanner{
         position: absolute;
@@ -90,7 +108,7 @@
     }
     .review-content {
         display: flex;
-        gap: 15%;
+        gap: 25%;
     }
 
     .flex {
@@ -99,11 +117,9 @@
         flex-direction: column;
         text-align: center;
         gap: 10px;
-        background-color: #ffffff38;
-        padding: 40px;
     }
     .flex p {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
         line-height: 26px;
         color: rgb(147 79 41);
@@ -112,6 +128,42 @@
     .flex span {
         font-weight: 400;
     }
+    .herobanner_img{
+        display: block;
+    }
+    .herobanner_img_phone{
+        display: none;
+    }
+@media (max-width: 575px) {
+    .herobanner-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 400px;
+        text-align: center;
+    }
+    .herobanner-content h1 {
+        order: -1;
+        margin: 0;
+    }
+    .herobanner-content p{
+        margin: 20px 0;
+    }
+    .herobanner_img_phone{
+        display: block;
+    }
+    .herobanner_img{
+        display: none;
+    }
+    .brand_logo{
+    max-width: 150px ;
+    }
+    .flex p {
+        padding: 0 20px;
+    }
+    
+}
 </style>
 
 {% schema %}
@@ -123,6 +175,11 @@
                 "type": "image_picker",
                 "id": "herobanner",
                 "label": "Hero Banner"
+            },
+            {
+                "type": "image_picker",
+                "id": "herobanner_phone",
+                "label": "Hero Banner for Phone"
             },
             {
                 "type": "image_picker",
