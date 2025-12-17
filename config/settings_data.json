@@ -11,6 +11,7 @@
   "current": {
     "logo_width": 160,
     "page_width": 1200,
+    "background": "#9f3434",
     "color_schemes": {
       "scheme_1": {
         "background": "#ffffff",
