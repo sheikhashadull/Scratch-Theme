@@ -45,17 +45,6 @@
     {
         "name": "Colors",
         "settings": [
-        {
-            "type": "color_scheme",
-            "id": "scheme_1",
-            "label": "Default scheme",
-            "default": "scheme_1"
-        }
-        ]
-    },
-    {
-        "name": "Colors",
-        "settings": [
             {
             "type": "color_scheme",
             "id": "color_scheme",
