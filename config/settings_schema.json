@@ -61,10 +61,6 @@
         "name": "Color schemes",
         "settings": [
             {
-                "type": "header",
-                "content": "Scheme 1"
-            },
-            {
                 "type": "color",
                 "id": "scheme_1_background",
                 "label": "Background",
