@@ -181,42 +181,10 @@
     "multicolumn_KpwQxg": {
       "type": "multicolumn",
       "blocks": {
-        "block_R7Xz4P": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_134_500x_80e71cd0-66ba-4813-9572-bc7e3e4f4ea4.png",
-            "producttitle": "The Real Dill",
-            "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
-          }
-        },
         "block_RYNVm8": {
           "type": "block",
           "settings": {
             "productimage": "shopify://shop_images/Group_135_500x_841bbdff-2dc4-4d98-9037-70436e72cdb0.png",
-            "producttitle": "The Real Dill",
-            "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
-          }
-        },
-        "block_MnQeYF": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_133_500x_0e91f6fb-f972-494c-b19b-10273ed08f27.png",
-            "producttitle": "The Real Dill",
-            "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
-          }
-        },
-        "block_tzAPTh": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_133_500x_0e91f6fb-f972-494c-b19b-10273ed08f27.png",
-            "producttitle": "The Real Dill",
-            "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
-          }
-        },
-        "block_VhN3KH": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_134_500x_80e71cd0-66ba-4813-9572-bc7e3e4f4ea4.png",
             "producttitle": "The Real Dill",
             "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
           }
@@ -231,11 +199,7 @@
         }
       },
       "block_order": [
-        "block_R7Xz4P",
         "block_RYNVm8",
-        "block_MnQeYF",
-        "block_tzAPTh",
-        "block_VhN3KH",
         "block_n4Yhmr"
       ],
       "name": "Multiple Column",
