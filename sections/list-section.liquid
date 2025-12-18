@@ -6,7 +6,7 @@
   assign buttontext = section.settings.buttontext
   assign btnlink = section.settings.btnlink
 %}
-<section class="bg_color">
+<div class="list-bg">
     <div class="page-width">
         <h1 class="heading">{{ title }}</h1>
         <div class="list-content">
@@ -38,10 +38,10 @@
             {% endif %}
         </div>
     </div>
-</section>
+</div>
 
 <style>
-    section{
+    .list-bg{
         background-color:{{ bg_color }};
         padding: {{ section_padding }}px 0;
     }
