@@ -9,26 +9,27 @@
         <div class="multicolumn">
             <h1 class="milti-title">{{ title }}</h1>
             <div class="multicolumn-row">
-                {% for block in section.blocks %}
-                    {% liquid
-                        assign productimage = block.settings.productimage
-                        assign producttitle = block.settings.producttitle
-                        assign productdescription = block.settings.productdescription
-                    %}
-                    <div class="munlicolumn-item" {{ block.shopify_attributes }}>
-                        <div class="swiper review_slider">
-                            <div class="swiper-wrapper">
-                                <div class="product-img">
-                                    <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
-                                </div>
-                                <div class="product-title">
-                                    <h3>{{ producttitle }}</h3>
-                                    <p>{{ productdescription }}</p>
-                                </div>
+                <div class="swiper review_slider">
+                    <div class="swiper-wrapper">
+                        {% for block in section.blocks %}
+                            {% liquid
+                                assign productimage = block.settings.productimage
+                                assign producttitle = block.settings.producttitle
+                                assign productdescription = block.settings.productdescription
+                            %}
+                            <div class="munlicolumn-item" {{ block.shopify_attributes }}>
+                                
+                                        <div class="product-img">
+                                            <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
+                                        </div>
+                                        <div class="product-title">
+                                            <h3>{{ producttitle }}</h3>
+                                            <p>{{ productdescription }}</p>
+                                        </div>
                             </div>
+                        {% endfor %}
+                  </div>
                         </div>
-                    </div>
-                {% endfor %}
             </div>
         </div>
     </div>
