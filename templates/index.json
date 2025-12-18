@@ -169,19 +169,19 @@
         "btnlink": ""
       }
     },
-    "image_banner_CexmDK": {
+    "image_banner_whDkdz": {
       "type": "image-banner",
       "name": "Image Banner",
       "settings": {
         "herobanner": "shopify://shop_images/Frame_109_1200x_960cbbad-e20a-4fb3-820c-e6d61186d9e3.webp",
         "herobanner_phone": "shopify://shop_images/Frame_108_1_1200x_30940ba0-9b17-41ae-a71e-fc1e2aeb6ba2.webp",
-        "imagetitle": "Our Winning Organic Spice Blends"
+        "imagetitle": "What's In The Package"
       }
     }
   },
   "order": [
     "hero_banner_XQ6rim",
     "list_section_MM7frU",
-    "image_banner_CexmDK"
+    "image_banner_whDkdz"
   ]
 }
