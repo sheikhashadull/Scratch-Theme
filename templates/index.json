@@ -88,7 +88,7 @@
         "subtitle": "⏳in just one minute!",
         "buttontext": "Order Your Kit Now",
         "btnlink": "",
-        "reviewcolor": "#FFE1B5"
+        "reviewcolor": "#ffe1b5"
       }
     },
     "list_section_MM7frU": {
@@ -164,7 +164,7 @@
       "settings": {
         "bg_color": "#fffcf7",
         "title": "Why You'll Love Our Pickling Kit",
-        "section_padding": 30,
+        "section_padding": 80,
         "buttontext": "Order Your Kit Now",
         "btnlink": ""
       }
