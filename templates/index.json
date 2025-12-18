@@ -166,7 +166,8 @@
         "title": "Why You'll Love Our Pickling Kit",
         "section_padding": 70,
         "buttontext": "Order Your Kit Now",
-        "btnlink": ""
+        "btnlink": "",
+        "color_scheme": "scheme-1"
       }
     },
     "image_banner_whDkdz": {
@@ -181,14 +182,6 @@
     "multicolumn_KpwQxg": {
       "type": "multicolumn",
       "blocks": {
-        "block_RYNVm8": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_135_500x_841bbdff-2dc4-4d98-9037-70436e72cdb0.png",
-            "producttitle": "The Real Dill",
-            "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
-          }
-        },
         "block_n4Yhmr": {
           "type": "block",
           "settings": {
@@ -199,7 +192,6 @@
         }
       },
       "block_order": [
-        "block_RYNVm8",
         "block_n4Yhmr"
       ],
       "name": "Multiple Column",
