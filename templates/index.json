@@ -215,12 +215,20 @@
         "section_padding": 70,
         "title": "Our Winning Organic Spice Blends"
       }
+    },
+    "check_GQa6z6": {
+      "type": "check",
+      "name": "Header",
+      "settings": {
+        "header_color_scheme": ""
+      }
     }
   },
   "order": [
     "hero_banner_XQ6rim",
     "list_section_MM7frU",
     "image_banner_whDkdz",
-    "multicolumn_KpwQxg"
+    "multicolumn_KpwQxg",
+    "check_GQa6z6"
   ]
 }
