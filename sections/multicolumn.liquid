@@ -34,6 +34,27 @@
     </div>
 </div>
 
+<script>
+    var swiper = new Swiper("munlicolumn-item", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 100,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+        },
+      },
+    });
+</script>
 
 
 <style>
