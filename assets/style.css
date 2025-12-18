@@ -11,6 +11,7 @@
 .page-width {
   max-width: var(--page-width);
   margin: auto;
+  width: 100%;
 }
 
 h1, h2{
