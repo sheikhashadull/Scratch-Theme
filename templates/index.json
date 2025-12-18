@@ -193,8 +193,8 @@
           "type": "block",
           "settings": {
             "productimage": "shopify://shop_images/Group_134_500x_80e71cd0-66ba-4813-9572-bc7e3e4f4ea4.png",
-            "producttitle": "The Real Dill",
-            "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
+            "producttitle": "Garlic Bites Back",
+            "productdescription": "For those who like their pickles loud—Garlic Bites Back brings the punch with savory depth and just enough spice to keep you hooked."
           }
         },
         "block_gGNLQ8": {
@@ -213,7 +213,7 @@
       ],
       "name": "Multiple Column",
       "settings": {
-        "bg_color": "#FFE1B5",
+        "bg_color": "#ffe1b5",
         "section_padding": 30,
         "title": "Our Winning Organic Spice Blends"
       }
