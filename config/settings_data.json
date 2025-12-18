@@ -14,12 +14,6 @@
     "background": "#de2323",
     "text": "#df3636",
     "button": "#991d1d",
-    "color_schemes": {
-      "scheme_1": {
-        "background": "#ffffff",
-        "text": "#000000"
-      }
-    },
     "content_for_index": []
   }
 }
