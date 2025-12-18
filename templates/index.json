@@ -181,35 +181,17 @@
     "multicolumn_KpwQxg": {
       "type": "multicolumn",
       "blocks": {
-        "block_T7xxgW": {
+        "block_RYNVm8": {
           "type": "block",
           "settings": {
             "productimage": "shopify://shop_images/Group_135_500x_841bbdff-2dc4-4d98-9037-70436e72cdb0.png",
             "producttitle": "The Real Dill",
             "productdescription": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar."
           }
-        },
-        "block_nxmWTN": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_134_500x_80e71cd0-66ba-4813-9572-bc7e3e4f4ea4.png",
-            "producttitle": "Garlic Bites Back",
-            "productdescription": "For those who like their pickles loud—Garlic Bites Back brings the punch with savory depth and just enough spice to keep you hooked."
-          }
-        },
-        "block_gGNLQ8": {
-          "type": "block",
-          "settings": {
-            "productimage": "shopify://shop_images/Group_133_500x_0e91f6fb-f972-494c-b19b-10273ed08f27.png",
-            "producttitle": "Turmeric Twist",
-            "productdescription": "More than just a pretty color—this blend adds anti-inflammatory flair and a bold twist on the traditional pickle."
-          }
         }
       },
       "block_order": [
-        "block_T7xxgW",
-        "block_nxmWTN",
-        "block_gGNLQ8"
+        "block_RYNVm8"
       ],
       "name": "Multiple Column",
       "settings": {
