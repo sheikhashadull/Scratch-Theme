@@ -14,9 +14,9 @@
         <img class="herobanner_img_phone" src="{{ herobanner_phone | image_url }}" width="100%" height="auto" alt="">
     {% endif %}
 
-    <div class="herobanner">
+    <div class="imagebanner">
         <div class="page-width">
-            <div class="herobanner-content">
+            <div class="imagebanner-content">
                 <h1 class="title">{{ title }}</h1>
             </div>
         </div>
@@ -33,7 +33,7 @@
         width: 100%;
         height: 100%;
     }
-    .herobanner-content{
+    .imagebanner-content{
         width: 100%;
     }
     .title{
@@ -41,7 +41,7 @@
         text-align: center;
     }
 @media (max-width: 575px) {
-    .herobanner-content h1 {
+    .imagebanner-content h1 {
         font-size: 40px;
     }
 }
@@ -54,7 +54,7 @@
         "settings": [
             {
                 "type": "image_picker",
-                "id": "herobanner",
+                "id": "imagebanner",
                 "label": "Image Banner"
             },
             {
