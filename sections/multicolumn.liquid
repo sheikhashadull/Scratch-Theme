@@ -4,8 +4,7 @@
 
   assign title = section.settings.title
 %}
-
-<section>
+<div class="multi-bg">
     <div class="page-width">
         <div class="multicolumn">
             <h1 class="title">{{ title }}</h1>
@@ -29,10 +28,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <style>
-    section{
+    .multi-bg{
         background-color: {{ bg_color }};
         padding: {{ section_padding }}px 0;
     }
