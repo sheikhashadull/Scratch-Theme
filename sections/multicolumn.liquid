@@ -1,16 +1,65 @@
 {% liquid
-  assign title = section.settings.title
-  assign color_scheme = section.settings.color_scheme
+  assign section_padding = section.settings.section_padding
+  assign bg_color = section.settings.bg_color
 
+  assign title = section.settings.title
 %}
 
-<div class="">
+<section>
     <div class="page-width">
         <div class="multicolumn">
             <h1 class="title">{{ title }}</h1>
+            <div class="multicolumn-row">
+                {% for block in section.blocks %}
+                    {% liquid
+                        assign productimage = block.settings.productimage
+                        assign producttitle = block.settings.producttitle
+                        assign productdescription = block.settings.productdescription
+                    %}
+                    <div class="munlicolumn-item">
+                        <div class="product-img">
+                            <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
+                        </div>
+                        <div class="product-title">
+                            <h3>{{ producttitle }}</h3>
+                            <p>{{ productdescription }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<style>
+    section{
+        background-color: {{ bg_color }};
+        padding: {{ section_padding }}px 0;
+    }
+    .title{
+        text-align: center;
+    }
+    .multicolumn-row {
+        display: flex;
+        gap: 15%;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .product-img img{
+        width: 100%;
+    }
+    .munlicolumn-item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .product-title h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    }
+</style>
 
 {% schema %}
     {
@@ -18,10 +67,51 @@
         "class": "multicolumn",
         "settings": [
             {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Section Background",
+                "default": "#FFE1B5"
+            },
+            {
+                "type": "range",
+                "id": "section_padding",
+                "min": 30,
+                "max": 120,
+                "step": 10,
+                "unit": "px",
+                "label": "Section Padding",
+                "default": 30
+            },
+            {
                 "type": "text",
                 "id": "title",
-                "label": "Hero Title",
+                "label": "Section Title",
                 "default": "Our Winning Organic Spice Blends"
+            },
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "Block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "productimage",
+                        "label": "Product Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "producttitle",
+                        "label": "Product Title",
+                        "default": "The Real Dill"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "productdescription",
+                        "label": "Product Description",
+                        "default": "Inspired by the pickles you grew up stealing from the jar, The Real Dill delivers a balanced, briny crunch that’s satisfyingly familiar.",
+                    },
+                ]
             },
         ],
         "presets": [
