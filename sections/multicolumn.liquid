@@ -16,7 +16,7 @@
                         assign producttitle = block.settings.producttitle
                         assign productdescription = block.settings.productdescription
                     %}
-                    <div class="munlicolumn-item {{ block.shopify_attributes }}">
+                    <div class="munlicolumn-item" {{ block.shopify_attributes }}>
                         <div class="product-img">
                             <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
                         </div>
