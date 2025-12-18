@@ -159,85 +159,85 @@
     }
 }
 </style>
-
 {% schema %}
+{
+  "name": "Hero Banner",
+  "class": "hero_banner",
+  "settings": [
     {
-        "name": "Hero Banner",
-        "class": "hero_banner",
-        "settings": [
-            {
-                "type": "image_picker",
-                "id": "herobanner",
-                "label": "Hero Banner"
-            },
-            {
-                "type": "image_picker",
-                "id": "herobanner_phone",
-                "label": "Hero Banner for Phone"
-            },
-            {
-                "type": "image_picker",
-                "id": "logo",
-                "label": "Logo"
-            },
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Hero Title",
-                "default": "Make Deli-Grade Pickles at Home"
-            },
-            {
-                "type": "textarea",
-                "id": "subtitle",
-                "label": "Sub Title",
-                "default": "⏳in just one minute!"
-            },
-            {
-                "type": "text",
-                "id": "buttontext",
-                "label": "Button Text",
-                "default": "Order Your Kit Now"
-            },
-            {
-                "type": "url",
-                "id": "btnlink",
-                "label": "Button Link"
-            },
-            {
-                "type": "header",
-                "content": "Section Style",
-            },
-            {
-                "type": "color",
-                "id": "reviewcolor",
-                "label": "Review Bg Color",
-                "default": "#FFE1B5"
-            }
-        ],
-        "blocks": [
-            {
-                "type": "review",
-                "name": "Review",
-                "settings": [
-                    {
-                        "type": "textarea",
-                        "id": "review",
-                        "label": "Review",
-                        "default": "I’ve never tasted pickles this good outside a deli!"
-                    },
-                    {
-                        "type": "text",
-                        "id": "customer",
-                        "label": "Customer Name",
-                        "default": "David.L"
-                    },
-                ]
-            },
-        ],
-        "presets": [
-            {
-                "name": "Hero Banner"
-            }
-        ]
+      "type": "image_picker",
+      "id": "herobanner",
+      "label": "Hero Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "herobanner_phone",
+      "label": "Hero Banner for Phone"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Hero Title",
+      "default": "Make Deli-Grade Pickles at Home"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Sub Title",
+      "default": "⏳in just one minute!"
+    },
+    {
+      "type": "text",
+      "id": "buttontext",
+      "label": "Button Text",
+      "default": "Order Your Kit Now"
+    },
+    {
+      "type": "url",
+      "id": "btnlink",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Section Style"
+    },
+    {
+      "type": "color",
+      "id": "reviewcolor",
+      "label": "Review Bg Color",
+      "default": "#FFE1B5"
     }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review",
+          "default": "I’ve never tasted pickles this good outside a deli!"
+        },
+        {
+          "type": "text",
+          "id": "customer",
+          "label": "Customer Name",
+          "default": "David.L"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
 {% endschema %}
+
