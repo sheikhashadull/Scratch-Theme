@@ -4,11 +4,10 @@
 
   assign title = section.settings.title
 %}
-
-<section>
+<div class="multi-bg">
     <div class="page-width">
         <div class="multicolumn">
-            <h1 class="title">{{ title }}</h1>
+            <h1 class="milti-title">{{ title }}</h1>
             <div class="multicolumn-row">
                 {% for block in section.blocks %}
                     {% liquid
@@ -29,14 +28,16 @@
             </div>
         </div>
     </div>
-</section>
+</div>
+
+
 
 <style>
-    section{
+    .multi-bg{
         background-color: {{ bg_color }};
         padding: {{ section_padding }}px 0;
     }
-    .title{
+    .milti-title{
         text-align: center;
     }
     .multicolumn-row {
