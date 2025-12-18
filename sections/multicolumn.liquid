@@ -9,14 +9,14 @@
     <div class="page-width">
         <div class="multicolumn">
             <h1 class="title">{{ title }}</h1>
-            <div class="multicolumn-row {{ block.shopify_attributes }}">
+            <div class="multicolumn-row">
                 {% for block in section.blocks %}
                     {% liquid
                         assign productimage = block.settings.productimage
                         assign producttitle = block.settings.producttitle
                         assign productdescription = block.settings.productdescription
                     %}
-                    <div class="munlicolumn-item">
+                    <div class="munlicolumn-item {{ block.shopify_attributes }}">
                         <div class="product-img">
                             <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
                         </div>
