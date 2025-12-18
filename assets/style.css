@@ -26,3 +26,17 @@ h1, h2{
         border-radius: 50px;
         color: white;
 }
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-background); /* অথবা --color-text */
+}
+
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
