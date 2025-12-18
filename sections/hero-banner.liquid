@@ -10,6 +10,10 @@
   assign btnlink = section.settings.btnlink
 
   assign reviewcolor = section.settings.reviewcolor
+
+  assign color_scheme = section.settings.color_scheme
+
+
 %}
 
 <div class="banner">
@@ -21,7 +25,7 @@
         <img class="herobanner_img_phone" src="{{ herobanner_phone | image_url }}" width="100%" height="auto" alt="">
     {% endif %}
 
-    <div class="herobanner">
+    <div class="herobanner color-{{ color_scheme }}">
         <div class="page-width">
             <img src="{{ logo | image_url }}" width="auto" height="auto" alt="" class="brand_logo">
             <div class="herobanner-content">
@@ -90,12 +94,8 @@
         margin-top: 80px;
     }
     .herobanner-content h1 {
-        font-weight: 400;
-        font-size: 62px;
-        line-height: 100%;
         margin: 10px 0 40px;
         text-align: left;
-        
     }
     .reviewSection{
         background-color: {{ reviewcolor }} ;
@@ -216,6 +216,13 @@
                 "label": "Review Bg Color",
                 "default": "#FFE1B5"
             },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color scheme",
+                "default": "scheme_1"
+            }
+
         ],
         "blocks": [
             {
