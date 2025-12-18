@@ -6,9 +6,8 @@
   assign buttontext = section.settings.buttontext
   assign btnlink = section.settings.btnlink
   
-  assign color_scheme = section.settings.color_scheme
 %}
-<div class="list-bg {{ color_scheme }}">
+<div class="list-bg color-{{ section.settings.color_scheme }}">
     <div class="page-width">
         <h1 class="heading">{{ title }}</h1>
         <div class="list-content">
