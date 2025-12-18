@@ -14,17 +14,6 @@
     "background": "#de2323",
     "text": "#df3636",
     "button": "#991d1d",
-    "colors": "scheme-1",
-    "scheme_1_background": "#ffffff",
-    "scheme_1_text": "#000000",
-    "scheme_1_primary": "#1a1b18",
-    "scheme_1_secondary": "#364132",
-    "header": {
-      "type": "header",
-      "settings": {
-        "header_color_scheme": "scheme-1"
-      }
-    },
     "content_for_index": []
   }
 }
