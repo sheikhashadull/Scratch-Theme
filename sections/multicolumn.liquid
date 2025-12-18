@@ -9,7 +9,7 @@
     <div class="page-width">
         <div class="multicolumn">
             <h1 class="title">{{ title }}</h1>
-            <div class="multicolumn-row">
+            <div class="multicolumn-row {{ block.shopify_attributes }}">
                 {% for block in section.blocks %}
                     {% liquid
                         assign productimage = block.settings.productimage
