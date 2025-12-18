@@ -18,18 +18,17 @@
                                 assign productdescription = block.settings.productdescription
                             %}
                             <div class="munlicolumn-item" {{ block.shopify_attributes }}>
-                                
-                                        <div class="product-img">
-                                            <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
-                                        </div>
-                                        <div class="product-title">
-                                            <h3>{{ producttitle }}</h3>
-                                            <p>{{ productdescription }}</p>
-                                        </div>
+                                <div class="product-img">
+                                    <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
+                                </div>
+                                <div class="product-title">
+                                    <h3>{{ producttitle }}</h3>
+                                    <p>{{ productdescription }}</p>
+                                </div>
                             </div>
                         {% endfor %}
-                  </div>
-                        </div>
+                     </div>
+                </div>
             </div>
         </div>
     </div>
