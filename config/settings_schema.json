@@ -43,21 +43,6 @@
         ]
     },
     {
-        "name": "Colors",
-        "settings": [
-            {
-                "type": "header",
-                "content": "Theme colors"
-            },
-            {
-                "type": "color_scheme",
-                "id": "colors",
-                "label": "Color scheme",
-                "default": "scheme-1"
-            }
-        ]
-    },
-    {
         "name": "Color schemes",
         "settings": [
             {
