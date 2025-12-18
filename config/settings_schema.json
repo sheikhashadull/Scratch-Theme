@@ -42,4 +42,80 @@
             }
         ]
     },
+    {
+        "name": "Colors",
+        "settings": [
+        {
+            "type": "header",
+            "content": "Theme colors"
+        },
+        {
+            "type": "color_scheme",
+            "id": "colors",
+            "label": "Color scheme",
+            "default": "scheme-1"
+        }
+        ]
+    },
+    {
+        "name": "Color schemes",
+        "settings": [
+        {
+            "type": "header",
+            "content": "Scheme 1"
+        },
+        {
+            "type": "color",
+            "id": "scheme_1_background",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "scheme_1_text",
+            "label": "Text",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "scheme_1_primary",
+            "label": "Primary color",
+            "default": "#1a1b18"
+        },
+        {
+            "type": "color",
+            "id": "scheme_1_secondary",
+            "label": "Secondary color",
+            "default": "#364132"
+        },
+        {
+            "type": "header",
+            "content": "Scheme 2"
+        },
+        {
+            "type": "color",
+            "id": "scheme_2_background",
+            "label": "Background",
+            "default": "#f8f8f8"
+        },
+        {
+            "type": "color",
+            "id": "scheme_2_text",
+            "label": "Text",
+            "default": "#222222"
+        },
+        {
+            "type": "color",
+            "id": "scheme_2_primary",
+            "label": "Primary color",
+            "default": "#4a5a6a"
+        },
+        {
+            "type": "color",
+            "id": "scheme_2_secondary",
+            "label": "Secondary color",
+            "default": "#6c7c8c"
+        }
+        ]
+    }
 ]
