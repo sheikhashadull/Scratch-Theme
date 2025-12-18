@@ -19,14 +19,12 @@
                         <div class="swiper munlicolumn_slider">
                             <div class="swiper-wrapper">
                                 {% for block in section.blocks %}
-                                    <div class="swiper-slide">
-                                        <div class="product-img">
-                                            <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
-                                        </div>
-                                        <div class="product-title">
-                                            <h3>{{ producttitle }}</h3>
-                                            <p>{{ productdescription }}</p>
-                                        </div>
+                                    <div class="product-img">
+                                        <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
+                                    </div>
+                                    <div class="product-title">
+                                        <h3>{{ producttitle }}</h3>
+                                        <p>{{ productdescription }}</p>
                                     </div>
                                 {% endfor %}
                             </div>
