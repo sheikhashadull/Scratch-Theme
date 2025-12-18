@@ -16,12 +16,20 @@
                         assign productdescription = block.settings.productdescription
                     %}
                     <div class="munlicolumn-item" {{ block.shopify_attributes }}>
-                        <div class="product-img">
-                            <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
-                        </div>
-                        <div class="product-title">
-                            <h3>{{ producttitle }}</h3>
-                            <p>{{ productdescription }}</p>
+                        <div class="swiper munlicolumn_slider">
+                            <div class="swiper-wrapper">
+                                {% for block in section.blocks %}
+                                    <div class="flex swiper-slide">
+                                        <div class="product-img">
+                                            <img src="{{ productimage | image_url }}" alt="" width="auto" height="auto">
+                                        </div>
+                                        <div class="product-title">
+                                            <h3>{{ producttitle }}</h3>
+                                            <p>{{ productdescription }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
@@ -29,6 +37,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    var swiper = new Swiper(".munlicolumn_slider", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 100,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+        },
+      },
+    });
+</script>
 
 <style>
     .multi-bg{
