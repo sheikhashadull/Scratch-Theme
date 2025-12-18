@@ -2,7 +2,7 @@
   assign herobanner = section.settings.herobanner
   assign herobanner_phone = section.settings.herobanner_phone
 
-  assign title = section.settings.title
+  assign imagetitle = section.settings.imagetitle
 %}
 
 <div class="banner">
@@ -17,7 +17,7 @@
     <div class="imagebanner">
         <div class="page-width">
             <div class="imagebanner-content">
-                <h1 class="title">{{ title }}</h1>
+                <h1 class="title">{{ imagetitle }}</h1>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
     .banner{
         position: relative;
     }
-    .herobanner{
+    .imagebanner{
         position: absolute;
         top: 0;
         left: 0;
