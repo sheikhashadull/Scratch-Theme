@@ -19,6 +19,12 @@
     "scheme_1_text": "#000000",
     "scheme_1_primary": "#1a1b18",
     "scheme_1_secondary": "#364132",
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_color_scheme": "scheme-1"
+      }
+    },
     "content_for_index": []
   }
 }
