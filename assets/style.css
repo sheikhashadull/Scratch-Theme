@@ -26,12 +26,3 @@ h1, h2{
         border-radius: 50px;
         color: white;
 }
-.custom-section {
-  background: rgb(var(--color-background));
-  color: rgb(var(--color-text));
-}
-
-.custom-section .btn-primary {
-  background: rgb(var(--color-button));
-  color: rgb(var(--color-button-label));
-}
