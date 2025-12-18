@@ -19,11 +19,11 @@
       "scheme-1": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
+          "background_gradient": "linear-gradient(180deg, rgba(255, 228, 49, 1), rgba(249, 32, 32, 1) 100%)",
+          "text": "#f41a1a",
+          "button": "#ffe1b5",
+          "button_label": "#657029",
+          "secondary_button_label": "#de4b4b",
           "shadow": "#121212"
         }
       },
