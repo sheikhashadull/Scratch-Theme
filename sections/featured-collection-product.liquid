@@ -8,7 +8,7 @@
     <div class="row">
         {% paginate section.settings.collection.products by 2 %}
             {% if section.settings.collection.products.size > 0 %}
-                {% render 'product-card',  %}
+                {% render 'product-card', product: product %}
             {% else %}
                 No Product Found
             {% endif %}
