@@ -14,53 +14,76 @@
         </div>
     </div>
 </div>
+
 <style>
-    .featured-collection {
-    max-width: 320px;
+    /* ===== Section ===== */
+.featured-section {
+    padding: 80px 0;
+    background: #f8f8f8;
+}
+/* ===== Grid System ===== */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.col-4 {
+    width: 33.333%;
+    padding: 15px;
+}
+
+/* ===== Featured Card ===== */
+.featured-collection {
+    height: 100%;
+    background: #fff;
     border-radius: 16px;
     overflow: hidden;
-    background: #ffffff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .featured-collection:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* ===== Image ===== */
 .featured-collection img {
     width: 100%;
-    height: 220px;
+    height: 240px;
     object-fit: cover;
     display: block;
+    background: #eaeaea;
 }
 
+/* ===== Card Details ===== */
 .card-details {
-    padding: 20px;
+    padding: 22px;
 }
 
 .card-details h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: #111;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card-details p {
     font-size: 14px;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
+/* ===== Button ===== */
 .card-details a {
     display: inline-block;
+    padding: 10px 22px;
     font-size: 14px;
     font-weight: 500;
-    color: #ffffff;
+    color: #fff;
     background: #111;
-    padding: 10px 18px;
     border-radius: 30px;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
@@ -68,7 +91,24 @@
 
 .card-details a:hover {
     background: #ff6a00;
-    transform: translateX(4px);
+    transform: translateX(5px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .col-4 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .col-4 {
+        width: 100%;
+    }
+
+    .featured-section {
+        padding: 50px 0;
+    }
 }
 
 </style>
