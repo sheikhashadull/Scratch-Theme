@@ -12,9 +12,9 @@
                 <img src="{{ product.featured_media | image_url }}" width="auto" height="auto" class="card-img-top" alt="{{ product.title }}">
                 <div class="card-body">
                   <div class="card-badge">
-                    {% if product.availavle == false %}
+                    {% if product.available == false %}
                         <span class="badge rounded-pill text-bg-danger">sold</span>
-                    {% elsif product.compare_at_price < product.price and product.available %}
+                    {% elsif product.compare_at_price > product.price and product.available %}
                         <span class="badge rounded-pill text-bg-success">sale</span>
                     {% endif %}
                   </div>
