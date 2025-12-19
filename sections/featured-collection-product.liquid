@@ -6,23 +6,25 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <div class="card-badge">
-              <span class="badge rounded-pill text-bg-success">sale</span>
-              <span class="badge rounded-pill text-bg-danger">sold</span>
+        {% for product in collections.all.products %}
+            <div class="col-lg-4">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="card-badge">
+                    <span class="badge rounded-pill text-bg-success">sale</span>
+                    <span class="badge rounded-pill text-bg-danger">sold</span>
+                  </div>
+                  <h5 class="card-title">Card title</h5>
+                  <div class="price">
+                    <span class="sale-price">Sale price</span>
+                    <span class="sale-regular">regular price</span>
+                  </div>
+                  <a href="#" class="btn btn-primary">See product</a>
+                </div>
+              </div>
             </div>
-            <h5 class="card-title">Card title</h5>
-            <div class="price">
-              <span class="sale-price">Sale price</span>
-              <span class="sale-regular">regular price</span>
-            </div>
-            <a href="#" class="btn btn-primary">See product</a>
-          </div>
-        </div>
-      </div>
+        {% endfor %}
     </div>
   </div>
 </div>
