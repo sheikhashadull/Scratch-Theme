@@ -4,7 +4,7 @@
             {% for collection in collections %}
                 <div class="col-4">
                     <div class="featured-collection">
-                        {% if image %}
+                        {% if collection.image.src %}
                             <img src="{{ collection.image | img_url: '200x' }}" width="auto" height="auto" alt="">
                           {% else %}
                             {{ 'collection-1' | placeholder_svg_tag }}
