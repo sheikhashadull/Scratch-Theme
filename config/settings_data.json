@@ -11,10 +11,6 @@
   "current": {
     "logo_width": 160,
     "page_width": 1200,
-    "scheme_1_background": "#841e1e",
-    "scheme_1_text": "#4bf534",
-    "scheme_1_primary": "#7684ff",
-    "scheme_1_secondary": "#f241d8",
     "background": "#de2323",
     "text": "#df3636",
     "button": "#991d1d",
