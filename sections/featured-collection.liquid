@@ -2,7 +2,7 @@
     <div class="page-width">
         <div class="row">
             {% for collection in collections %}
-                <div class="{{ section.settings.col }}">
+                <div class="col-{{ section.settings.col }}">
                     <div class="featured-collection">
                         {% if collection.image.src %}
                             <img src="{{ collection.image | img_url: '200x' }}" width="auto" height="auto" alt="">
