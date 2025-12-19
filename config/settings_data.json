@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "logo_width": 160,
-    "page_width": 1200,
+    "logo_width": 130,
+    "page_width": 1340,
     "text": "#df3636",
     "button": "#991d1d",
     "content_for_index": []
