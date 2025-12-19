@@ -42,33 +42,4 @@
             }
         ]
     },
-    {
-        "name": "Color schemes",
-        "settings": [
-            {
-                "type": "color",
-                "id": "scheme_1_background",
-                "label": "Background",
-                "default": "#ffffff"
-            },
-            {
-                "type": "color",
-                "id": "scheme_1_text",
-                "label": "Text",
-                "default": "#000000"
-            },
-            {
-                "type": "color",
-                "id": "scheme_1_primary",
-                "label": "Primary color",
-                "default": "#1a1b18"
-            },
-            {
-                "type": "color",
-                "id": "scheme_1_secondary",
-                "label": "Secondary color",
-                "default": "#364132"
-            }
-        ]
-    }
 ]
