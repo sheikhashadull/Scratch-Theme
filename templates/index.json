@@ -9,15 +9,13 @@
  */
 {
   "sections": {
-    "check_GQa6z6": {
-      "type": "check",
-      "name": "Header",
-      "settings": {
-        "header_color_scheme": ""
-      }
+    "featured_collection_kyDAAT": {
+      "type": "featured-collection",
+      "name": "Featured Collection",
+      "settings": {}
     }
   },
   "order": [
-    "check_GQa6z6"
+    "featured_collection_kyDAAT"
   ]
 }
