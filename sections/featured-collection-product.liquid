@@ -1,14 +1,47 @@
 <div class="featured-collection-product">
-    <div class="page-width">
-        <div class="row">
-            {% for collection in collections %}
-                <div class="col-4">
-                    {% render 'collection-card', collection: collection %}
-                </div>
-            {% endfor %}
+  <div class="page-width">
+    <h2 class="section-heading">Featured Products</h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x400" alt="Product">
+        <div class="product-info">
+          <h3>Product Title</h3>
+          <span class="price">$49.00</span>
+          <a href="#" class="btn">View Product</a>
         </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x400" alt="Product">
+        <div class="product-info">
+          <h3>Product Title</h3>
+          <span class="price">$59.00</span>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x400" alt="Product">
+        <div class="product-info">
+          <h3>Product Title</h3>
+          <span class="price">$39.00</span>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x400" alt="Product">
+        <div class="product-info">
+          <h3>Product Title</h3>
+          <span class="price">$69.00</span>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
 
 
 {% schema %}
