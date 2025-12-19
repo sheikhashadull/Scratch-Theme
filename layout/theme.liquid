@@ -13,13 +13,8 @@
 
     {{ content_for_header }}
     <style>
-        {% assign current_scheme = settings[section.settings.color_scheme_id] %}
         :root {
             --page-width: {{ settings.page_width }}px;
-            --color-background: {{ current_scheme.background }};
-            --color-text: {{ current_scheme.text }};
-            --color-primary: {{ current_scheme.primary }};
-            --color-secondary: {{ current_scheme.secondary }};
         }
     </style>
 </head>
