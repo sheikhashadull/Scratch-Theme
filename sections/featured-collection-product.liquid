@@ -9,7 +9,7 @@
         {% for product in collections.all.products %}
             <div class="col-lg-4">
               <div class="card" style="width: 18rem;">
-                <img src="{{ product.product_media | image_url: '200x' }}" width="auto" height="auto" class="card-img-top" alt="{{ product.title }}">
+                <img src="{{ product.featured_media | image_url: '200x' }}" width="auto" height="auto" class="card-img-top" alt="{{ product.title }}">
                 <div class="card-body">
                   <div class="card-badge">
                     <span class="badge rounded-pill text-bg-success">sale</span>
