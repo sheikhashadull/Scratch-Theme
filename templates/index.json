@@ -9,15 +9,13 @@
  */
 {
   "sections": {
-    "featured_collection_product_Kew7j3": {
-      "type": "featured-collection-product",
-      "name": "Featured Collection Product",
-      "settings": {
-        "collection": "product-1"
-      }
+    "main_product_JGPd36": {
+      "type": "main-product",
+      "name": "Main Product",
+      "settings": {}
     }
   },
   "order": [
-    "featured_collection_product_Kew7j3"
+    "main_product_JGPd36"
   ]
 }
