@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-        {% paginate collections.all.products by 6 %}
+        {% comment %} {% paginate collections.all.products by 6 %} {% endcomment %}
             {% for product in collections.all.products %}
                 <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
@@ -33,7 +33,7 @@
             <div>
                 {{ paginate | default_pagination }}
             </div>
-        {% endpaginate %}
+        {% comment %} {% endpaginate %} {% endcomment %}
     
     </div>
   </div>
