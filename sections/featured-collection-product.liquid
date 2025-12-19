@@ -17,8 +17,8 @@
                   </div>
                   <h5 class="card-title">{{ product.title }}</h5>
                   <div class="price">
-                    <span class="sale-price">{{ product.price | money_with_currency }}</span>
-                    <span class="sale-regular">{{ product.compare_at_price | money_with_currency }}</span>
+                    <span class="sale-price">{{ product.price | money }}</span>
+                    <span class="sale-regular">{{ product.compare_at_price | money }}</span>
                   </div>
                   <a href="{{ product.url }}" class="btn btn-primary">See product</a>
                 </div>
