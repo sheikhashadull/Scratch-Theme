@@ -14,7 +14,7 @@
                   <div class="card-badge">
                     {% if product.availavle == false %}
                         <span class="badge rounded-pill text-bg-danger">sold</span>
-                    {% elsif product.compare_at_price < product.price and product.availavle %}
+                    {% elsif product.price > product.compare_at_price and product.availavle %}
                         <span class="badge rounded-pill text-bg-success">sale</span>
                     {% endif %}
                   </div>
