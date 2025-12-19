@@ -1,14 +1,14 @@
 <div class="featured-section">
     <div class="page-width">
         <div class="row">
-            {% for item in collections %}
+            {% for collection in collections %}
                 <div class="col-4">
                     <div class="featured-collection">
                         <img src="" alt="">
                         <div class="card-details">
-                            <h3>Card Title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vero?</p>
-                            <a href="">More Products</a>
+                            <h3>{{ collection.title }}</h3>
+                            <p>{{collection.description}}</p>
+                            <a href="{{ collection.url }}">More Products</a>
                         </div>
                     </div>
                 </div>
