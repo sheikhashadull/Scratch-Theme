@@ -14,6 +14,7 @@
                   <div class="card-badge">
                     {% if product.available == false %}
                         <span class="badge rounded-pill text-bg-danger">sold</span>
+                        this product out of stock
                     {% elsif product.compare_at_price > product.price and product.available %}
                         <span class="badge rounded-pill text-bg-success">sale</span>
                     {% endif %}
