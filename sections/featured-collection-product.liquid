@@ -12,8 +12,11 @@
                 <img src="{{ product.featured_media | image_url }}" width="auto" height="auto" class="card-img-top" alt="{{ product.title }}">
                 <div class="card-body">
                   <div class="card-badge">
-                    <span class="badge rounded-pill text-bg-success">sale</span>
-                    <span class="badge rounded-pill text-bg-danger">sold</span>
+                    {% if product.availavle == true %}
+                        <span class="badge rounded-pill text-bg-success">sale</span>
+                    {% else %}
+                        <span class="badge rounded-pill text-bg-danger">sold</span>
+                    {% endif %}
                   </div>
                   <h5 class="card-title">{{ product.title }}</h5>
                   <div class="price">
