@@ -9,13 +9,13 @@
  */
 {
   "sections": {
-    "featured_collection_7cCMUy": {
-      "type": "featured-collection",
-      "name": "Featured Collection",
+    "featured_collection_product_wjBgG6": {
+      "type": "featured-collection-product",
+      "name": "Featured Collection Product",
       "settings": {}
     }
   },
   "order": [
-    "featured_collection_7cCMUy"
+    "featured_collection_product_wjBgG6"
   ]
 }
