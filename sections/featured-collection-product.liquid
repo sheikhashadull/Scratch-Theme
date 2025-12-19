@@ -13,9 +13,9 @@
                 <div class="card-body">
                   <div class="card-badge">
                     {% if product.availavle == false %}
-                        <span class="badge rounded-pill text-bg-success">sale</span>
-                    {% else %}
                         <span class="badge rounded-pill text-bg-danger">sold</span>
+                    {% else %}
+                        <span class="badge rounded-pill text-bg-success">sale</span>
                     {% endif %}
                   </div>
                   <h5 class="card-title">{{ product.title }}</h5>
