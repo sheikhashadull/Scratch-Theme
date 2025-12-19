@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         {% comment %} {% paginate collections.all.products by 6 %} {% endcomment %}
-            {% for product in section.settings.collection %}
+            {% for product in section.settings.collection.products %}
                 <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
                     <img src="{{ product.featured_media | image_url }}" width="auto" height="auto" class="card-img-top" alt="{{ product.title }}">
