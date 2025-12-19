@@ -1,118 +1,176 @@
 <div class="featured-collection-product">
   <div class="page-width">
-    <h2 class="section-heading">Featured Products</h2>
-
-    <div class="product-row">
-      {% for product in collection.products %}
-        <div class="col-4">
-          <div class="product-card">
-            {% if product.featured_image %}
-              <img src="{{ product.featured_image | image_url: width: 500 }}" alt="{{ product.title }}">
-            {% endif %}
-
-            <div class="product-info">
-              <h3>{{ product.title }}</h3>
-              <span class="price">{{ product.price | money_with_currency }}</span>
-              <p>{{ product.description | strip_html | truncate: 80 }}</p>
-              <a href="{{ product.url }}" class="btn">View Product</a>
+    <div class="row">
+      <div class="col-12">
+        <h1>Featured collection product</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-badge">
+              <span class="badge rounded-pill text-bg-success">sale</span>
+              <span class="badge rounded-pill text-bg-danger">sold</span>
             </div>
+            <h5 class="card-title">Card title</h5>
+            <div class="price">
+              <span class="sale-price">Sale price</span>
+              <span class="sale-regular">regular price</span>
+            </div>
+            <a href="#" class="btn btn-primary">See product</a>
           </div>
         </div>
-      {% endfor %}
+      </div>
     </div>
   </div>
 </div>
 
 <style>
-    .featured-collection-product {
+    /* Section */
+.featured-collection-product {
   padding: 80px 0;
   background: #f7f7f7;
 }
 
+/* Layout */
 .page-width {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.section-heading {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-/* Grid */
-.product-row {
+.row {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
 
-.col-4 {
-  width: 25%;
-  padding: 15px;
-}
-
-/* Card */
-.product-card {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
-  transition: .4s;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-}
-
-/* Image */
-.product-card img {
+.col-12 {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
-}
-
-/* Info */
-.product-info {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
-.product-info h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+.col-lg-4 {
+  width: 33.333%;
+  padding: 15px;
 }
 
-.price {
+/* Heading */
+.featured-collection-product h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Card */
+.card {
+  width: 100% !important;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* Image */
+.card-img-top {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
   display: block;
-  font-weight: 600;
-  margin-bottom: 10px;
+  background: #eaeaea;
 }
 
-.product-info p {
-  font-size: 14px;
-  color: #555;
+/* Card Body */
+.card-body {
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+/* Badges */
+.card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.text-bg-success {
+  background: #28a745;
+}
+
+.text-bg-danger {
+  background: #dc3545;
+}
+
+/* Title */
+.card-title {
+  font-size: 18px;
+  margin: 30px 0 10px;
+}
+
+/* Price */
+.price {
   margin-bottom: 15px;
+}
+
+.sale-price {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.sale-regular {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 14px;
 }
 
 /* Button */
 .btn {
+  display: inline-block;
   padding: 10px 24px;
   background: #111;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  display: inline-block;
+  transition: background .3s ease;
+}
+
+.btn:hover {
+  background: #ff6a00;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
-  .col-4 { width: 50%; }
+  .col-lg-4 {
+    width: 50%;
+  }
 }
 
 @media (max-width: 480px) {
-  .col-4 { width: 100%; }
+  .col-lg-4 {
+    width: 100%;
+  }
+
+  .featured-collection-product h1 {
+    font-size: 28px;
+  }
 }
 
 </style>
