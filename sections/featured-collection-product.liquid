@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-        {% paginate section.settings.collection.products by 3 %}
+        {% paginate section.settings.collection.products by 1 %}
             {% if section.settings.collection.products.size > 0 %}
                 {% render 'product-card', product: product %}
             {% else %}
