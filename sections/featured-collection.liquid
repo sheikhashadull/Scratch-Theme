@@ -1,9 +1,9 @@
 <div class="featured-section">
     <div class="page-width">
         <div class="row">
+            <div class="col-4">
             {% for collection in collections %}
-                <div class="col-4 {{ section.settings.col }}">
-                    <div class="featured-collection">
+                    <div class="featured-collection {{ section.settings.col }}">
                         {% if collection.image.src %}
                             <img src="{{ collection.image | img_url: '200x' }}" width="auto" height="auto" alt="">
                           {% else %}
@@ -15,8 +15,8 @@
                             <a href="{{ collection.url }}">More Products</a>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

@@ -12,7 +12,9 @@
     "featured_collection_7cCMUy": {
       "type": "featured-collection",
       "name": "Featured Collection",
-      "settings": {}
+      "settings": {
+        "col": 2
+      }
     }
   },
   "order": [
