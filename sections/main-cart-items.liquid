@@ -1,9 +1,25 @@
 <div class="page-width">
     {% if cart != blank %}
     {% for item in cart.items %}
-        <h3>{{ item.product.title }}</h3>
-        <p>original_price: {{ item.original_price | money }}</p>
-        <p>quantity: {{ item.quantity }}</p>
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/100" alt="Product">
+            
+            <div class="cart-details">
+            <h3>{{ item.product.title }}</h3>
+            <p>Small / Black</p>
+            </div>
+
+            <div class="cart-price">{{ item.original_price | money }}</div>
+
+            <div class="cart-qty">
+            <input type="number" value="{{ item.quantity }}">
+            </div>
+
+            <div class="remove">Remove</div>
+        </div>
+        <h3></h3>
+        <p>original_price: </p>
+        <p>quantity: </p>
         <p>line_item_price: {{ item.original_line_price | money }}</p>
     {% endfor %}
   {% else %}
