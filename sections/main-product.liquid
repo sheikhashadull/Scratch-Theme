@@ -24,6 +24,7 @@
             <input type="hidden" name="id" value="{{current_variant.id}}">
             <input type="number" name="quantity" id="quantity" min="1" max="{{ current_variant.inventory_quantity | default: 10 }}" value="1">
             <input type="submit" value="Add to Cart">
+            {{ form | payment_button }}
             {% endform %}
         </div>
       </div>
