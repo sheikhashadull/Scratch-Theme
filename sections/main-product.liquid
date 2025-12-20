@@ -13,7 +13,7 @@
                 <span>{{ product.price | money }}</span>
                 <span>{{ product.compare_at_price | money }}</span>
             </div>
-            <p>This is a detailed description of the product. It highlights its features, benefits, and any other relevant information that a customer might need before making a purchase.</p>
+            <p>{{ product.description }}</p>
         </div>
         <div class="product-form">
             {% form 'product', product %}
