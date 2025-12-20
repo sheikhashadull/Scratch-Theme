@@ -1,9 +1,12 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
 <div class="page-width">
      <h1 class="cart-title">Your Cart</h1>
     {% if cart != blank %}
     {% for item in cart.items %}
         <div class="cart-item">
-            <img src="https://via.placeholder.com/100" alt="Product">
+            <img src="{{ featured_image.src | image_url }}" alt="{{ product.title }}" width="auto" height="auto">
             
             <div class="cart-details">
             <h3>{{ item.product.title }}</h3>
