@@ -1,6 +1,6 @@
 {% if cart != blank %}
     {% for item in cart.items %}
-        <h3>{{ item.product.price }}</h3>
+        <h3>{{ item.product.price | money }}</h3>
     {% endfor %}
   {% else %}
     cart is empty
