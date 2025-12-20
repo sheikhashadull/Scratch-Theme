@@ -16,11 +16,16 @@
             </div>
 
             <div class="remove">Remove</div>
+              <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>{{ item.original_line_price | money }}</h2>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
         </div>
         <h3></h3>
         <p>original_price: </p>
         <p>quantity: </p>
-        <p>line_item_price: {{ item.original_line_price | money }}</p>
+        <p>line_item_price: </p>
     {% endfor %}
   {% else %}
     cart is empty
