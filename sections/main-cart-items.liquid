@@ -1,5 +1,7 @@
 {% if cart != blank %}
-    product has been added
+    {% for item in cart.items %}
+        <h3>{{ item.product.price }}</h3>
+    {% endfor %}
   {% else %}
     cart is empty
 {% endif %}
