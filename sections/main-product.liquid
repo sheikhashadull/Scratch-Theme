@@ -10,7 +10,7 @@
         <div class="product-right">
             <h3>{{ product.title }}</h3>
             <div>
-                <span>{{ product.price | money }}</span>
+                <span class="sale-price">{{ product.price | money }}</span>
                 <span class="sale-regular">{{ product.compare_at_price | money }}</span> 
             </div>
             <p>{{ product.description }}</p>
