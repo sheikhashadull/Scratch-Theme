@@ -13,9 +13,17 @@
       "type": "main-product",
       "name": "Main Product",
       "settings": {}
+    },
+    "featured_collection_product_nAXNhd": {
+      "type": "featured-collection-product",
+      "name": "Featured Collection Product",
+      "settings": {
+        "collection": "product-1"
+      }
     }
   },
   "order": [
-    "main_product_JGPd36"
+    "main_product_JGPd36",
+    "featured_collection_product_nAXNhd"
   ]
 }
