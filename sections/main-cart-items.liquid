@@ -6,7 +6,7 @@
     {% if cart != blank %}
     {% for item in cart.items %}
         <div class="cart-item">
-            <img src="{{ featured_image.src | image_url }}" alt="{{ product.title }}" width="auto" height="auto">
+            <img src="{{ featured_image| image_url }}" alt="{{ product.title }}" width="auto" height="auto">
             
             <div class="cart-details">
             <h3>{{ item.product.title }}</h3>
