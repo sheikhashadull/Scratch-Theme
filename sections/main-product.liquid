@@ -8,12 +8,18 @@
       </div>
       <div class="col-lg-6">
         <div class="product-right">
-          <h3>Product Title</h3>
-          <div>
-            <span>Price: $100.00</span>
-            <s>Sale Price: $80.00</s>
-          </div>
-          <p>This is a detailed description of the product. It highlights its features, benefits, and any other relevant information that a customer might need before making a purchase.</p>
+            <h3>Product Title</h3>
+            <div>
+                <span>Price: $100.00</span>
+                <s>Sale Price: $80.00</s>
+            </div>
+            <p>This is a detailed description of the product. It highlights its features, benefits, and any other relevant information that a customer might need before making a purchase.</p>
+        </div>
+        <div class="product-form">
+            {% form 'product' %}
+              <input type="submit" value="Add to Card">
+            {% endform %}
+
         </div>
       </div>
     </div>
