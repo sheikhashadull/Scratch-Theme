@@ -1,9 +1,9 @@
 {% if cart != blank %}
     {% for item in cart.items %}
         <h3>{{ item.product.title }}</h3>
-        <h3>{{ item.product.price | money }}</h3>
-        <h3>{{ item.quantity }}</h3>
-        <h3>{{ item.quantity | money }}</h3>
+        <p>{{ item.original_price | money }}</p>
+        <p>{{ item.quantity }}</p>
+        <p>{{ item.original_line_price | money }}</p>
     {% endfor %}
   {% else %}
     cart is empty
