@@ -1,4 +1,5 @@
-{% if cart != blank %}
+<div class="page-width">
+    {% if cart != blank %}
     {% for item in cart.items %}
         <h3>{{ item.product.title }}</h3>
         <p>original_price: {{ item.original_price | money }}</p>
@@ -9,6 +10,7 @@
     cart is empty
 {% endif %}
 
+</div>
 
 <div class="cart-container">
   <h1 class="cart-title">Your Cart</h1>
