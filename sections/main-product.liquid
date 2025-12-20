@@ -1,9 +1,12 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+
 <div class="main-product-section">
   <div class="page-width">
     <div class="row">
       <div class="col-lg-6">
         <div class="product-left">
-          <img src="your-image-source.jpg" alt="Product Image" width="auto" height="auto">
+          <img src="{{ current_variant.featured_media | image_url }}" alt="Product Image" width="auto" height="auto">
         </div>
       </div>
       <div class="col-lg-6">
