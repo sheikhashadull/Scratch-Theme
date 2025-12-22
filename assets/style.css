@@ -18,13 +18,3 @@ h1, h2{
         font-weight: 400;
         font-size: 62px;
 }
-
-section {
-  background: var(--bg);
-}
-
-.btn {
-  padding: 10px 20px;
-  background-color: var(--btn);
-  color: var(--btn-text);
-}
