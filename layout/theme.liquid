@@ -19,7 +19,7 @@
         .color-{{ scheme.id }} {
 
             {% if scheme.settings.background_gradient != empty %}
-                --gradient-background: {{ scheme.settings.background_gradient }};
+                --bg: {{ scheme.settings.background_gradient }};
             {% else %}
                 --bg: {{ scheme.settings.background }};
             {% endif %}
