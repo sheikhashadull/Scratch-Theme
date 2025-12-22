@@ -74,7 +74,7 @@
       "name": "Announcement Bar",
       "settings": {
         "enable_bar": true,
-        "paddingx": 70,
+        "paddingx": 10,
         "gap": 70,
         "alignment": "center",
         "color_scheme": "scheme-1"
@@ -85,7 +85,7 @@
       "name": "Header Menu",
       "settings": {
         "logo": "shopify://shop_images/logo.svg",
-        "padding-headerx": 40,
+        "padding-headerx": 20,
         "gap": 10,
         "alignment": "center",
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
