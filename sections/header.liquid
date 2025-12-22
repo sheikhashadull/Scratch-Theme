@@ -45,9 +45,15 @@
 </section>
 
 <style>
-.{{ section.id }} {
+.{{ section.id }} section {
     padding: {{ padding-headerx }}px 0;
 }
+.{{ section.id }} header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .header-top{
     display: flex;
     align-items: center;
