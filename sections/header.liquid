@@ -8,7 +8,7 @@
 %}
 
 
-<section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+<section class=" header {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <header>
             <div class="header-top">
@@ -45,10 +45,10 @@
 </section>
 
 <style>
-.{{ section.id }} section {
+.{{ section.id }} .header {
     padding: {{ padding-headerx }}px 0;
 }
-.{{ section.id }} header {
+.{{ section.id }} .header-items {
     display: flex;
     flex-direction: column;
     gap: 20px;
