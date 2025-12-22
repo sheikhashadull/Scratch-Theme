@@ -2,6 +2,9 @@
   assign logo = section.settings.logo
   assign menu = section.settings.menu
 
+  assign header-gap = section.settings.menu-gap
+  assign menu-gap = section.settings.menu-gap
+
   assign padding-headerx = section.settings.padding-headerx
   assign gap = section.settings.gap
 
@@ -48,7 +51,7 @@
 .header-items {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: {{ header-gap }}px;
 }
 
 .header-top{
@@ -137,7 +140,17 @@ nav ul{
             },
             {
                 "type": "range",
-                "id": "gap-gap",
+                "id": "header-gap",
+                "label": "Header Gap",
+                "min": 10,
+                "max": 120,
+                "default": 10,
+                "step": 10,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "menu-gap",
                 "label": "Menu Gap",
                 "min": 10,
                 "max": 120,
