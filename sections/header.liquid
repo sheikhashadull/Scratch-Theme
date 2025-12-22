@@ -1,53 +1,73 @@
 <header class="header">
   <div class="container">
     <div class="logo">
-      <a href="#">MyLogo</a>
+      <a href="#">ShopLogo</a>
     </div>
+
     <nav class="nav">
       <ul class="menu">
         <li><a href="#">Home</a></li>
         <li class="dropdown">
           <a href="#">Products <span class="arrow">&#9662;</span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Product 1</a></li>
-            <li><a href="#">Product 2</a></li>
-            <li><a href="#">Product 3</a></li>
+            <li><a href="#">Category 1</a></li>
+            <li><a href="#">Category 2</a></li>
+            <li><a href="#">Category 3</a></li>
           </ul>
         </li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-    <div class="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <div class="header-icons">
+      <a href="#" class="search"><i class="fas fa-search"></i></a>
+      <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
 </header>
 
+
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
 /* Header */
 .header {
+  width: 100%;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
   z-index: 1000;
 }
 
 .header .container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
   padding: 15px 20px;
 }
 
+/* Logo */
 .logo a {
   text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 700;
   color: #333;
 }
 
@@ -56,6 +76,7 @@
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .nav ul li {
@@ -63,10 +84,9 @@
 }
 
 .nav ul li a {
-  display: block;
-  padding: 10px 15px;
   text-decoration: none;
   color: #333;
+  padding: 10px 5px;
   transition: color 0.3s;
 }
 
@@ -80,24 +100,45 @@
   top: 100%;
   left: 0;
   background: #fff;
-  min-width: 150px;
+  min-width: 200px;
   display: none;
   flex-direction: column;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .dropdown:hover .dropdown-menu {
   display: flex;
+  animation: fadeIn 0.3s ease forwards;
 }
 
 .dropdown-menu li a {
-  padding: 10px;
+  padding: 12px 20px;
+  color: #333;
 }
 
-/* Arrow */
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
+}
+
 .arrow {
   font-size: 0.6em;
   margin-left: 5px;
+}
+
+/* Icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
 }
 
 /* Mobile Menu */
@@ -105,18 +146,18 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
+  gap: 5px;
 }
 
 .mobile-menu-toggle span {
   height: 3px;
   width: 25px;
   background: #333;
-  margin-bottom: 5px;
   border-radius: 2px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav {
     position: absolute;
     top: 100%;
@@ -125,14 +166,16 @@
     background: #fff;
     display: none;
     flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   .nav ul {
     flex-direction: column;
+    gap: 0;
   }
 
   .nav ul li a {
-    padding: 15px;
+    padding: 15px 20px;
   }
 
   .dropdown-menu {
@@ -153,6 +196,11 @@
   .nav.active {
     display: flex;
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 </style>
