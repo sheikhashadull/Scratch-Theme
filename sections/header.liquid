@@ -11,6 +11,10 @@
   assign font_size = section.settings.font-size
   assign color = section.settings.color
   assign active_color = section.settings.active-color
+
+
+
+  assign text_transform = section.settings.text-transform
 %}
 
 
@@ -106,10 +110,10 @@ nav ul{
     align-items: center;
     justify-content: center;
     font-size:{{ font_size }}px;
-    text-transform: uppercase;
 }
 nav ul li a{
     color: {{ color }};
+    text-transform: {{ text_transform }};
 }
 nav ul li a.active {
   color: {{ active_color }};
