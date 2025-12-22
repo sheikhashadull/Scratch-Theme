@@ -1,3 +1,13 @@
+{% liquid
+  assign checkbox = section.settings.enable_bar
+  assign paddingx = section.settings.paddingx
+  assign paddingy = section.settings.paddingy
+  assign gap = section.settings.gap
+
+  assign alignment = section.settings.alignment
+%}
+
+
 <section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="header-top">
@@ -92,6 +102,47 @@ nav ul{
                 "type": "image_picker",
                 "id": "logo",
                 "label": "Logo"
+            },
+            {
+                "type": "range",
+                "id": "paddingx",
+                "label": "PaddingX",
+                "min": 10,
+                "max": 120,
+                "default": 10,
+                "step": 10,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "paddingy",
+                "label": "PaddingY",
+                "min": 10,
+                "max": 120,
+                "default": 10,
+                "step": 10,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "gap",
+                "label": "Gap",
+                "min": 10,
+                "max": 120,
+                "default": 10,
+                "step": 10,
+                "unit": "px"
+            },
+            {
+                "type": "select",
+                "id": "alignment",
+                "label": "Alignment",
+                "default": "center",
+                "options": [
+                    { "value": "flex-start", "label": "Left"},
+                    { "value": "center", "label": "Center"},
+                    { "value": "flex-end", "label": "Right"}
+                ]
             },
             {
                 "type": "color_scheme",
