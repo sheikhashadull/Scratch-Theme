@@ -15,7 +15,7 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#bb2b2b",
+          "background": "#482b2b",
           "background_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(168, 255, 251, 1) 100%)",
           "text": "#b2bc22",
           "button": "#394838",
