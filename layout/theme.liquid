@@ -25,9 +25,13 @@
             {% endif %}
             
         --text: {{ scheme.settings.text }};
-        --btn: {{ scheme.settings.button }};
+        {% if scheme.settings.stock_button != empty %}
+            --btn: {{ scheme.settings.button }};
+        {% else %}
+            --btn: {{ scheme.settings.stock_button }};
+        {% endif %}
+
         --btn-text: {{ scheme.settings.button_text }};
-        --btn-border: {{ scheme.settings.stock_button }};
         }
         {% endfor %}
         }
