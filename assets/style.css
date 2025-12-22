@@ -19,13 +19,6 @@ h1, h2{
         font-size: 62px;
 }
 
-button {
-        padding: 13px 30px;
-        display: inline-block;
-        border-radius: 50px;
-        color: white;
-}
-
 section {
   background: var(--bg);
   color: var(--text);
