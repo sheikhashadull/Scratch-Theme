@@ -21,10 +21,8 @@
             {% if scheme.settings.background_gradient != empty %}
         --bg: {{ scheme.settings.background }};
         {% else %}
-          --gradient-background: {{ scheme.settings.background }};
+          --gradient-background: {{ scheme.settings.background_gradient }};
         {% endif %}
-
-
             
         --text: {{ scheme.settings.text }};
         --btn: {{ scheme.settings.button }};
