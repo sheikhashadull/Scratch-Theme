@@ -17,6 +17,9 @@
             --page-width: {{ settings.page_width }}px;
         {% for scheme in settings.color_schemes %}
         .color-{{ scheme.id }} {
+            
+            --color-stock-button: {{ scheme.settings.stock_button }};
+
 
             {% if scheme.settings.background_gradient != empty %}
                 --bg: {{ scheme.settings.background_gradient }};
@@ -25,12 +28,9 @@
             {% endif %}
             
         --text: {{ scheme.settings.text }};
-        
-            {% if scheme.settings.stock_button != empty %}
-                --btn: {{ scheme.settings.button }};
-            {% else %}
-                --btn: {{ scheme.settings.stock_button }};
-            {% endif %}
+
+        --btn: {{ scheme.settings.button }};
+        --btn-stock: {{ scheme.settings.stock_button }};
 
         --btn-text: {{ scheme.settings.button_text }};
         }
