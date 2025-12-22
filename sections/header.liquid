@@ -18,7 +18,7 @@
             </form>
             <div class="logo">
                 {% if logo != blank %}
-                    <img class="{{ logo | image_url: 100 }}" width="auto" height="auto" alt="{{ shop.url }}">
+                    <img src="{{ logo | image_url: 100 }}" width="auto" height="auto" alt="{{ shop.url }}">
                 {% else %}
                     {{ shop.url }}
                 {% endif %}
