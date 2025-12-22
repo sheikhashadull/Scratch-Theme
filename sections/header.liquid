@@ -1,5 +1,6 @@
 {% liquid
   assign logo = section.settings.logo
+  assign menu = section.settings.menu
 
   assign padding-headerx = section.settings.padding-headerx
   assign gap = section.settings.gap
@@ -30,15 +31,18 @@
             </div>
             </div>
             <nav>
-                <ul>
-                    <li><a href="">home</a></li>
-                    <li><a href="">home</a></li>
-                    <li><a href="">home</a></li>
-                    <li><a href="">home</a></li>
-                    <li><a href="">home</a></li>
-                    <li><a href="">home</a></li>
-                    <li><a href="">home</a></li>
-                </ul>
+                {% for link in linklists.menu.link %}
+                  
+                    <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                    </ul>
+                {% endfor %}
             </nav>
         </div>
     </div>
