@@ -8,7 +8,7 @@
 
   assign font_size = section.settings.font-size
   assign color = section.settings.color
-  assign padding_headerx = section.settings.padding-headerx
+  assign active_color = section.settings.active-color
 
 
 
@@ -117,6 +117,9 @@ nav ul{
 nav ul li a{
     color: {{ color }};
 }
+nav ul li a:active{
+    color: {{ active_color }};
+}
 </style>
 {% schema %}
     {
@@ -161,6 +164,12 @@ nav ul li a{
                 "type": "color",
                 "id": "color",
                 "label": "Color",
+                "default": "#333333"
+            },
+            {
+                "type": "color",
+                "id": "active-color",
+                "label": "Active Color",
                 "default": "#333333"
             },
             {
