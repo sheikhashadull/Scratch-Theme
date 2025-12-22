@@ -86,6 +86,8 @@
       "name": "Header Menu",
       "settings": {
         "logo": "shopify://shop_images/logo.svg",
+        "padding-headerx": 10,
+        "padding-headery": 10,
         "gap": 10,
         "alignment": "center",
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
