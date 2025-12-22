@@ -7,7 +7,7 @@
 
 
   assign font_size = section.settings.font-size
-  assign padding_headerx = section.settings.padding-headerx
+  assign color = section.settings.color
   assign padding_headerx = section.settings.padding-headerx
 
 
@@ -114,6 +114,9 @@ nav ul{
     font-size:{{ font_size }}px;
     text-transform: uppercase;
 }
+nav ul li a{
+    color: {{ color }};
+}
 </style>
 {% schema %}
     {
@@ -155,14 +158,9 @@ nav ul{
                 "content": "Menu Style"
             },
             {
-                "type": "range",
-                "id": "menu-gap",
-                "label": "Menu Gap",
-                "min": 10,
-                "max": 120,
-                "default": 10,
-                "step": 10,
-                "unit": "px"
+                "type": "color",
+                "id": "color",
+                "label": "Color"
             },
             {
                 "type": "range",
@@ -172,6 +170,16 @@ nav ul{
                 "max": 20,
                 "default": 16,
                 "step": 2,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "menu-gap",
+                "label": "Gap",
+                "min": 10,
+                "max": 120,
+                "default": 10,
+                "step": 10,
                 "unit": "px"
             },
             {
