@@ -2,6 +2,8 @@
   assign checkbox = section.settings.enable_bar
   assign paddingx = section.settings.paddingx
   assign paddingy = section.settings.paddingy
+  assign gap = section.settings.gap
+
   assign alignment = section.settings.alignment
 
   assign color_scheme = section.settings.color_scheme
@@ -21,7 +23,7 @@
         display: flex;
         align-items: center;
         justify-content: {{ alignment }};
-        gap: 30px;
+        gap: {{ gap }}px;
         padding: {{ paddingx }}px {{ paddingy }}px;
         overflow: hidden;
         white-space: nowrap;
@@ -73,6 +75,16 @@
                 "type": "range",
                 "id": "paddingy",
                 "label": "PaddingY",
+                "min": 10,
+                "max": 120,
+                "default": 10,
+                "step": 10,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "gap",
+                "label": "Gap",
                 "min": 10,
                 "max": 120,
                 "default": 10,
