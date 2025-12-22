@@ -25,6 +25,6 @@ section {
 
 .btn {
   padding: 10px 20px;
-  background: var(--btn);
+  background-color: var(--btn);
   color: var(--btn-text);
 }
