@@ -18,7 +18,7 @@
           "background": "#834444",
           "background_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(168, 255, 251, 1) 100%)",
           "text": "#b2bc22",
-          "button": "#33e724",
+          "button": "#27bb1b",
           "button_text": "#c3b407",
           "secondary_button_label": "#b64b4b",
           "shadow": "#eeff00"
