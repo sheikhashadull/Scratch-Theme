@@ -17,8 +17,8 @@
                 <input class="search" type="search" placeholder="Search">
             </form>
             <div class="logo">
-                {% if section.settings.logo != blank %}
-                    <img class=" ">
+                {% if logo != blank %}
+                    <img class="{{ logo | image_url }}" width="auto" height="auto">
                 {% else %}
                     {{ shop.url }}
                 {% endif %}
