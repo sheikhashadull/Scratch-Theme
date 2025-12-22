@@ -43,38 +43,19 @@
         ]
     },
     {
-        "name": "Global Colors",
-        "settings": [
+    "name": "Color schemes",
+    "settings": [
             {
-                "type": "color",
-                "id": "color_primary",
-                "label": "Primary Color",
-                "default": "#1A73E8"
+                "type": "color_scheme",
+                "id": "scheme_default",
+                "label": "Default scheme"
             },
             {
-                "type": "color",
-                "id": "color_secondary",
-                "label": "Secondary Color",
-                "default": "#FF6F61"
-            },
-            {
-                "type": "color",
-                "id": "color_accent",
-                "label": "Accent Color",
-                "default": "#F5A623"
-            },
-            {
-                "type": "color",
-                "id": "color_text",
-                "label": "Text Color",
-                "default": "#333333"
-            },
-            {
-                "type": "color",
-                "id": "color_background",
-                "label": "Background Color",
-                "default": "#FFFFFF"
+                "type": "color_scheme",
+                "id": "scheme_inverse",
+                "label": "Inverse scheme"
             }
         ]
     }
+
 ]
