@@ -14,11 +14,19 @@
     "announcement_bar_QtNNPm": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_item_ibgTjw": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p>“⏰ Sale Ends Tonight — Order Now!”</p>"
+          },
+          "blocks": {}
+        },
         "announcement_item_gPbYqG": {
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
-            "item": "<p>“Mega Sale! Up to 50% OFF Today”</p>"
+            "item": "<p>“🚚 Free Shipping on All Orders”</p>"
           },
           "blocks": {}
         },
@@ -32,6 +40,7 @@
         }
       },
       "block_order": [
+        "announcement_item_ibgTjw",
         "announcement_item_gPbYqG",
         "announcement_item_LPTQ8Q"
       ],
