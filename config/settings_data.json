@@ -15,10 +15,10 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#834444",
+          "background": "#ffffff",
           "background_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(168, 255, 251, 1) 100%)",
           "text": "#b2bc22",
-          "button": "#27bb1b",
+          "button": "#1ffc0d",
           "button_text": "#c3b407",
           "secondary_button_label": "#b64b4b",
           "shadow": "#eeff00"
