@@ -17,10 +17,10 @@
         "settings": {
           "background": "#6b1f1f",
           "background_gradient": "",
-          "text": "#b2bc22",
+          "text": "#ffffff",
           "button": "#394838",
           "button_text": "#1ffc0d",
-          "secondary_button_label": "#b64b4b",
+          "secondary_button_label": "#ffee00",
           "shadow": "#eeff00"
         }
       }
