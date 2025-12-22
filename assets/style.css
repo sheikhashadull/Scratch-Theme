@@ -26,3 +26,13 @@
         border-radius: 50px;
         color: white;
 } */
+
+section {
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  background: var(--btn);
+  color: var(--btn-text);
+}
