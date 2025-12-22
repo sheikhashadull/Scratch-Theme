@@ -14,14 +14,23 @@
     "announcement_bar_QtNNPm": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_item_Tg4ziY": {
+        "announcement_item_qkpikz": {
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {},
           "blocks": {}
+        },
+        "announcement_item_Tg4ziY": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p>Free shipping on all orders</p>"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
+        "announcement_item_qkpikz",
         "announcement_item_Tg4ziY"
       ],
       "name": "Announcement Bar",
