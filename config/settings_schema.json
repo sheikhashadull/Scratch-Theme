@@ -43,19 +43,18 @@
         ]
     },
     {
-    "name": "Color schemes",
-    "settings": [
+        "name": "Theme settings",
+        "settings": [
             {
                 "type": "color_scheme",
                 "id": "scheme_default",
-                "label": "Default scheme"
+                "label": "Default"
             },
             {
                 "type": "color_scheme",
-                "id": "scheme_inverse",
-                "label": "Inverse scheme"
+                "id": "scheme_dark",
+                "label": "Dark"
             }
         ]
     }
-
 ]
