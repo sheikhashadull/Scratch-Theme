@@ -27,20 +27,133 @@
 </header>
 
 <style>
-    section {
-     background: var(--bg);
-     color: var(--text);
-    }
-
-    .header_section .btn {
-    padding: 10px 20px;
-    background: var(--btn);
-    border: 5px solid var(--btn-stock);
-    box-shadow: 0 4px 12px var(--btn-shadow);
-    border-radius: 20px;
-    }
+/* Header */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
 }
 
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Menu */
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 150px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li a {
+  padding: 10px;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 0.6em;
+  margin-left: 5px;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li a {
+    padding: 15px;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
 
 </style>
 
