@@ -15,6 +15,15 @@
     <style>
         :root {
             --page-width: {{ settings.page_width }}px;
+            {% for scheme in settings.color_schemes %}
+            .color-{{ scheme.id }} {
+                --color-bg: {{ scheme.settings.background }};
+                --color-text: {{ scheme.settings.text }};
+                --color-primary: {{ scheme.settings.primary }};
+                --color-secondary: {{ scheme.settings.secondary }};
+                --color-accent: {{ scheme.settings.accent }};
+            }
+            {% endfor %}
         }
     </style>
 </head>
