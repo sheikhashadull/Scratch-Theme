@@ -17,8 +17,8 @@
             --page-width: {{ settings.page_width }}px;
         {% for scheme in settings.color_schemes %}
         .color-{{ scheme.id }} {
-            
-            --color-stock-button: {{ scheme.settings.stock_button }};
+
+            --stock-button: {{ scheme.settings.stock_button }};
 
 
             {% if scheme.settings.background_gradient != empty %}
