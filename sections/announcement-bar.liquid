@@ -9,7 +9,7 @@
 
 
 
-<section class="{{ section.id }} color-{{ color_scheme }} gradient checkbox">
+<section class="{{ section.id }} color-{{ color_scheme }} gradient">
     <div class="announcement-bar">
         {% content_for 'blocks' %}
     </div>
@@ -33,12 +33,8 @@
         animation: scrolling 30s linear infinite;
     }
     @keyframes scrolling {
-    0% {
-        transform: translateX(0%);
-        }
-    100% {
-        transform: translateX(-100%);
-        }
+        0% {transform: translateX(0%);}
+        100% {transform: translateX(-100%);}
     }
     {% endif %}
 
