@@ -13,19 +13,19 @@
   margin: auto;
 }
 
-/* h1, h2{
+h1, h2{
         font-family: "Bebas Neue", sans-serif;
         font-weight: 400;
         font-size: 62px;
 }
 
-.btn a{
+a{
         background-color: #FF8E09;
         padding: 13px 30px;
         display: inline-block;
         border-radius: 50px;
         color: white;
-} */
+}
 
 section {
   background: var(--bg);
