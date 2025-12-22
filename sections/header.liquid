@@ -33,7 +33,7 @@
             <nav>
                 {% for link in linklists.header-menu.links %}
                     <ul>
-                        <li><a href="">{{ link.title }}</a></li>
+                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                     </ul>
                 {% endfor %}
             </nav>
