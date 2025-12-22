@@ -24,50 +24,6 @@
           "shadow": "#121212"
         }
       },
-      "scheme-2": {
-        "settings": {
-          "background": "#f3f3f3",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_text": "#F5eF9F",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-3": {
-        "settings": {
-          "background": "#242833",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_text": "#F5eF9F",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-4": {
-        "settings": {
-          "background": "#121212",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_text": "#F5eF9F",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-5": {
-        "settings": {
-          "background": "#334fb4",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_text": "#F5eF9F",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
-        }
-      },
       "scheme-0cd74eab-f4ef-4559-9099-b90467db2370": {
         "settings": {
           "background": "#ffffff",
