@@ -1,3 +1,10 @@
+{% liquid
+  assign checkbox = section.settings.enable_bar
+  assign paddingx = section.settings.paddingx
+  assign paddingy = section.settings.paddingy
+  assign checkbox = section.settings.color_scheme
+%}
+
 <section class="color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width announcement-bar">
         <p>HelloHelloHelloHelloHelloHelloHelloHello</p>
@@ -54,6 +61,10 @@
                 "default": 10,
                 "step": 10,
                 "unit": "px"
+            },
+            {
+                "type": "header",
+                "content": "Announcement Bar Style"
             },
             {
                 "type": "color_scheme",
