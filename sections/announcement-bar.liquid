@@ -1,0 +1,35 @@
+<div class="announcement-bar">
+    <p>Hello</p>
+</div>
+
+
+<style>
+    .announcement-bar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+</style>
+
+{% schema %}
+    {
+        "name": "Announcement Bar",
+        "enabled_on": {
+            "groups": ["header"]
+        },
+        "settings": [
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "Color Scheme"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Announcement Bar"
+            }
+        ]
+    }
+{% endschema %}
