@@ -73,7 +73,7 @@
       ],
       "name": "Announcement Bar",
       "settings": {
-        "enable_bar": false,
+        "enable_bar": true,
         "paddingx": 10,
         "paddingy": 10,
         "alignment": "left",
