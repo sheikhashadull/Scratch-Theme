@@ -18,7 +18,7 @@
     <div class="page-width">
         <div class="header-items">
             <div class="header-top">
-            <form action="">
+            <form action="{{ routes.search_url }} method">
                 {% render 'icons', icon: 'search' %}
                 <input class="search" type="search" placeholder="Search">
             </form>
@@ -30,9 +30,9 @@
                 {% endif %}
             </div>
             <div class="accounts">
-                <a href="">{% render 'icons', icon: 'user' %}</a>
-                <a href="">{% render 'icons', icon: 'wishlist' %}</a>
-                <a href="">{% render 'icons', icon: 'cart' %}</a>
+                <a href=" {% if customer != blank %} {{ routes.account_url }} {% else %} {{ routes.account_login }} {% endif %}">{% render 'icons', icon: 'user' %}</a>
+                <a href="/pages/wishlist">{% render 'icons', icon: 'wishlist' %}</a>
+                <a href="{{ routes.cart_add_url }}">{% render 'icons', icon: 'cart' %}</a>
             </div>
             </div>
             <nav>
