@@ -19,7 +19,7 @@ h1, h2{
         font-size: 62px;
 }
 
-a{
+button a{
         background-color: #FF8E09;
         padding: 13px 30px;
         display: inline-block;
