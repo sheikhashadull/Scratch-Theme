@@ -75,7 +75,7 @@
       "settings": {
         "enable_bar": true,
         "paddingx": 110,
-        "paddingy": 120,
+        "paddingy": 10,
         "alignment": "left",
         "color_scheme": "scheme-1"
       }
