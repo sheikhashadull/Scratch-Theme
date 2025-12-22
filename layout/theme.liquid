@@ -19,14 +19,13 @@
         .color-{{ scheme.id }} {
 
             {% if scheme.settings.background_gradient != empty %}
-          --gradient-background: {{ scheme.settings.background_gradient }};
+        --bg: {{ scheme.settings.background }};
         {% else %}
           --gradient-background: {{ scheme.settings.background }};
         {% endif %}
 
 
             
-        --bg: {{ scheme.settings.background }};
         --text: {{ scheme.settings.text }};
         --btn: {{ scheme.settings.button }};
         --btn-text: {{ scheme.settings.button_text }};
