@@ -27,16 +27,7 @@ h1, h2{
         color: white;
 }
 
-.hero {
+section {
   background: var(--color-bg);
   color: var(--color-text);
-}
-
-.btn {
-  background: var(--color-primary);
-  color: var(--color-bg);
-}
-
-.btn:hover {
-  background: var(--color-accent);
 }
