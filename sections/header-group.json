@@ -11,6 +11,13 @@
   "name": "Header",
   "type": "header",
   "sections": {
+    "announcement_bar_QtNNPm": {
+      "type": "announcement-bar",
+      "name": "Announcement Bar",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
     "header_FPcpfW": {
       "type": "header",
       "name": "Header Menu",
@@ -20,6 +27,7 @@
     }
   },
   "order": [
+    "announcement_bar_QtNNPm",
     "header_FPcpfW"
   ]
 }
