@@ -77,7 +77,7 @@
         "paddingx": 10,
         "paddingy": 10,
         "gap": 70,
-        "alignment": "left",
+        "alignment": "center",
         "color_scheme": "scheme-1"
       }
     },
