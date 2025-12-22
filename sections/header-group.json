@@ -13,6 +13,19 @@
   "sections": {
     "announcement_bar_QtNNPm": {
       "type": "announcement-bar",
+      "blocks": {
+        "announcement_item_afECxF": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "text": "Free shipping on all orders"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "announcement_item_afECxF"
+      ],
       "name": "Announcement Bar",
       "settings": {
         "enable_bar": true,
