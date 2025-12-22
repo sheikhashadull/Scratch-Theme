@@ -18,8 +18,8 @@
 
         {% for scheme in settings.color_schemes %}
         .color-{{ scheme.id }} {
-        {% if scheme.settings.background_gradient != empty %}
-            gradient: {{ scheme.settings.background_gradient}};
+        {% if scheme.settings.background_gradient != blank %}
+            --gradient: {{ scheme.settings.background_gradient}};
         {% else %}
             --bg: {{ scheme.settings.background }};
         {% endif %}
