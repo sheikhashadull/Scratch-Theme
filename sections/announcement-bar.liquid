@@ -31,7 +31,15 @@
 
     {% if checkbox == true %}
       .{{ section.id }} {
-
+        animation-name: scrolling;
+    }
+    @keyframes scrolling {
+    0% {
+        transform: translateX(0%);
+        }
+    100% {
+        transform: translateX(-100%);
+        }
     }
     {% endif %}
 
