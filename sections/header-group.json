@@ -15,17 +15,7 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "bgcolor": "#fff1f9",
-        "iconcolor": "#d91376",
-        "menucolor": "#d91376",
-        "padding": 4,
-        "btntext": "Take the Quiz",
-        "btnlink": "",
-        "btncolor": "#d91376",
-        "btntextcolor": "#ffffff",
-        "btnpaddingx": 10,
-        "btnpaddingy": 10,
-        "btnredius": 10
+        "color_scheme": "scheme-4"
       }
     }
   },
