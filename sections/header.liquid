@@ -15,7 +15,11 @@
                 <input class="search" type="search" placeholder="Search">
             </form>
             <div class="logo">
-                <h1>ashadul</h1>
+                {% if logo != blank %}
+                    <img class="">
+                {% else %}
+                    {{ shop.url }}
+                {% endif %}
             </div>
             <div class="accounts">
                 <a href="">{% render 'icons', icon: 'user' %}</a>
