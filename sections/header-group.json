@@ -76,6 +76,7 @@
         "enable_bar": true,
         "paddingx": 10,
         "paddingy": 10,
+        "gap": 70,
         "alignment": "left",
         "color_scheme": "scheme-1"
       }
