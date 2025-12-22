@@ -89,10 +89,10 @@
         "menu": "header-menu",
         "padding-headerx": 20,
         "header-gap": 30,
-        "color": "#333333",
+        "color": "#121212",
         "active-color": "#4cff00",
-        "text-transform": "capitalize",
-        "font-size": 18,
+        "text-transform": "uppercase",
+        "font-size": 16,
         "menu-gap": 40,
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
       }
