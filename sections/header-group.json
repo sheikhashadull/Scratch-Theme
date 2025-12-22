@@ -14,24 +14,17 @@
     "announcement_bar_QtNNPm": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_item_qkpikz": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {},
-          "blocks": {}
-        },
-        "announcement_item_Tg4ziY": {
+        "announcement_item_LPTQ8Q": {
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
-            "item": "<p>Free shipping on all orders</p>"
+            "item": "<p>“🔥 Flat 20% OFF — Limited Time Only!”</p>"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_item_qkpikz",
-        "announcement_item_Tg4ziY"
+        "announcement_item_LPTQ8Q"
       ],
       "name": "Announcement Bar",
       "settings": {
