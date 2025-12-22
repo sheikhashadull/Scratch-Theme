@@ -2,6 +2,8 @@
   assign checkbox = section.settings.enable_bar
   assign paddingx = section.settings.paddingx
   assign paddingy = section.settings.paddingy
+  assign alignment = section.settings.alignment
+
   assign color_scheme = section.settings.color_scheme
 %}
 
@@ -18,7 +20,7 @@
     .{{ section.id }} .announcement-bar{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: {{ alignment }};
         gap: 20px;
         padding: {{ paddingx }}px 0;
         display: {{ checkbox }};
