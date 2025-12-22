@@ -16,7 +16,7 @@
       "scheme-1": {
         "settings": {
           "background": "#834444",
-          "background_gradient": "linear-gradient(99deg, rgba(255, 211, 226, 1), rgba(168, 255, 251, 1) 100%)",
+          "background_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(168, 255, 251, 1) 100%)",
           "text": "#eeff00",
           "button": "#74fa69",
           "button_text": "#cbbe20",
