@@ -26,3 +26,17 @@ h1, h2{
         border-radius: 50px;
         color: white;
 }
+
+.hero {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.btn {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.btn:hover {
+  background: var(--color-accent);
+}
