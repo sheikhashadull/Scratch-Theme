@@ -14,6 +14,30 @@
     "announcement_bar_QtNNPm": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_item_U9d6Ey": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p>“🔐 100% Authentic Products Guaranteed”</p>"
+          },
+          "blocks": {}
+        },
+        "announcement_item_eYEdf4": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p>“📞 Need Help? Call or WhatsApp Us”</p>"
+          },
+          "blocks": {}
+        },
+        "announcement_item_ccJNB7": {
+          "type": "announcement-item",
+          "name": "Announcement Item",
+          "settings": {
+            "item": "<p>“🆕 New Collection Just Launched”</p>"
+          },
+          "blocks": {}
+        },
         "announcement_item_ibgTjw": {
           "type": "announcement-item",
           "name": "Announcement Item",
@@ -40,6 +64,9 @@
         }
       },
       "block_order": [
+        "announcement_item_U9d6Ey",
+        "announcement_item_eYEdf4",
+        "announcement_item_ccJNB7",
         "announcement_item_ibgTjw",
         "announcement_item_gPbYqG",
         "announcement_item_LPTQ8Q"
