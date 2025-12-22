@@ -24,7 +24,14 @@
         gap: 20px;
         padding: {{ paddingx }}px 0;
         display: {{ checkbox }};
+        overflow: hidden;
     }
+
+    {% if checkbox == true %}
+      .{{ section.id }} {
+
+    }
+    {% endif %}
 
 </style>
 
