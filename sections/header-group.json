@@ -22,7 +22,7 @@
           },
           "blocks": {}
         },
-        "announcement_item_PMQFCA": {
+        "announcement_item_Ane4fV": {
           "type": "announcement-item",
           "name": "Announcement Item",
           "settings": {
@@ -33,7 +33,7 @@
       },
       "block_order": [
         "announcement_item_beE9gM",
-        "announcement_item_PMQFCA"
+        "announcement_item_Ane4fV"
       ],
       "name": "Announcement Bar",
       "settings": {
