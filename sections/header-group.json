@@ -87,7 +87,7 @@
         "logo": "shopify://shop_images/logo.svg",
         "menu": "header-menu",
         "padding-headerx": 20,
-        "header-gap": 50,
+        "header-gap": 30,
         "menu-gap": 40,
         "alignment": "center",
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
