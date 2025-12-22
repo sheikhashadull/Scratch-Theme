@@ -1,5 +1,4 @@
 {% liquid
-  assign checkbox = section.settings.enable_bar
   assign paddingx = section.settings.paddingx
   assign paddingy = section.settings.paddingy
   assign gap = section.settings.gap
@@ -8,7 +7,7 @@
 %}
 
 
-<section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+<section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient {{ paddingx }}px">
     <div class="page-width">
         <div class="header-top">
             <form action="">
