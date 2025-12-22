@@ -23,11 +23,8 @@ section {
   background: var(--bg);
 }
 
-button {
+.btn {
+  padding: 10px 20px;
   background: var(--btn);
   color: var(--btn-text);
-}
-
-.btn{
-  padding: 10px 20px;
 }
