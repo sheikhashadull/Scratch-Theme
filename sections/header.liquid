@@ -24,7 +24,7 @@
                 {% if logo != blank %}
                     <img src="{{ logo | image_url }}" width="80" height="auto" alt="{{ shop.url }}">
                 {% else %}
-                    {{ shop.url }}
+                    <span class="logo-text">{{ shop.name }}</span>
                 {% endif %}
             </div>
             <div class="accounts">
