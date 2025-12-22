@@ -14,26 +14,15 @@
     "announcement_bar_QtNNPm": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_item_beE9gM": {
+        "announcement_item_Tg4ziY": {
           "type": "announcement-item",
           "name": "Announcement Item",
-          "settings": {
-            "text": "Free shipping on all orders"
-          },
-          "blocks": {}
-        },
-        "announcement_item_Ane4fV": {
-          "type": "announcement-item",
-          "name": "Announcement Item",
-          "settings": {
-            "text": "Free shipping on all orders"
-          },
+          "settings": {},
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_item_beE9gM",
-        "announcement_item_Ane4fV"
+        "announcement_item_Tg4ziY"
       ],
       "name": "Announcement Bar",
       "settings": {
