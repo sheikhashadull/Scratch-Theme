@@ -1,211 +1,29 @@
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <a href="#">ShopLogo</a>
+<section>
+    <div class="page-width">
+        <div class="header-top">
+            <form action="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+                <input class="search" type="search" placeholder="Search">
+            </form>
+
+            <div class="logo">
+                <h1>ashadul</h1>
+            </div>
+            <div class="accounts">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+            </div>
+        </div>
     </div>
-
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Products <span class="arrow">&#9662;</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Category 1</a></li>
-            <li><a href="#">Category 2</a></li>
-            <li><a href="#">Category 3</a></li>
-          </ul>
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-icons">
-      <a href="#" class="search"><i class="fas fa-search"></i></a>
-      <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-      <div class="mobile-menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-</header>
-
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-}
-
-/* Header */
-.header {
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
-
-.header .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-}
-
-/* Logo */
-.logo a {
-  text-decoration: none;
-  font-size: 26px;
-  font-weight: 700;
-  color: #333;
-}
-
-/* Menu */
-.nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav ul li {
-  position: relative;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 5px;
-  transition: color 0.3s;
-}
-
-.nav ul li a:hover {
-  color: #007bff;
-}
-
-/* Dropdown */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  min-width: 200px;
-  display: none;
-  flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: flex;
-  animation: fadeIn 0.3s ease forwards;
-}
-
-.dropdown-menu li a {
-  padding: 12px 20px;
-  color: #333;
-}
-
-.dropdown-menu li a:hover {
-  background: #f5f5f5;
-}
-
-.arrow {
-  font-size: 0.6em;
-  margin-left: 5px;
-}
-
-/* Icons */
-.header-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-icons a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-}
-
-/* Mobile Menu */
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.mobile-menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: #333;
-  border-radius: 2px;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .nav ul li a {
-    padding: 15px 20px;
-  }
-
-  .dropdown-menu {
-    position: relative;
-    top: 0;
-    box-shadow: none;
-    display: none;
-  }
-
-  .dropdown.active .dropdown-menu {
-    display: flex;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-</style>
-
-
+</section>
 {% schema %}
     {
         "name": "Header",
