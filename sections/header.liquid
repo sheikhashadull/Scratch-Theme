@@ -7,7 +7,7 @@
 %}
 
 
-<section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient {{ paddingx }}px">
+<section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="header-top">
             <form action="">
@@ -38,6 +38,9 @@
 </section>
 
 <style>
+section{
+    padding: {{ paddingx }}px 0;
+}
 .header-top{
     display: flex;
     align-items: center;
