@@ -76,6 +76,7 @@
         "enable_bar": true,
         "paddingx": 10,
         "paddingy": 10,
+        "alignment": "right",
         "color_scheme": "scheme-1"
       }
     },
