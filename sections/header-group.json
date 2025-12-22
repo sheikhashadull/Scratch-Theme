@@ -74,7 +74,7 @@
       "name": "Announcement Bar",
       "settings": {
         "enable_bar": true,
-        "paddingx": 110,
+        "paddingx": 10,
         "paddingy": 10,
         "alignment": "left",
         "color_scheme": "scheme-1"
