@@ -30,9 +30,9 @@
                 {% endif %}
             </div>
             <div class="accounts">
-                <a href=" {% if customer != blank %} {{ routes.account_url }} {% else %} {{ routes.account_login }} {% endif %}">{% render 'icons', icon: 'user' %}</a>
+                <a href=" {% if customer != blank %} {{ routes.account_url }} {% else %} {{ routes.account_login_url }} {% endif %}">{% render 'icons', icon: 'user' %}</a>
                 <a href="/pages/wishlist">{% render 'icons', icon: 'wishlist' %}</a>
-                <a href="{{ routes.cart_add_url }}">{% render 'icons', icon: 'cart' %}</a>
+                <a href="{{ routes.a }}">{% render 'icons', icon: 'cart' %}</a>
             </div>
             </div>
             <nav>
