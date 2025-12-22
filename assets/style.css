@@ -19,8 +19,7 @@ h1, h2{
         font-size: 62px;
 }
 
-button a{
-        background-color: #FF8E09;
+button {
         padding: 13px 30px;
         display: inline-block;
         border-radius: 50px;
