@@ -31,11 +31,11 @@
             </div>
             </div>
             <nav>
-                {% for link in linklists.header-menu.links %}
-                    <ul>
+                <ul>
+                    {% for link in linklists.header-menu.links %}
                         <li><a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a></li>
-                    </ul>
-                {% endfor %}
+                    {% endfor %}
+                </ul>
             </nav>
         </div>
     </div>
@@ -96,6 +96,18 @@ form input{
 .accounts svg {
     width: 30px;
     height: 30px;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 </style>
 {% schema %}
