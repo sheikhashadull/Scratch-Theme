@@ -15,13 +15,13 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#914040",
-          "background_gradient": "",
-          "text": "#121212",
-          "button": "#b591ef",
-          "button_text": "#f5ef9f",
+          "background": "#b591ef",
+          "background_gradient": "linear-gradient(99deg, rgba(255, 211, 226, 1), rgba(168, 255, 251, 1) 100%)",
+          "text": "#995959",
+          "button": "#000000",
+          "button_text": "#ded021",
           "secondary_button_label": "#42f1a9",
-          "shadow": "#c7e336"
+          "shadow": "#bcdb1e"
         }
       }
     }
