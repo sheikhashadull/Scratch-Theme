@@ -1,5 +1,7 @@
 {% liquid
   assign logo = section.settings.logo
+  assign logowidth = section.settings.logowidth
+
   assign header_gap = section.settings.header-gap
   assign menu_gap = section.settings.menu-gap
 
@@ -22,7 +24,7 @@
             </form>
             <div class="logo">
                 {% if logo != blank %}
-                    <img src="{{ logo | image_url }}" width="80" height="auto" alt="{{ shop.url }}">
+                    <img src="{{ logo | image_url }}" width="{{ logowidth }}" height="auto" alt="{{ shop.url }}">
                 {% else %}
                     <span class="logo-text">{{ shop.name }}</span>
                 {% endif %}
@@ -127,6 +129,16 @@ nav ul li a.active {
                 "type": "image_picker",
                 "id": "logo",
                 "label": "Logo"
+            },
+            {
+                "type": "range",
+                "id": "logowidth",
+                "label": "Logo Width",
+                "min": 50,
+                "max": 120,
+                "default": 50,
+                "step": 10,
+                "unit": "px"
             },
             {
                 "type": "link_list",
