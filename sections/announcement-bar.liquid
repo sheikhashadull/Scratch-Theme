@@ -7,7 +7,7 @@
 
 
 
-<section class="color-{{ color_scheme }} gradient">
+<section class="{{ section.id }} color-{{ color_scheme }} gradient">
     <div class="page-width announcement-bar">
         {% content_for 'blocks' %}
     </div>
@@ -15,7 +15,7 @@
 
 
 <style>
-    .announcement-bar{
+    .{{ section.id }} .announcement-bar{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -64,6 +64,17 @@
                 "default": 10,
                 "step": 10,
                 "unit": "px"
+            },
+            {
+                "type": "select",
+                "id": "alignment",
+                "label": "Alignment",
+                "default": "center",
+                "options": [
+                    { "value": "left", "label": "Left"},
+                    { "value": "center", "label": "Center"},
+                    { "value": "right", "label": "Cight"}
+                ]
             },
             {
                 "type": "header",
