@@ -85,12 +85,13 @@
       "name": "Header Menu",
       "settings": {
         "logo": "shopify://shop_images/logo.svg",
-        "logowidth": 70,
+        "logowidth": 50,
         "menu": "header-menu",
         "padding-headerx": 20,
         "header-gap": 30,
         "color": "#333333",
         "active-color": "#4cff00",
+        "text-transform": "capitalize",
         "font-size": 18,
         "menu-gap": 40,
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
