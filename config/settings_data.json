@@ -19,7 +19,7 @@
           "background_gradient": "linear-gradient(180deg, rgba(NaN, NaN, NaN, 1), rgba(168, 255, 251, 1) 100%)",
           "text": "#b2bc22",
           "button": "#59c650",
-          "button_text": "#cbbe20",
+          "button_text": "#c3b407",
           "secondary_button_label": "#000000",
           "shadow": "#eeff00"
         }
