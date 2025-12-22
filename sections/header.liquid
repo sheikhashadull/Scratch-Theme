@@ -1,14 +1,9 @@
 {% liquid
   assign logo = section.settings.logo
-  assign menu = section.settings.menu
+  assign header_gap = section.settings.header-gap
+  assign menu_gap = section.settings.menu-gap
 
-  assign header-gap = section.settings.header-gap
-  assign menu-gap = section.settings.menu-gap
-
-  assign padding-headerx = section.settings.padding-headerx
-  assign gap = section.settings.gap
-
-  assign alignment = section.settings.alignment
+  assign padding_headerx = section.settings.padding-headerx
 %}
 
 
@@ -46,12 +41,12 @@
 
 <style>
 .header {
-    padding: {{ padding-headerx }}px 0;
+    padding: {{ padding_headerx }}px 0;
 }
 .header-items {
     display: flex;
     flex-direction: column;
-    gap: {{ header-gap }}px;
+    gap: {{ header_gap }}px;
 }
 
 .header-top{
@@ -105,7 +100,7 @@ nav{
 nav ul{
     width: 100%;
     display: flex;
-    gap: {{ menu-gap }}px;
+    gap: {{ menu_gap }}px;
     align-items: center;
     justify-content: center;
     font-size: 20px;
@@ -156,17 +151,6 @@ nav ul{
                 "default": 10,
                 "step": 10,
                 "unit": "px"
-            },
-            {
-                "type": "select",
-                "id": "alignment",
-                "label": "Alignment",
-                "default": "center",
-                "options": [
-                    { "value": "flex-start", "label": "Left"},
-                    { "value": "center", "label": "Center"},
-                    { "value": "flex-end", "label": "Right"}
-                ]
             },
             {
                 "type": "color_scheme",
