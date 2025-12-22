@@ -26,9 +26,9 @@
       },
       "scheme-7edc33ad-54c7-450a-accf-10be995b01fa": {
         "settings": {
-          "background": "#966363",
+          "background": "#ffffff",
           "background_gradient": "",
-          "text": "#522828",
+          "text": "#333333",
           "button": "#ffffff",
           "button_text": "#ffee00",
           "stock_button": "#d48989",
