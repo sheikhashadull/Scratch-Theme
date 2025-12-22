@@ -9,6 +9,9 @@
                 <h1>ashadul</h1>
             </div>
             <div class="accounts">
+                <a href="{% render 'icons', icon: 'user' %}"></a>
+                <a href="{% render 'icons', icon: 'user' %}"></a>
+                <a href="{% render 'icons', icon: 'user' %}"></a>
                 {% render 'icons', icon: 'user' %}
                 {% render 'icons', icon: 'wishlist' %}
                 {% render 'icons', icon: 'cart' %}
@@ -87,6 +90,11 @@ nav ul{
         "name": "Header",
         "class": "header_section",
         "settings": [
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+            },
             {
                 "type": "color_scheme",
                 "id": "color_scheme",
