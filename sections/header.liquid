@@ -1,6 +1,6 @@
 {% liquid
-  assign paddingx = section.settings.paddingx
-  assign paddingy = section.settings.paddingy
+  assign paddingx = section.settings.padding-headerx
+  assign paddingy = section.settings.padding-headery
   assign gap = section.settings.gap
 
   assign alignment = section.settings.alignment
@@ -39,7 +39,7 @@
 
 <style>
 section{
-    padding: {{ paddingx }}px 0;
+    padding: {{ padding-headerx }}px {{ padding-headery }}px;
 }
 .header-top{
     display: flex;
@@ -107,7 +107,7 @@ nav ul{
             },
             {
                 "type": "range",
-                "id": "paddingx",
+                "id": "padding-headerx",
                 "label": "PaddingX",
                 "min": 10,
                 "max": 120,
@@ -117,7 +117,7 @@ nav ul{
             },
             {
                 "type": "range",
-                "id": "paddingy",
+                "id": "padding-headery",
                 "label": "PaddingY",
                 "min": 10,
                 "max": 120,
