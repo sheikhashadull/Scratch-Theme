@@ -1,5 +1,6 @@
 {% liquid
   assign padding_footerx = section.settings.padding-footerx
+  assign copyright = section.settings.copyright
 %}
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
@@ -31,6 +32,9 @@
                     </div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="copyright">
+            <p>{{ copyright }}</p>
         </div>
         
     </div>
@@ -117,6 +121,11 @@
                 "default": 10,
                 "step": 10,
                 "unit": "px"
+            },
+            {
+                "type": "text",
+                "id": "copyright",
+                "label": "Copyright Text"
             },
             {
                 "type": "header",
