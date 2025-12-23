@@ -47,10 +47,11 @@
                     {% for link in menu.links %}
                         <li>
                             <a href="{{ link.url }}">{{ link.title }}
-                                {% if link != blank %}
+                                {% if link.links != blank %}
                                     {% render 'icons', icon: 'downarrow' %}
                                 {% endif %}
                             </a>
+
                         </li>
                     {% endfor %}
                 </ul>
