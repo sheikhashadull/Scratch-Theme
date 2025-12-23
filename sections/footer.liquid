@@ -2,71 +2,131 @@
   assign padding_footerx = section.settings.padding-footerx
 %}
 
+
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width">
-    <div class="footer-content">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when "footer_info" %}
-            <div class="info" {{ block.shopify_attributes }}>
-              <h3>{{ block.settings.footer_title }}</h3>
-              {% form 'customer', class: 'newsletter' %}
-                <input type="hidden" name="contact[tags]" value="newsletter">
-                <input type="email" placeholder="Email" name="contact[email]" required>
-                <button type="submit" aria-label="Subscribe" class="newsletter-btn">
-                  {% render 'icons', icon: 'rightarrow' %}
-                </button>
-              {% endform %}
+    <div class="page-width">
+        <div class="footer-content">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when "footer_info" %}
+                    <div class="info" {{ block.shopify_attributes }}>
+                        <h3>{{ block.settings.footer_title }}</h3>
+                        {% form 'customer', class: 'newsletter' %}
+                            <input type="hidden" name="contact[tags]" value="newsletter">
+                            <input type="email" placeholder="Email" name="contact[email]" required>
+                            <button type="submit" aria-label="Subscribe" class="newsletter-btn">
+                                {% render 'icons', icon: 'rightarrow' %}
+                            </button>
+                        {% endform %}
+                    </div>
+                {% when "footer_links" %}
+                    <div class="links" {{ block.shopify_attributes }}>
+                        <div class="link">
+                            <h5>{{ block.link_title }}</h5>
+                            <ul>
+                                {% for link in block.settings.menu_link.links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% else %}
+                  <p>please add block form theme editor</p>
+              {% endcase %}
+            {% endfor %}
+        </div>
+        <span></span>
+        <div class="copyright">
+                {{ section.settings.copyright | default: 'Kick Game Limited | Company No. 08761997 VAT No. GB179081090' }}
+            <div class="payment-icons">
+                {{ 'visa' | payment_type_svg_tag }}
+                {{ 'master' | payment_type_svg_tag }}
+                {{ 'american_express' | payment_type_svg_tag }}
+                {{ 'paypal' | payment_type_svg_tag }}
+                {{ 'apple_pay' | payment_type_svg_tag }}
+                {{ 'google_pay' | payment_type_svg_tag }}
+                {{ 'shop_pay' | payment_type_svg_tag }}
             </div>
-
-          {% when "footer_links" %}
-            <div class="links" {{ block.shopify_attributes }}>
-              <div class="link">
-                <h5>{{ block.settings.link_title }}</h5>
-                <ul>
-                  {% for link in block.settings.menu_link.links %}
-                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-
-          {% else %}
-            <p>Please add a block from the theme editor</p>
-        {% endcase %}
-      {% endfor %}
+        </div>
+        
     </div>
-
-    <div class="copyright">
-      {{ section.settings.copyright | default: 'Kick Game Limited | Company No. 08761997 VAT No. GB179081090' }}
-      <div class="payment-icons">
-        {{ 'visa' | payment_type_svg_tag }}
-        {{ 'master' | payment_type_svg_tag }}
-        {{ 'american_express' | payment_type_svg_tag }}
-        {{ 'paypal' | payment_type_svg_tag }}
-        {{ 'apple_pay' | payment_type_svg_tag }}
-        {{ 'google_pay' | payment_type_svg_tag }}
-        {{ 'shop_pay' | payment_type_svg_tag }}
-      </div>
-    </div>
-  </div>
 </section>
 
 <style>
-  .footer { padding: {{ padding_footerx }}px 0; }
-  .footer-content { display: flex; gap: 76px; margin-bottom: 20px; flex-wrap: wrap; }
-  .info { width: 30%; display: flex; flex-direction: column; }
-  .info h3 { font-size: 28px; line-height: 32px; font-weight: 700; margin-bottom: 20px; width: 80%; }
-  .links { width: 70%; display: flex; gap: 20px; flex-wrap: wrap; }
-  .link h5 { font-size: 16px; text-transform: uppercase; margin-bottom: 10px; }
-  .link ul li { padding: 6px 0; font-size: 16px; }
-  .link ul li a { color: #121212; }
-  .newsletter { display: flex; align-items: center; justify-content: space-between; width: 100%; border: 1px solid #47474796; padding: 5px 10px; }
-  .newsletter-btn { background: none; border: 0; cursor: pointer; }
-  .copyright { display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid rgba(177,177,177,0.44); flex-wrap: wrap; }
-  .payment-icons { display: flex; gap: 10px; flex-wrap: wrap; }
-  .payment-icons svg { height: 26px; width: auto; opacity: 0.85; }
+    .newsletter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border: 1px solid #47474796;
+    }
+    .newsletter-btn {
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+    .footer {
+        padding: {{ padding_footerx }}px 0;
+    }
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 76px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .info{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+    .info h3 {
+        font-size: 28px;
+        width: 80%;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .links{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .link h5 {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .link {}
+
+    .link ul li {
+        padding: 6px 0;
+        font-size: 16px;
+    }
+    .link ul li a {
+        color: #121212;
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        border-top: 1px solid rgba(177, 177, 177, 0.44);
+    }
+    .payment-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .payment-icons svg {
+        height: 26px;
+        width: auto;
+        opacity: 0.85;
+    }
 </style>
+
 
 {% schema %}
 {
