@@ -17,7 +17,7 @@
         "footer_links_CWbWer": {
           "type": "footer_links",
           "settings": {
-            "link_title": "Information",
+            "link_title": "jhh",
             "menu_link": "header-menu"
           }
         },
@@ -50,7 +50,6 @@
         "footer_links_itDpMp"
       ],
       "settings": {
-        "footerlinks": "header-menu",
         "padding-footerx": 30,
         "copyright": "",
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
