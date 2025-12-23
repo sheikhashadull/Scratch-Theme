@@ -62,7 +62,7 @@
                                                     <ul>
                                                         {% for subchild in childlink.links %}
                                                           
-                                                            <li><a href="">home</a></li>
+                                                            <li><a href="{{ subchild.url }}">{{ subchild.title }}</a></li>
                                                         {% endfor %}
                                                     </ul>
                                                 {% endif %}
