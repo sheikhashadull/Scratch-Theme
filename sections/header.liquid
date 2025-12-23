@@ -42,7 +42,13 @@
             <nav>
                 <ul>
                     {% for link in linklists.header-menu.links %}
-                        <li><a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a></li>
+                        <li>
+                            {% if link.links != blank %}
+                                dropdown
+                            {% else %}    
+                                <a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+                            {% endif %}
+                        </li>
                     {% endfor %}
                 </ul>
             </nav>
