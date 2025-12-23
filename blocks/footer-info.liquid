@@ -1,4 +1,13 @@
-{{ block.settings.title }}
+ <div class="info">
+    <h3>{{ block.settings.title }}</h3>
+    {% form 'customer', class: 'newsletter' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input type="email" placeholder="Email" name="contact[email]" required>
+        <button type="submit" aria-label="Subscribe" class="newsletter-btn">
+            {% render 'icons', icon: 'rightarrow' %}
+        </button>
+    {% endform %}
+</div>
 
 {% schema %}
 {
