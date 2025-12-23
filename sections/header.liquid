@@ -44,7 +44,7 @@
                     {% for link in linklists.header-menu.links %}
                         <li>
                             {% if link.links != blank %}
-                                {{ link.title }} {% render 'icons', icon: 'downarrow' %}
+                                {{ link.title }}
                                 <div class="dropdown-menu">
                                     <ul>
                                         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -53,7 +53,7 @@
                                     </ul>
                                 </div>
                             {% else %}    
-                                <a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+                                <a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>{% render 'icons', icon: 'downarrow' %}
                             {% endif %}
                         </li>
                     {% endfor %}
