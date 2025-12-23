@@ -35,7 +35,7 @@
         </div>
         <div class="copyright">
             <p>{{ copyright }}</p>
-            <ul class="payment-icons">
+            <div class="payment-icons">
                 {{ 'visa' | payment_type_svg_tag }}
                 {{ 'master' | payment_type_svg_tag }}
                 {{ 'american_express' | payment_type_svg_tag }}
@@ -43,7 +43,7 @@
                 {{ 'apple_pay' | payment_type_svg_tag }}
                 {{ 'google_pay' | payment_type_svg_tag }}
                 {{ 'shop_pay' | payment_type_svg_tag }}
-            </ul>
+            </div>
         </div>
         
     </div>
@@ -109,6 +109,21 @@
         align-items: center;
         justify-content: space-between;
     }
+    .payment-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .payment-icons svg {
+        height: 26px;
+        width: auto;
+        opacity: 0.85;
+    }
+
     
 </style>
 
