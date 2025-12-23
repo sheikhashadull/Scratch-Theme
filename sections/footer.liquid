@@ -9,7 +9,7 @@
         <div class="footer-content">
             {% for block in section.blocks %}
               {% case block.type %}
-                {% when 'info' %}
+                {% when "info" %}
                     <div class="info">
                         <h3>{{ block.settings.title }}</h3>
                         {% form 'customer', class: 'newsletter' %}
@@ -21,7 +21,7 @@
                         {% endform %}
                     </div>
                   
-                {% when 'footer_links' %}
+                {% when "footer_links" %}
                     <div class="links">
                         {% for i in (1..4) %}
                             <div class="link">
