@@ -13,6 +13,9 @@
   assign active_color = section.settings.active-color
 
 
+  assign menu = section.settings.menu
+
+
 
   assign text_transform = section.settings.text-transform
 %}
@@ -41,7 +44,7 @@
             </div>
             <nav>
                 <ul>
-                    {% for link in section.settings.menu.links %}
+                    {% for link in menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
 
                         <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}
@@ -82,78 +85,78 @@
 </section>
 
 <style>
-.header {
-    padding: {{ padding_headerx }}px 0;
-}
-.header-items {
-    display: flex;
-    flex-direction: column;
-    gap: {{ header_gap }}px;
-}
+    .header {
+        padding: {{ padding_headerx }}px 0;
+    }
+    .header-items {
+        display: flex;
+        flex-direction: column;
+        gap: {{ header_gap }}px;
+    }
 
-.header-top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-form{
-    display: flex;
-    background-color: #F2EFE7;
-    align-items: center;
-    justify-content: space-between;
-    width: 20%;
-    padding: 4px 8px;
-}
-form svg{
-    width: 25px;
-}
-form input{
-    width: 100%;
-    padding: 10px;
-    background: none;
-    outline: none;
-    border: none;
-    outline: none;
-}
-.logo {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-.accounts {
-    display: flex;
-    width: 20%;
-    align-items: center;
-    justify-content: end;
-    gap: 10px;
-}
-.accounts svg {
-    width: 25px;
-}
-nav{
-    width: 100%;
-    position: relative;
-}
-nav ul{
-    width: 100%;
-    display: flex;
-    gap: {{ menu_gap }}px;
-    align-items: center;
-    justify-content: center;
-    font-size:{{ font_size }}px;
-}
-nav ul li a{
-    color: {{ color }};
-    text-transform: {{ text_transform }};
-    font-weight: 600;
-}
-nav ul li a.active {
-  color: {{ active_color }};
-}
-nav ul li a svg {
-  width: 15px;
-}
+    .header-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    form{
+        display: flex;
+        background-color: #F2EFE7;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+        padding: 4px 8px;
+    }
+    form svg{
+        width: 25px;
+    }
+    form input{
+        width: 100%;
+        padding: 10px;
+        background: none;
+        outline: none;
+        border: none;
+        outline: none;
+    }
+    .logo {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .accounts {
+        display: flex;
+        width: 20%;
+        align-items: center;
+        justify-content: end;
+        gap: 10px;
+    }
+    .accounts svg {
+        width: 25px;
+    }
+    nav{
+        width: 100%;
+        position: relative;
+    }
+    nav ul{
+        width: 100%;
+        display: flex;
+        gap: {{ menu_gap }}px;
+        align-items: center;
+        justify-content: center;
+        font-size:{{ font_size }}px;
+    }
+    nav ul li a{
+        color: {{ color }};
+        text-transform: {{ text_transform }};
+        font-weight: 600;
+    }
+    nav ul li a.active {
+    color: {{ active_color }};
+    }
+    nav ul li a svg {
+    width: 15px;
+    }
 </style>
 
 {% schema %}
