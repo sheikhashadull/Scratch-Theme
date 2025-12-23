@@ -44,7 +44,8 @@
             </div>
             <nav>
                 <ul>
-                    {% for link in menu.links %}
+                    <li>
+                    {% comment %} {% for link in menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
 
                         <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}
@@ -77,7 +78,7 @@
                         {% endif %}
 
                     </li>
-                    {% endfor %}
+                    {% endfor %} {% endcomment %}
                 </ul>
             </nav>
         </div>
