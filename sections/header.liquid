@@ -43,7 +43,7 @@
                 <ul>
                     {% for link in section.settings.menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
-                        
+
                         <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">
                         {{ link.title }}
                         {% if link.links != blank %}
@@ -55,15 +55,35 @@
                         <div class="dropdown-menu">
                             <ul>
                             {% for childlink in link.links %}
-                                <li>
+                                <li class="{% if childlink.links != blank %}has-sub-dropdown{% endif %}">
+
                                 <a href="{{ childlink.url }}">
                                     {{ childlink.title }}
+                                    {% if childlink.links != blank %}
+                                    {% render 'icons', icon: 'downarrow' %}
+                                    {% endif %}
                                 </a>
+
+                                {% if childlink.links != blank %}
+                                    <div class="sub-dropdown-menu">
+                                    <ul>
+                                        {% for subchild in childlink.links %}
+                                        <li>
+                                            <a href="{{ subchild.url }}">
+                                            {{ subchild.title }}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    </div>
+                                {% endif %}
+
                                 </li>
                             {% endfor %}
                             </ul>
                         </div>
                         {% endif %}
+
                     </li>
                     {% endfor %}
                 </ul>
@@ -154,7 +174,7 @@ form{
     padding: 4px 8px;
 }
 form svg{
-    width: 15px;
+    width: 25px;
 }
 form input{
     width: 100%;
@@ -200,7 +220,7 @@ nav ul li a.active {
   color: {{ active_color }};
 }
 nav ul li a svg {
-  width: 25px;
+  width: 15px;
 }
 </style>
 
