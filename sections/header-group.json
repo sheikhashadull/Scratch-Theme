@@ -86,7 +86,7 @@
       "settings": {
         "logo": "shopify://shop_images/logo.svg",
         "logowidth": 50,
-        "menu": "footer",
+        "menu": "header-menu",
         "padding-headerx": 20,
         "header-gap": 30,
         "color": "#121212",
