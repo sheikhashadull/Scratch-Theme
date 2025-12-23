@@ -3,7 +3,7 @@
         <div class="footer-content">
             <div class="logo">
                 <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
-                <form action="">
+                <form action="" class="newesletter">
                     <input type="email" placeholder="Email">
                     {% render 'icons', icon: 'rightarrow' %}
                 </form>
@@ -47,6 +47,9 @@
         font-weight: 700;
         margin-bottom: 20px;
     }
+        form .newesletter {
+        width: 100%;
+    }
     .links{
         width: 75%;
         display: flex;
@@ -67,4 +70,5 @@
     .link ul li a {
         color: #121212;
     }
+    
 </style>
