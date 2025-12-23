@@ -49,7 +49,11 @@
                             {% if link.links != blank %}
                                 {{ link.title }}
                             {% else %}
-                                <a href="{{ link.url }}">{{ link.title }}</a>
+                                <a href="{{ link.url }}">{{ link.title }}
+                                    {% if link.links != blank %}
+                                      {% render 'icons', icon: 'downarrow' %}
+                                    {% endif %}
+                                </a>
                             {% endif %}
                         </li>
                     {% endfor %}
