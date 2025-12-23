@@ -21,35 +21,26 @@
                         {% endform %}
                     </div>
                   
-                {% when second_value %}
+                {% when 'footer_links' %}
+                    <div class="links">
+                        {% for i in (1..4) %}
+                            <div class="link">
+                                <h5>header</h5>
+                                <ul>
+                                    {% for link in footerlinks.links %}
+                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
                   
                 {% else %}
                   
               {% endcase %}
             {% endfor %}
-            <div class="info">
-                <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
-                {% form 'customer', class: 'newsletter' %}
-                    <input type="hidden" name="contact[tags]" value="newsletter">
-                    <input type="email" placeholder="Email" name="contact[email]" required>
-                    <button type="submit" aria-label="Subscribe" class="newsletter-btn">
-                        {% render 'icons', icon: 'rightarrow' %}
-                    </button>
-                {% endform %}
-            </div>
 
-            <div class="links">
-                {% for i in (1..4) %}
-                    <div class="link">
-                        <h5>header</h5>
-                        <ul>
-                            {% for link in footerlinks.links %}
-                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endfor %}
-            </div>
+            
         </div>
         <span></span>
         <div class="copyright">
@@ -200,7 +191,7 @@
                         "label": "Social Links"
                     }
                 ],
-                "type": "links",
+                "type": "footer_links",
                 "name":"Important Links",
                 "settings": [
                     {
