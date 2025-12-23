@@ -30,6 +30,7 @@
                 {% endfor %}
             </div>
         </div>
+        <span></span>
         <div class="copyright">
                 {{ section.settings.copyright | default: 'Kick Game Limited | Company No. 08761997 VAT No. GB179081090' }}
             <div class="payment-icons">
@@ -106,8 +107,6 @@
         align-items: center;
         justify-content: space-between;
         padding-top: 40px;
-        border-top: 1px solid #47474796;
-
     }
     .payment-icons {
         display: flex;
@@ -121,7 +120,9 @@
         width: auto;
         opacity: 0.85;
     }
-
+    span{
+        border-top: 1px solid #47474796;
+    }
 </style>
 
 
