@@ -1,3 +1,5 @@
+{{ block.settings.linktitle }}
+
 {% schema %}
 {
     "name": "Important Link",
@@ -8,6 +10,11 @@
             "label": "Link Title",
             "default": "Customer Service"
         },
+        {
+            "type": "link_list",
+            "id": "footer_link",
+            "label": "Links"
+        }
     ],
     "presets": [
         {
