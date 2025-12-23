@@ -54,7 +54,7 @@
                             <div class="dropdown">
                                 <ul>
                                     {% for childlink in link.links %}
-                                        <li><a href="">home</a></li>
+                                        <li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
                                       
                                     {% endfor %}
                                 </ul>
