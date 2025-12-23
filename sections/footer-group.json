@@ -14,57 +14,24 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer_info_cExi7h": {
-          "type": "footer-info",
-          "name": "Info",
+        "footer_links_zxGUkL": {
+          "type": "footer_links",
           "settings": {
-            "title": "GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER"
-          },
-          "blocks": {}
+            "link_title": "Information",
+            "menu_link": ""
+          }
         },
-        "footer_menu_38ajP7": {
-          "type": "footer-menu",
-          "name": "Important Link",
+        "footer_links_itDpMp": {
+          "type": "footer_links",
           "settings": {
-            "linktitle": "Customer Service",
-            "footer_link": "header-menu"
-          },
-          "blocks": {}
-        },
-        "footer_menu_YWtQ6q": {
-          "type": "footer-menu",
-          "name": "Important Link",
-          "settings": {
-            "linktitle": "Customer Service",
-            "footer_link": "header-menu"
-          },
-          "blocks": {}
-        },
-        "footer_menu_cLdCAW": {
-          "type": "footer-menu",
-          "name": "Important Link",
-          "settings": {
-            "linktitle": "Customer Service",
-            "footer_link": "header-menu"
-          },
-          "blocks": {}
-        },
-        "footer_menu_yjWXpA": {
-          "type": "footer-menu",
-          "name": "Important Link",
-          "settings": {
-            "linktitle": "Customer Service",
-            "footer_link": "header-menu"
-          },
-          "blocks": {}
+            "link_title": "Information",
+            "menu_link": ""
+          }
         }
       },
       "block_order": [
-        "footer_info_cExi7h",
-        "footer_menu_38ajP7",
-        "footer_menu_YWtQ6q",
-        "footer_menu_cLdCAW",
-        "footer_menu_yjWXpA"
+        "footer_links_zxGUkL",
+        "footer_links_itDpMp"
       ],
       "settings": {
         "footerlinks": "header-menu",
