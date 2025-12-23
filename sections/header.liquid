@@ -45,17 +45,8 @@
             <nav>
                 <ul>
                     {% for link in menu.links %}
-                        <li>
-                            {% if link.links != blank %}
-                                {{ link.title }}
-                            {% else %}
-                                <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}
-                                    {% if link.links != blank %}
-                                      {% render 'icons', icon: 'downarrow' %}
-                                    {% endif %}
-                                </a>
-                            {% endif %}
-                        </li>
+                        <li><a href=""></a></li>
+                      
                     {% endfor %}
                     {% comment %} {% for link in menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
