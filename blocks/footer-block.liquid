@@ -1,0 +1,22 @@
+{{ block.settings.item }}
+
+
+{% schema %}
+    {
+        "name": "Company Info",
+        "tag": null,
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "item",
+                "label": "Text",
+                "default": "<p>Free shipping on all orders</p>"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Announcement Item"
+            }
+        ]
+    }
+{% endschema %}
