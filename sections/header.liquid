@@ -45,7 +45,13 @@
             <nav>
                 <ul>
                     {% for link in menu.links %}
-                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        <li>
+                            <a href="{{ link.url }}">{{ link.title }}
+                                {% if link.links != blank %}
+                                  {% render 'icons', icon: 'downarrow' %}
+                                {% endif %}
+                            </a>
+                        </li>
                     {% endfor %}
                 </ul>
                 {% comment %} <ul>
