@@ -50,9 +50,7 @@
                                 {{ link.title }}
                             {% else %}
                                 <a href="{{ link.url }}">{{ link.title }}
-                                    {% if link.links != blank %}
-                                      {% render 'icons', icon: 'downarrow' %}
-                                    {% endif %}
+                                    {% render 'icons', icon: 'downarrow' %}
                                 </a>
                             {% endif %}
                         </li>
