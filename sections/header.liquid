@@ -45,7 +45,7 @@
             <nav>
                 <ul>
                     {% for link in menu.links %}
-                        <li><a href="">home</a></li>
+                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                     {% endfor %}
                     {% comment %} {% for link in menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
