@@ -84,8 +84,8 @@
       "type": "header",
       "name": "Header Menu",
       "settings": {
-        "logo": "shopify://shop_images/logo.svg",
-        "logowidth": 50,
+        "logo": "shopify://shop_images/logo_svg_d62f5d57-f5c7-476a-9168-17df0d5db568.svg",
+        "logowidth": 120,
         "menu": "header-menu",
         "padding-headerx": 20,
         "header-gap": 30,
