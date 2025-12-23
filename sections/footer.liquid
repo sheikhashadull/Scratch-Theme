@@ -8,8 +8,8 @@
     <div class="page-width">
         <div class="footer-content">
             {% for block in section.blocks %}
-              {% case block.settings.type %}
-                {% when 'title' %}
+              {% case block.type %}
+                {% when 'info' %}
                     <div class="info">
                         <h3>{{ block.title }}</h3>
                         {% form 'customer', class: 'newsletter' %}
