@@ -5,7 +5,7 @@
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="footer-content">
-            {% for block in blocks.settings %}
+            {% for block in section.blocks %}
                 {% case block.type %}
                   {% when info %}
                     <div class="info">
@@ -22,7 +22,7 @@
                     <div class="links">
                         {% for i in (1..4) %}
                             <div class="link">
-                                <h5>{{ blocks.settings.title }}</h5>
+                                <h5>{{ blocks.settings.linktitle }}</h5>
                                 <ul>
                                     {% for link in footerlinks.links %}
                                         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
