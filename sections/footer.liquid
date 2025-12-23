@@ -10,6 +10,7 @@
 
                 {% form 'customer' %}
                     <input type="email" placeholder="Email">
+                    {% render 'icons', icon: 'rightarrow' %}
                   
                 {% endform %}
                 <form action="{{ user.email }}" class="newesletter">
