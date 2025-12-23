@@ -10,7 +10,7 @@
               {% case block.type %}
                 {% when "footer_info" %}
                     <div class="info" {{ block.shopify_attributes }}>
-                        <h3>{{ block.footer_title }}</h3>
+                        <h3>{{ block.settings.footer_title }}</h3>
                         {% form 'customer', class: 'newsletter' %}
                             <input type="hidden" name="contact[tags]" value="newsletter">
                             <input type="email" placeholder="Email" name="contact[email]" required>
