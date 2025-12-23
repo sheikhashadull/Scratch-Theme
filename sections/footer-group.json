@@ -13,6 +13,29 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "footer_info_Hyhcyr": {
+          "type": "footer-info",
+          "name": "Info",
+          "settings": {
+            "title": "GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER"
+          },
+          "blocks": {}
+        },
+        "footer_menu_gEQDHj": {
+          "type": "footer-menu",
+          "name": "Important Link",
+          "settings": {
+            "linktitle": "Customer Service",
+            "footer_link": "header-menu"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "footer_info_Hyhcyr",
+        "footer_menu_gEQDHj"
+      ],
       "settings": {
         "footerlinks": "header-menu",
         "padding-footerx": 30,
