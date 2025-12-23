@@ -45,7 +45,13 @@
             <nav>
                 <ul>
                     {% for link in menu.links %}
-                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        <li>
+                            {% if link.links != blank %}
+                                {{ link.title }}
+                            {% else %}
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                            {% endif %}
+                        </li>
                     {% endfor %}
                     {% comment %} {% for link in menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
