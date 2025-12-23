@@ -8,19 +8,15 @@
                 {% content_for 'blocks' %}
                 <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
                 {% form 'customer', class: 'newsletter' %}
-  <input type="hidden" name="contact[tags]" value="newsletter">
+                <input type="hidden" name="contact[tags]" value="newsletter">
 
-  <input
-    type="email"
-    name="contact[email]"
-    placeholder="Enter your email"
-    required
-  >
+                <input
+                    type="email" name="contact[email]" placeholder="Enter your email" required>
 
-  <button type="submit" aria-label="Subscribe">
-    {% render 'icons', icon: 'rightarrow' %}
-  </button>
-{% endform %}
+                <button type="submit" aria-label="Subscribe">
+                    {% render 'icons', icon: 'rightarrow' %}
+                </button>
+                {% endform %}
 
             </div>
             <div class="links">
@@ -43,6 +39,14 @@
 </section>
 
 <style>
+    .newsletter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.newsletter input {
+  flex: 1;
+}
     .footer {
         padding: {{ padding_footerx }}px 0;
     }
