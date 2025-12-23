@@ -25,7 +25,7 @@
                             <h5>{{ block.link_title }}</h5>
                             <ul>
                                 {% for link in block.settings.menu_link.links %}
-                                    <li><a href="{{ block.settings.menu_link }}">{{ block.settings.menu_link }}</a></li>
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
