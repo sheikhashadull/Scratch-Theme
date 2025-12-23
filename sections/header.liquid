@@ -44,7 +44,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="">home</a></li>
+                    {% for link in menu.links %}
+                        <li><a href="">home</a></li>
+                    {% endfor %}
                     {% comment %} {% for link in menu.links %}
                     <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
 
