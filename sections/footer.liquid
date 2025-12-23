@@ -5,7 +5,7 @@
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="footer-content">
-            <div class="logo">
+            <div class="info">
                 {% content_for 'blocks' %}
                 <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
 
@@ -63,12 +63,12 @@
         gap: 76px;
         width: 100%;
     }
-    .logo{
+    .info{
         width: 40%;
         display: flex;
         flex-direction: column;
     }
-    .logo h3 {
+    .info h3 {
         font-size: 28px;
         width: 80%;
         line-height: 32px;
