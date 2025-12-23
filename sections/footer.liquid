@@ -8,15 +8,10 @@
                 {% content_for 'blocks' %}
                 <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
 
-                {% form 'customer' %}
+                {% form 'customer' class= "newesletter" %}
                     <input type="email" placeholder="Email" name="contact[email]" required>
                     {% render 'icons', icon: 'rightarrow' %}
-                  
                 {% endform %}
-                <form action="{{ user.email }}" class="newesletter">
-                    <input type="email" placeholder="Email">
-                    {% render 'icons', icon: 'rightarrow' %}
-                </form>
             </div>
 
             <div class="links">
