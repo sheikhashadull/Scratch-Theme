@@ -22,6 +22,24 @@
           },
           "blocks": {}
         },
+        "footer_menu_mbKjTN": {
+          "type": "footer-menu",
+          "name": "Important Link",
+          "settings": {
+            "linktitle": "Customer Service",
+            "footer_link": ""
+          },
+          "blocks": {}
+        },
+        "footer_menu_4Ejzin": {
+          "type": "footer-menu",
+          "name": "Important Link",
+          "settings": {
+            "linktitle": "Customer Service",
+            "footer_link": ""
+          },
+          "blocks": {}
+        },
         "footer_menu_gEQDHj": {
           "type": "footer-menu",
           "name": "Important Link",
@@ -34,6 +52,8 @@
       },
       "block_order": [
         "footer_info_Hyhcyr",
+        "footer_menu_mbKjTN",
+        "footer_menu_4Ejzin",
         "footer_menu_gEQDHj"
       ],
       "settings": {
