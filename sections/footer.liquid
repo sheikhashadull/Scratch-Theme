@@ -23,7 +23,7 @@
                         <div class="link">
                             <h5>{{ block.settings.linktitle }}</h5>
                             <ul>
-                                {% for link in footerlinks.links %}
+                                {% for link in block.settings.footer_link.links %}
                                     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                                 {% endfor %}
                             </ul>
