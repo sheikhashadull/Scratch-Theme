@@ -1,6 +1,5 @@
 {% liquid
   assign padding_footerx = section.settings.padding-footerx
-  assign copyright = section.settings.copyright
 %}
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
@@ -32,7 +31,7 @@
             </div>
         </div>
         <div class="copyright">
-            {{ copyright }}
+                {{ section.settings.copyright | default: 'Kick Game Limited | Company No. 08761997 VAT No. GB179081090' }}
             <div class="payment-icons">
                 {{ 'visa' | payment_type_svg_tag }}
                 {{ 'master' | payment_type_svg_tag }}
