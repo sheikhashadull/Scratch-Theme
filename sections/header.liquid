@@ -45,11 +45,13 @@
                         <li>
                             {% if link.links != blank %}
                                 {{ link.title }}
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                </ul>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                    </ul>
+                                </div>
                             {% else %}    
                                 <a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
                             {% endif %}
