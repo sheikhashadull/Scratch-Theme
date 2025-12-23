@@ -45,7 +45,7 @@
                         <li>
                             {% if link.links != blank %}
                                 {{ link.title }}
-                                <ul>
+                                <ul class="dropdown-menu">
                                     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                                     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                                     <li><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -62,6 +62,9 @@
 </section>
 
 <style>
+.dropdown-menu {
+    position: absolute;
+}
 .header {
     padding: {{ padding_headerx }}px 0;
 }
