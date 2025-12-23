@@ -41,21 +41,30 @@
             </div>
             <nav>
                 <ul>
-                    {% for link in linklists.header-menu.links %}
-                        <li>
-                            {% if link.links != blank %}
-                                {{ link.title }}
-                                <a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title }}{% render 'icons', icon: 'downarrow' %}</a>
-                            {% else %}    
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                    </ul>
-                                </div>
-                            {% endif %}
-                        </li>
+                    {% for link in section.settings.menu.links %}
+                    <li class="menu-item {% if link.links != blank %}has-dropdown{% endif %}">
+                        
+                        <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">
+                        {{ link.title }}
+                        {% if link.links != blank %}
+                            {% render 'icons', icon: 'downarrow' %}
+                        {% endif %}
+                        </a>
+
+                        {% if link.links != blank %}
+                        <div class="dropdown-menu">
+                            <ul>
+                            {% for childlink in link.links %}
+                                <li>
+                                <a href="{{ childlink.url }}">
+                                    {{ childlink.title }}
+                                </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </li>
                     {% endfor %}
                 </ul>
             </nav>
