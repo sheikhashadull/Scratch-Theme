@@ -14,13 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer_links_zxGUkL": {
-          "type": "footer_links",
-          "settings": {
-            "link_title": "Information",
-            "menu_link": ""
-          }
-        },
         "footer_links_itDpMp": {
           "type": "footer_links",
           "settings": {
@@ -30,7 +23,6 @@
         }
       },
       "block_order": [
-        "footer_links_zxGUkL",
         "footer_links_itDpMp"
       ],
       "settings": {
