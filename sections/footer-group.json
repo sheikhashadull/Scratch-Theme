@@ -38,8 +38,8 @@
         "footer_links_itDpMp": {
           "type": "footer_links",
           "settings": {
-            "link_title": "Information",
-            "menu_link": ""
+            "link_title": "Hello",
+            "menu_link": "header-menu"
           }
         }
       },
