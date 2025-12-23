@@ -1,3 +1,6 @@
+{% liquid
+  assign padding-footerx = section.settings.padding-footerx
+%}
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="footer-content">
@@ -28,6 +31,9 @@
 </section>
 
 <style>
+    .footer {
+        padding: {{ padding_headerx }}px 0;
+    }
     .footer-content{
         display: flex;
         align-items: center;
@@ -87,7 +93,7 @@
             },
             {
                 "type": "range",
-                "id": "padding-headerx",
+                "id": "padding-footerx",
                 "label": "Footer Padding",
                 "min": 10,
                 "max": 120,
