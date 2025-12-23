@@ -7,10 +7,8 @@
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="footer-content">
-            {% for block in section.blocks %}
-              
-            {% endfor %}
             <div class="info">
+                {% content_for 'blocks' %}
                 <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
                 {% form 'customer', class: 'newsletter' %}
                     <input type="hidden" name="contact[tags]" value="newsletter">
