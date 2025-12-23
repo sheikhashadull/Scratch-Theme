@@ -1,6 +1,5 @@
 {% liquid
   assign padding_footerx = section.settings.padding-footerx
-  assign footerlinks = section.settings.footerlinks
 %}
 
 
@@ -11,7 +10,7 @@
               {% case block.type %}
                 {% when "footer_info" %}
                     <div class="info" {{ block.shopify_attributes }}>
-                        <h3>{{ block.settings.footer_title }}</h3>
+                        <h3>{{ block.footer_title }}</h3>
                         {% form 'customer', class: 'newsletter' %}
                             <input type="hidden" name="contact[tags]" value="newsletter">
                             <input type="email" placeholder="Email" name="contact[email]" required>
@@ -23,9 +22,11 @@
                 {% when "footer_links" %}
                     <div class="links" {{ block.shopify_attributes }}>
                         <div class="link">
-                            <h5>{{ block.settings.link_title }}</h5>
+                            <h5>{{ block.link_title }}</h5>
                             <ul>
-                                <li><a href="{{ block.settings.menu_link }}">{{ block.settings.menu_link }}</a></li>
+                                {% for link in block.settings.menu_link.links %}
+                                    <li><a href="{{ block.settings.menu_link }}">{{ block.settings.menu_link }}</a></li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
