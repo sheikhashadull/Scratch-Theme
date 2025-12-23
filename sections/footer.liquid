@@ -35,6 +35,12 @@
         </div>
         <div class="copyright">
             <p>{{ copyright }}</p>
+            <ul class="payment-icons">
+                {{ 'visa' | payment_type_svg_tag }}
+                {{ 'master' | payment_type_svg_tag }}
+                {{ 'paypal' | payment_type_svg_tag }}
+                {{ 'amex' | payment_type_svg_tag }}
+            </ul>
         </div>
         
     </div>
