@@ -13,6 +13,19 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "footer_block_Mz8Nre": {
+          "type": "footer-block",
+          "name": "Company Info",
+          "settings": {
+            "title": "GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "footer_block_Mz8Nre"
+      ],
       "settings": {
         "menu": "",
         "padding-footerx": 40,
