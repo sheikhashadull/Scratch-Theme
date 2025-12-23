@@ -44,7 +44,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="">Hello</a></li>
+                    {% for link in menu.links %}
+                        <li>
+                            <a href="">Hello</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>
