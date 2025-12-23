@@ -152,8 +152,66 @@
     nav ul li a svg {
     width: 15px;
     }
+{% comment %} dropdown css {% endcomment %}
+ /* ===== Dropdown Basic ===== */
+nav ul li {
+  position: relative;
+}
 
-    {% comment %} dropdown css {% endcomment %}
+.dropdown,
+.sub-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  z-index: 99;
+}
+
+.dropdown ul,
+.sub-dropdown ul {
+  flex-direction: column;
+  gap: 0;
+}
+
+.dropdown li,
+.sub-dropdown li {
+  width: 100%;
+}
+
+.dropdown a,
+.sub-dropdown a {
+  display: block;
+  padding: 10px 14px;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Hover show dropdown */
+nav ul li:hover > .dropdown {
+  display: block;
+}
+
+/* ===== Sub Dropdown ===== */
+.sub-dropdown {
+  top: 0;
+  left: 100%;
+}
+
+/* Hover show sub-dropdown */
+.dropdown li:hover > .sub-dropdown {
+  display: block;
+}
+
+/* Simple hover effect */
+.dropdown a:hover,
+.sub-dropdown a:hover {
+  background: #f5f5f5;
+}
+
 </style>
 
 {% schema %}
