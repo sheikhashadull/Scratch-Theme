@@ -60,7 +60,10 @@
                                                 <a href="{{ childlink.url }}">{{ childlink.title }}</a>
                                                 {% if childlink.links != blank %}
                                                     <ul>
-                                                        <li><a href="">home</a></li>
+                                                        {% for subchild in childlink.links %}
+                                                          
+                                                            <li><a href="">home</a></li>
+                                                        {% endfor %}
                                                     </ul>
                                                 {% endif %}
                                             </li>
