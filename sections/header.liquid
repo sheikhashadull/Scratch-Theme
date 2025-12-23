@@ -73,6 +73,49 @@
 </section>
 
 <style>
+.menu-item {
+  position: relative;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 99;
+}
+
+.dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-menu a {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  color: {{ active_color }};
+}
+
+
 .dropdown-menu {
     position: absolute;
     top: 25px;
