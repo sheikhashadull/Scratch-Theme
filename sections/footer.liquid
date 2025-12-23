@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>{{ copyright }}</p>
+            {{ copyright }}
             <div class="payment-icons">
                 {{ 'visa' | payment_type_svg_tag }}
                 {{ 'master' | payment_type_svg_tag }}
@@ -148,10 +148,10 @@
                 "unit": "px"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "copyright",
                 "label": "Copyright Text",
-                "default": "Kick Game Limited | Company No. 08761997 VAT No. GB179081090"
+                "default": "<p>Kick Game Limited | Company No. 08761997 VAT No. GB179081090</p>"
             },
             {
                 "type": "header",
