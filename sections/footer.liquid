@@ -4,36 +4,41 @@
 %}
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
-        <div class="footer-content">
-            {% for block in section.blocks %}
-                {% case block.type %}
-                  {% when 'info' %}
-                    <div class="info">
-                        <h3>{{ block.settings.title }}</h3>
-                        {% form 'customer', class: 'newsletter' %}
-                            <input type="hidden" name="contact[tags]" value="newsletter">
-                            <input type="email" placeholder="Email" name="contact[email]" required>
-                            <button type="submit" aria-label="Subscribe" class="newsletter-btn">
-                                {% render 'icons', icon: 'rightarrow' %}
-                            </button>
-                        {% endform %}
-                    </div>
-                  {% when 'linklists' %}
-                    <div class="links">
-                        <div class="link">
-                            <h5>{{ block.settings.linktitle }}</h5>
-                            <ul>
-                                {% for link in block.settings.footer_link %}
-                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                  {% else %}
-                    <p>Please add links menu</p>
-                {% endcase %}
-            {% endfor %}
+<div class="footer-content">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'info' %}
+        <div class="info">
+          <h3>{{ block.settings.title }}</h3>
+          {% form 'customer', class: 'newsletter' %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <input type="email" placeholder="Email" name="contact[email]" required>
+            <button type="submit" aria-label="Subscribe" class="newsletter-btn">
+              {% render 'icons', icon: 'rightarrow' %}
+            </button>
+          {% endform %}
         </div>
+
+      {% when 'important_link' %}
+        <div class="links">
+          <h5>{{ block.settings.linktitle }}</h5>
+          {% if block.settings.footer_link != blank %}
+            <ul>
+              {% for link in block.settings.footer_link.links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>Please assign a menu in the block settings</p>
+          {% endif %}
+        </div>
+
+      {% else %}
+        <p>Unknown block type</p>
+    {% endcase %}
+  {% endfor %}
+</div>
+
         <span></span>
         <div class="copyright">
                 {{ section.settings.copyright | default: 'Kick Game Limited | Company No. 08761997 VAT No. GB179081090' }}
