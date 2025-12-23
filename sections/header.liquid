@@ -44,7 +44,7 @@
                     {% for link in linklists.header-menu.links %}
                         <li>
                             {% if link.links != blank %}
-                                {{ link.title }}
+                                <span>{{ link.title }}</span>
                                 <div class="dropdown-menu">
                                     <ul>
                                         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
