@@ -18,25 +18,22 @@
                             </button>
                         {% endform %}
                     </div>
-                  {% when text %}
-                    
-                  {% else %}
-                    
-                {% endcase %}
-            
-
-            <div class="links">
-                {% for i in (1..4) %}
-                    <div class="link">
-                        <h5>{{ blocks.settings.title }}</h5>
-                        <ul>
-                            {% for link in footerlinks.links %}
-                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                            {% endfor %}
-                        </ul>
+                  {% when linklists %}
+                    <div class="links">
+                        {% for i in (1..4) %}
+                            <div class="link">
+                                <h5>{{ blocks.settings.title }}</h5>
+                                <ul>
+                                    {% for link in footerlinks.links %}
+                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
-            </div>
+                  {% else %}
+                    <p>Please add links menu</p>
+                {% endcase %}
             {% endfor %}
         </div>
         <span></span>
