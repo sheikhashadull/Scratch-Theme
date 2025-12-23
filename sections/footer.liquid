@@ -6,18 +6,24 @@
     <div class="page-width">
         <div class="footer-content">
             {% for block in blocks.settings %}
-              
+                {% case block.type %}
+                  {% when info %}
+                    <div class="info">
+                        <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
+                        {% form 'customer', class: 'newsletter' %}
+                            <input type="hidden" name="contact[tags]" value="newsletter">
+                            <input type="email" placeholder="Email" name="contact[email]" required>
+                            <button type="submit" aria-label="Subscribe" class="newsletter-btn">
+                                {% render 'icons', icon: 'rightarrow' %}
+                            </button>
+                        {% endform %}
+                    </div>
+                  {% when text %}
+                    
+                  {% else %}
+                    
+                {% endcase %}
             
-            <div class="info">
-                <h3>GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER</h3>
-                {% form 'customer', class: 'newsletter' %}
-                    <input type="hidden" name="contact[tags]" value="newsletter">
-                    <input type="email" placeholder="Email" name="contact[email]" required>
-                    <button type="submit" aria-label="Subscribe" class="newsletter-btn">
-                        {% render 'icons', icon: 'rightarrow' %}
-                    </button>
-                {% endform %}
-            </div>
 
             <div class="links">
                 {% for i in (1..4) %}
