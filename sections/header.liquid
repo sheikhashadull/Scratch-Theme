@@ -55,7 +55,9 @@
                             {% if link.links != blank %}
                                 <div class="dropdown">
                                     <ul>
-                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                        {% for childlink in link.links %}
+                                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                               
