@@ -53,9 +53,11 @@
                             </a>
                             <div class="dropdown">
                                 <ul>
-                                    <li>
-                                        <a href="">Hello</a>
-                                    </li>
+                                    {% for childlink in link.links %}
+                                        <li>
+                                            <a href="">Hello</a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </li>
