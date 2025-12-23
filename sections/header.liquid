@@ -46,7 +46,7 @@
                 <ul>
                     {% for link in menu.links %}
                         <li>
-                            <a href="">Hello</a>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
