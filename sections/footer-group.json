@@ -18,7 +18,7 @@
           "type": "footer_links",
           "settings": {
             "link_title": "Information",
-            "menu_link": ""
+            "menu_link": "header-menu"
           }
         },
         "footer_links_aL48rt": {
