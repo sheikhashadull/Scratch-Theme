@@ -57,7 +57,11 @@
                                     <ul>
                                         {% for childlink in link.links %}
                                             <li>
-                                                <a href="{{ childlink.url }}">{{ childlink.title }} {% render 'icons', icon: 'downarrow' %}</a>
+                                                <a href="{{ childlink.url }}">{{ childlink.title }}
+                                                    {% if childlink.links != blank %}
+                                                      {% render 'icons', icon: 'downarrow' %}
+                                                    {% endif %}
+                                                </a>
                                                 {% if childlink.links != blank %}
                                                     <ul>
                                                         {% for subchild in childlink.links %}
