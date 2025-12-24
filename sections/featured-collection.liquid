@@ -3,7 +3,7 @@
         <h2>SPOTLIGHT</h2>
         <div class="featured-collection">
             {% for item in collections %}
-                <div class="item">
+                <div class="items">
                     {% if item.image.src %}
                         <img src="{{ item.image.src | image_url }}" alt="{{ image.title }}" width="auto" height="auto">
                     {% else %}
@@ -27,7 +27,7 @@
         width: 100%;
         gap: 30px;
     }
-    .item img,svg {
+    .items>img,svg {
         object-fit: cover;
         width: 350px;
         height: 408px;
