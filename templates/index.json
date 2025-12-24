@@ -14,7 +14,7 @@
       "name": "Featured Collection",
       "settings": {
         "featured-title": "Featured Collections",
-        "collection": "",
+        "collection": "all-collections",
         "featured-paddingx": 40
       }
     },
