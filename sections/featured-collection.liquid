@@ -3,7 +3,7 @@
         <div class="featured-collection">
             <h2>SPOTLIGHT</h2>
             <div class="collections">
-                {% for item in collections %}
+                {% for item in collections.collection %}
                     <div class="items">
                         {% if item.image.src %}
                             <img src="{{ item.image.src | image_url }}" alt="{{ item.title }}">
