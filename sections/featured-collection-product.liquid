@@ -11,14 +11,6 @@
                             <span class="stockout">Sold</span>
                         </div>
                         <h3>{{ product.title }}</h3>
-                        {% if product.metafields.reviews.rating.value %}
-                            <div class="rating">
-                                <div class="stars" style="--rating: {{ product.metafields.reviews.rating.value }};"></div>
-                                <span class="rating-count">
-                                ({{ product.metafields.reviews.rating_count.value | default: 0 }})
-                                </span>
-                            </div>
-                        {% endif %}
                         <div class="price">
                             <span class="sale-price">{{ product.price | money }}</span>
                             <span class="regular-price">{{ product.compare_at_price | money }}</span>
@@ -121,45 +113,6 @@
         color: #888;
         text-decoration: line-through;
     }
-    .rating {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 10px;
-}
-
-.stars {
-  --star-size: 14px;
-  --star-color: #ddd;
-  --star-background: #f5a623;
-
-  font-size: var(--star-size);
-  font-family: Times;
-  line-height: 1;
-  position: relative;
-  display: inline-block;
-}
-
-.stars::before {
-  content: "★★★★★";
-  color: var(--star-color);
-}
-
-.stars::after {
-  content: "★★★★★";
-  color: var(--star-background);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(var(--rating) / 5 * 100%);
-  overflow: hidden;
-}
-
-.rating-count {
-  font-size: 13px;
-  color: #666;
-}
-
 
 </style>
 
