@@ -1,4 +1,6 @@
 {% liquid
+    assign current_variant = product.selected_or_first_available_variant
+    assign featured_media = current_variant.featured_media | default: product.featured_media
 
 %}
 <section class="product-section">
@@ -6,7 +8,7 @@
     <div class="product-wraper">
     <div class="product-left">
       <div class="main-image">
-        <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
+        <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto">
       </div>
 
       <div class="thumbs">
