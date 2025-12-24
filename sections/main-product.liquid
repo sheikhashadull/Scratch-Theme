@@ -25,12 +25,27 @@
                 <span class="regular-price">{{ product.compare_at_price | money }}</span>
             </div>
             <p class="description"> {{ product.description }}</p>
-            <select class="variant-select">
-                <option>Select Size</option>
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-            </select>
+
+             {% if product.variants.size > 1 %}
+                <select class="variant-select">
+                {% for variant in product.variants %}
+                    <option value="{{ variant.id }}">
+                    {{ variant.title }}
+                    </option>
+                {% endfor %}
+                </select>
+            {% endif %}
+
+            {% if product.variants.size > 1 %}
+                <select class="variant-select">
+                    {% for variant in product.variants %}
+                        <option>
+                            {{ variant.title }}
+                        </option>
+                    {% endfor %}
+                </select>
+              
+            {% endif %}
             <div class="product-form">
                 {% form 'product', product %}
                     <input type="hidden" name="id" value="{{ current_variant.id }}">
