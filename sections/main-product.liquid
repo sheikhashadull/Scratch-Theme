@@ -22,10 +22,14 @@
         <span class="sale-price">$120</span>
         <span class="regular-price">$160</span>
       </div>
-
       <p class="description">
         This is a simple product description. Clean, minimal and professional.
       </p>
+      <div class="product-form">
+        {% form 'product', product %}
+          <input type="submit" value="Add to Cart">
+        {% endform %}
+      </div>
 
       <select class="variant-select">
         <option>Select Size</option>
