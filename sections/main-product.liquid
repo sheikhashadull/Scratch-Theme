@@ -1,34 +1,117 @@
-{% schema %}
-{
-    "name": "All Products",
-    "disabled_on": {"groups": ["header", "footer"]},
-    "settings": [
-        {
-            "type": "text",
-            "id": "featured-title",
-            "label": "Title",
-            "default": "Featured Collections"
-        },
-        {
-            "type": "collection_list",
-            "id": "collection_list",
-            "label": "Featured Collections",
-        },
-        {
-            "type": "range",
-            "id": "featured-paddingx",
-            "label": "Footer Padding",
-            "min": 10,
-            "max": 120,
-            "default": 10,
-            "step": 10,
-            "unit": "px"
-        },
-    ],
-    "presets": [
-        {
-            "name": "All Products"
-        }
-    ]
+<section class="product-simple">
+  <div class="page-width product-wrap">
+
+    <!-- LEFT : Images -->
+    <div class="product-media">
+      <img
+        id="MainProductImage"
+        src="{{ product.featured_image | image_url }}"
+        alt="{{ product.title }}"
+      >
+
+      <div class="product-thumbs">
+        {% for image in product.images %}
+          <img
+            src="{{ image | image_url: width: 120 }}"
+            alt="{{ product.title }}"
+            onclick="document.getElementById('MainProductImage').src=this.src"
+          >
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- RIGHT : Details -->
+    <div class="product-info">
+      <h1>{{ product.title }}</h1>
+
+      <div class="price">
+        <span class="price-main">{{ product.price | money }}</span>
+      </div>
+
+      <!-- Variant dropdown -->
+      {% if product.variants.size > 1 %}
+        <select class="variant-select">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}">
+              {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+      {% endif %}
+
+      <button class="btn">Add to cart</button>
+
+      <div class="description">
+        {{ product.description }}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+    .product-simple {
+  padding: 60px 0;
 }
-{% endschema %}
+
+.product-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Left */
+.product-media img {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+.product-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.product-thumbs img {
+  width: 70px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+/* Right */
+.product-info h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.price-main {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.variant-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 30px;
+  color: #555;
+}
+
+</style>
