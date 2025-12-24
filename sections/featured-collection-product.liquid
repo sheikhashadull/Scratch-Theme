@@ -9,7 +9,7 @@
                         <div class="badge">
                             {% if product.available == true %}
                                 <span class="instock">Sale</span>
-                            {% elsif product.compare_at_price > product.price and product.unavailable %}
+                            {% elsif product.compare_at_price > product.price %}
                                 <span class="stockout">Sold</span>
                             {% endif %}
                               
