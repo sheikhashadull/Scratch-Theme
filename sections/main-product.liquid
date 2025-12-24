@@ -8,12 +8,12 @@
     <div class="product-wraper">
     <div class="product-left">
       <div class="main-image">
-        <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto">
+        <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto" id="productimage">
       </div>
 
       <div class="thumbs">
         {% for image in product.images %}
-            <img src="{{ image | image_url }}" alt="" width="auto" height="auto" id="productimage"
+            <img src="{{ image | image_url }}" alt="" width="auto" height="auto"
                 onclick="document.getElementById('productimage').src=this.src"
             >
         {% endfor %}
