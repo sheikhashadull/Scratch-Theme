@@ -12,7 +12,9 @@
     "featured_collection_GLpyG3": {
       "type": "featured-collection",
       "name": "Featured Collection",
-      "settings": {}
+      "settings": {
+        "collection": "product-3"
+      }
     }
   },
   "order": [
