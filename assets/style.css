@@ -15,8 +15,9 @@
 }
 
 h1, h2{
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 32px;
+    text-decoration: uppercase;
 }
 section {
     background: var(--bg);
