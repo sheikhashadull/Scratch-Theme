@@ -28,7 +28,7 @@
       "type": "featured-collection-product",
       "name": "Featured Product",
       "settings": {
-        "featured-title": "All Collection Products",
+        "featured-title": "",
         "collection": "product-1",
         "pro-paddingx": 10
       }
