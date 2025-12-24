@@ -1,8 +1,8 @@
 <section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
-        <h2>SPOTLIGHT</h2>
+        <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-collection">
-            {% for item in collections %}
+            {% for item in collection %}
                 <div class="items">
                     {% if item.image.src %}
                         <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
@@ -65,6 +65,11 @@
     "name": "Featured Collection",
     "disabled_on": {"groups": ["header", "footer"]},
     "settings": [
+        {
+            "type": "text",
+            "id": "featured-title",
+            "label": "Title"
+        },
         {
             "type": "collection",
             "id": "collection",
