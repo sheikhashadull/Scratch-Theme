@@ -2,34 +2,15 @@
     <div class="page-width">
         <h2>SPOTLIGHT</h2>
         <div class="featured-collection">
-            <div class="collections">
-                <img src="" alt="">
-                <div class="items">
-                    <h3>Hello</h3>
-                    <a href="">See More</a>
+            {% for item in collections %}
+                <div class="collections">
+                    <img src="" alt="">
+                    <div class="items">
+                        <h3>Hello</h3>
+                        <a href="">See More</a>
+                    </div>
                 </div>
-            </div>
-            <div class="collections">
-                <img src="" alt="">
-                <div class="items">
-                    <h3>Hello</h3>
-                    <a href="">See More</a>
-                </div>
-            </div>
-            <div class="collections">
-                <img src="" alt="">
-                <div class="items">
-                    <h3>Hello</h3>
-                    <a href="">See More</a>
-                </div>
-            </div>
-            <div class="collections">
-                <img src="" alt="">
-                <div class="items">
-                    <h3>Hello</h3>
-                    <a href="">See More</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
