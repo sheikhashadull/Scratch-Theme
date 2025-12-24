@@ -13,8 +13,52 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "info_JwJh8c": {
+          "type": "info",
+          "settings": {
+            "title": "GET 10% OFF YOUR FIRST ORDER WHEN SIGNING UP TO OUR NEWSLETTER",
+            "description": "<p>Central Cee Goes Shopping for Sneakers at Kick Game</p>",
+            "socil": ""
+          }
+        },
+        "links_x7Afaw": {
+          "type": "links",
+          "settings": {
+            "title": "Information",
+            "menu": "header-menu"
+          }
+        },
+        "links_JHEDLk": {
+          "type": "links",
+          "settings": {
+            "title": "Information",
+            "menu": "header-menu"
+          }
+        },
+        "links_eJzNfH": {
+          "type": "links",
+          "settings": {
+            "title": "Information",
+            "menu": "header-menu"
+          }
+        },
+        "links_aq7kyC": {
+          "type": "links",
+          "settings": {
+            "title": "Information",
+            "menu": "header-menu"
+          }
+        }
+      },
+      "block_order": [
+        "info_JwJh8c",
+        "links_x7Afaw",
+        "links_JHEDLk",
+        "links_eJzNfH",
+        "links_aq7kyC"
+      ],
       "settings": {
-        "footerlinks": "header-menu",
         "padding-footerx": 30,
         "copyright": "",
         "color_scheme": "scheme-7edc33ad-54c7-450a-accf-10be995b01fa"
