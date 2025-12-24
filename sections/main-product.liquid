@@ -31,6 +31,7 @@
       <p class="description">{{ product.description }}</p>
       <div class="product-form">
         {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ current_variant.id }}">
           <input type="submit" value="Add to Cart">
         {% endform %}
       </div>
