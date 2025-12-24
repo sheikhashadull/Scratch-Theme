@@ -1,7 +1,7 @@
 <section class="featured-col {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
-        <div class="featured-collection">
+        <div class="featured-product">
             {% for product in collections.all.products %}
                 <div class="items">
                     <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
@@ -27,11 +27,12 @@
     .featured-col {
         padding: {{section.settings.pro-paddingx}}px 0;
     }
-    .featured-collection {
+    .featured-product {
         display: flex;
         gap: 24px;
         margin: 30px 0;
         width: 100%;
+        flex-wrap: wrap;
     }
 
     .items {
