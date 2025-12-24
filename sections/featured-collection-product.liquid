@@ -7,8 +7,11 @@
                     <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
                     <div class="item-title">
                         <div class="badge">
-                            <span class="instock">Sale</span>
-                            <span class="stockout">Sold</span>
+                            {% if product.available == true %}
+                                <span class="instock">Sale</span>
+                            {% else %}
+                                <span class="stockout">Sold</span>
+                            {% endif %}
                         </div>
                         <h3>{{ product.title }}</h3>
                         <div class="rating">
