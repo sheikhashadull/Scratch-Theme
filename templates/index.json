@@ -9,15 +9,7 @@
  */
 {
   "sections": {
-    "featured_collection_product_nAXNhd": {
-      "type": "featured-collection-product",
-      "name": "Featured Collection Product",
-      "settings": {
-        "collection": "product-1"
-      }
-    }
   },
   "order": [
-    "featured_collection_product_nAXNhd"
   ]
 }
