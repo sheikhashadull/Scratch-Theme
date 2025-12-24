@@ -13,7 +13,7 @@
 
       <div class="thumbs">
         {% for image in product.images %}
-            <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto" id="productimage"
+            <img src="{{ image | image_url }}" alt="" width="auto" height="auto" id="productimage"
                 onclick="document.getElementById('productimage').src=this.src"
             >
         {% endfor %}
