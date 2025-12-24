@@ -23,8 +23,8 @@
       "name": "Featured Product",
       "settings": {
         "featured-title": "All Collection Products",
-        "collection": "",
-        "featured-paddingx": 10
+        "collection": "all-collections",
+        "pro-paddingx": 10
       }
     }
   },
