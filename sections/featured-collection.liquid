@@ -2,7 +2,7 @@
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-collection">
-            {% for item in collection %}
+            {% for item in collections %}
                 <div class="items">
                     {% if item.image.src %}
                         <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
@@ -68,12 +68,13 @@
         {
             "type": "text",
             "id": "featured-title",
-            "label": "Title"
+            "label": "Title",
+            "default": "Featured Collections"
         },
         {
             "type": "collection",
             "id": "collection",
-            "label": "Collections"
+            "label": "Collections",
         }
     ],
     "presets": [
