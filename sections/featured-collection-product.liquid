@@ -143,37 +143,43 @@
     .star.filled {
     color: #f5a623; /* filled star */
     }
-    .pagination {
+    /* Ensure parent has relative position */
+.featured-product {
+  position: relative;
+  padding-bottom: 60px; /* space for pagination */
+}
+
+/* Pagination container */
+.pagination {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px; /* always bottom */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
-  z-index: 10;
 }
 
+/* Number buttons */
 .pagination span,
 .pagination a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  min-width: 36px;
+  height: 36px;
   font-size: 14px;
   background: #f2f2f2;
   color: #111;
   text-decoration: none;
-  border-radius: 50%; /* circular */
-  transition: all 0.25s ease;
+  border-radius: 8px;
+  transition: background 0.2s ease;
 }
 
 /* Hover effect */
 .pagination a:hover {
   background: #111;
   color: #fff;
-  transform: translateY(-2px);
 }
 
 /* Active page */
@@ -182,28 +188,6 @@
   color: #fff;
   font-weight: 600;
   cursor: default;
-}
-
-/* Prev / Next arrows using CSS */
-.pagination .prev a::before,
-.pagination .next a::after {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #111;
-  border-right: 2px solid #111;
-  transform: rotate(135deg); /* left arrow default */
-  content: "";
-}
-
-.pagination .next a::after {
-  transform: rotate(-45deg); /* right arrow */
-}
-
-/* Remove text inside prev/next */
-.pagination .prev a span,
-.pagination .next a span {
-  display: none;
 }
 
 
