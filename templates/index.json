@@ -14,7 +14,13 @@
       "name": "Featured Collection",
       "settings": {
         "featured-title": "Featured Collections",
-        "collection": "",
+        "collection_list": [
+          "product-3-copy",
+          "product-1",
+          "product-2",
+          "product-3",
+          "all-collections"
+        ],
         "featured-paddingx": 40
       }
     },
