@@ -1,7 +1,7 @@
 <section class="">
     <div class="page-width">
-        <h2>SPOTLIGHT</h2>
         <div class="featured-collection">
+            <h2>SPOTLIGHT</h2>
             {% for item in collections %}
                 <div class="items">
                     {% if item.image.src %}
@@ -18,9 +18,6 @@
 </section>
 
 <style>
-/* Section title *
-
-/* Collection container */
 .featured-collection {
     display: flex;
     flex-wrap: wrap;
