@@ -13,7 +13,9 @@
       "type": "featured-collection",
       "name": "Featured Collection",
       "settings": {
-        "collection": ""
+        "featured-title": "Featured Collections",
+        "collection": "",
+        "featured-paddingx": 40
       }
     }
   },
