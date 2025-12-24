@@ -2,20 +2,24 @@
     <div class="page-width">
         <h2>SPOTLIGHT</h2>
         <div class="featured-collection">
-            {% for item in collections %}
-                <div class="items">
-                    {% if item.image.src %}
-                        <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
-                    {% else %}
-                        {{ 'collection-1' | placeholder_svg_tag }}
-                    {% endif %}
-                    <div class="item-title">
-                        <h3>{{ item.title }}</h3>
-                        <a href="{{ item.url }}">See More</a>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+  {% for item in collections %}
+    <div class="items">
+      <div class="item-image">
+        {% if item.image %}
+          <img src="{{ item.image | image_url: width: 800 }}" alt="{{ item.title }}">
+        {% else %}
+          {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+
+      <div class="item-title">
+        <h3>{{ item.title }}</h3>
+        <a href="{{ item.url }}">See More</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
     </div>
 </section>
 
