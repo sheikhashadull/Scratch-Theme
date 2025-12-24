@@ -22,9 +22,7 @@
         <span class="sale-price">{{ product.price | money }}</span>
         <span class="regular-price">{{ product.compare_at_price | money }}</span>
       </div>
-      <p class="description">
-        This is a simple product description. Clean, minimal and professional.
-      </p>
+      <p class="description">{{ product.description }}</p>
       <div class="product-form">
         {% form 'product', product %}
           <input type="submit" value="Add to Cart">
