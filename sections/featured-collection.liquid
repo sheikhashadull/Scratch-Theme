@@ -2,7 +2,7 @@
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-collection">
-            {% for item in section.settings.collection.products %}
+            {% for item in section.settings.collection_list %}
                 <div class="items">
                     {% if item.image.src %}
                         <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
@@ -76,7 +76,7 @@
         },
         {
             "type": "collection_list",
-            "id": "collection",
+            "id": "collection_list",
             "label": "Featured Collections",
         },
         {
