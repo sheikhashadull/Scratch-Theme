@@ -145,11 +145,11 @@
     }
     .pagination {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 6px;
+  gap: 8px;
   flex-wrap: wrap;
   z-index: 10;
 }
@@ -159,13 +159,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   font-size: 14px;
   background: #f2f2f2;
   color: #111;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 50%; /* circular */
   transition: all 0.25s ease;
 }
 
@@ -184,18 +184,23 @@
   cursor: default;
 }
 
-/* Previous / Next icons */
-.pagination .prev a::before {
-  content: "‹"; /* Unicode left arrow */
-  font-size: 18px;
+/* Prev / Next arrows using CSS */
+.pagination .prev a::before,
+.pagination .next a::after {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-right: 2px solid #111;
+  transform: rotate(135deg); /* left arrow default */
+  content: "";
 }
 
 .pagination .next a::after {
-  content: "›"; /* Unicode right arrow */
-  font-size: 18px;
+  transform: rotate(-45deg); /* right arrow */
 }
 
-/* Hide text inside prev/next links */
+/* Remove text inside prev/next */
 .pagination .prev a span,
 .pagination .next a span {
   display: none;
