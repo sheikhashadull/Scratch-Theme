@@ -1,4 +1,4 @@
-<section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+<section class="featured-col {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-collection">
@@ -20,6 +20,8 @@
 </section>
 
 <style>
+    .featured-col{
+        padding: {{section.settings.featured-paddingx}}px 0;
     .featured-collection {
         display: flex;
         gap: 24px;
@@ -75,7 +77,17 @@
             "type": "collection",
             "id": "collection",
             "label": "Collections",
-        }
+        },
+        {
+            "type": "range",
+            "id": "featured-paddingx",
+            "label": "Footer Padding",
+            "min": 10,
+            "max": 120,
+            "default": 10,
+            "step": 10,
+            "unit": "px"
+        },
     ],
     "presets": [
         {
