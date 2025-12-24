@@ -2,35 +2,28 @@
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-product">
-            {% for product in collections.all.products %}
-                <div class="prod-items">
-                    <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
-                    <div class="item-title">
-                        <div class="badge">
-                            {% if product.compare_at_price > product.price and product.available == true %}
-                                <span class="instock">Sale</span>
-                            {% elsif product.compare_at_price > product.price %}
-                                <span class="stockout">Sold</span>
-                            {% endif %}
-                              
-                        </div>
-                        <h3>{{ product.title }}</h3>
-                        <div class="rating">
-                            <span class="star filled">★</span>
-                            <span class="star filled">★</span>
-                            <span class="star filled">★</span>
-                            <span class="star filled">★</span>
-                            <span class="star">★</span>
-                        </div>
-
-                        <div class="price">
-                            <span class="sale-price">{{ product.price | money }}</span>
-                            <span class="regular-price">{{ product.compare_at_price | money }}</span>
-                        </div>
-                        <a href="{{ product.url }}" class="btn">See Product</a>
+            <div class="prod-items">
+                <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
+                <div class="item-title">
+                    <div class="badge">
+                        <span class="instock">Sale</span>
+                        <span class="stockout">Sold</span>
                     </div>
+                    <h3>fff</h3>
+                    <div class="rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="price">
+                        <span class="sale-price">ff</span>
+                        <span class="regular-price">ff</span>
+                    </div>
+                    <a href="" class="btn">See Product</a>
                 </div>
-            {% endfor %}
+            </div>
         </div>
     </div>
 </section>
