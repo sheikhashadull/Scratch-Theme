@@ -2,11 +2,11 @@
     <div class="page-width">
         <h2>SPOTLIGHT</h2>
         <div class="featured-collection">
-            {% for items in collections %}
+            {% for item in collections %}
                 <div class="items">
                     <img src="" alt="">
-                    <h3>color_scheme</h3>
-                    <button class="btn">See more</button>
+                    <h3>{{ item.title }}</h3>
+                    <button class="btn" href="{{ item.url }}">See more</button>
                 </div>
             {% endfor %}
         </div>
