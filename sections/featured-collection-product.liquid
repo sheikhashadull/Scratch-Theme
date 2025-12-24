@@ -4,7 +4,7 @@
         <div class="featured-product">
             {% for product in collections.all.products %}
                 <div class="items">
-                    <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
+                    <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
                     <div class="item-title">
                         <div class="badge">
                             <span class="instock">Sale</span>
