@@ -30,8 +30,8 @@
       <p class="description"> {{ product.description }}</p>
       <div class="product-form">
         {% form 'product', product %}
-            <input type="submit" name="id" value="Add to Cart">
-          
+            <input type="submit" value="Add to Cart">
+            <input type="hidden" name="">
         {% endform %}
       </div>
 
