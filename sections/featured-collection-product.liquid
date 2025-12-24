@@ -7,7 +7,7 @@
                     <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
                     <div class="item-title">
                         <div class="badge">
-                            {% if product.available == true %}
+                            {% if product.available == false %}
                                 <span class="instock">Sale</span>
                             {% elsif product.compare_at_price > product.price and product.unavailable %}
                                 <span class="stockout">Sold</span>
