@@ -17,9 +17,19 @@
         "collection": "",
         "featured-paddingx": 40
       }
+    },
+    "featured_collection_product_PEei9m": {
+      "type": "featured-collection-product",
+      "name": "Featured Product",
+      "settings": {
+        "featured-title": "All Collection Products",
+        "collection": "",
+        "featured-paddingx": 10
+      }
     }
   },
   "order": [
-    "featured_collection_cw4RUa"
+    "featured_collection_cw4RUa",
+    "featured_collection_product_PEei9m"
   ]
 }
