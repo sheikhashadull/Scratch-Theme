@@ -1,11 +1,13 @@
 <section class="">
     <div class="page-width">
         <div class="featured-collection">
-            <div class="items">
-                <img src="" alt="">
-                <h3>color_scheme</h3>
-                <button class="btn">See more</button>
-            </div>
+            {% for items in collections %}
+                <div class="items">
+                    <img src="" alt="">
+                    <h3>color_scheme</h3>
+                    <button class="btn">See more</button>
+                </div>
+            {% endfor %}
             <div class="items">
                 <img src="" alt="">
                 <h3>color_scheme</h3>
