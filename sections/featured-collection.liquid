@@ -5,7 +5,7 @@
             {% for item in section.settings.collection.products %}
                 <div class="items">
                     {% if item.image.src %}
-                        <img src="{{ item.featured_media | image_url }}" alt="" width="auto" height="auto">
+                        <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
                     {% else %}
                         {{ 'collection-1' | placeholder_svg_tag }}
                     {% endif %}
