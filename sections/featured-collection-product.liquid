@@ -10,7 +10,7 @@
                             {% if product.compare_at_price > product.price and product.available == true %}
                                 <span class="instock">Best Seller</span>
                             {% elsif product.available == true%}
-                                <span class="instock">Tranding</span>
+                                <span class="tranding">Tranding</span>
                             {% elsif product.compare_at_price > product.price and product.available == false%}
                                 <span class="stockout">Sold</span>
                             {% endif %}
@@ -98,6 +98,11 @@
     /* Sale badge */
     .badge .instock {
         background:rgb(12, 165, 71);
+        color: #ffffff;
+    }
+    /* Tranding badge */
+    .badge .tranding {
+        background:rgb(255, 145, 0);
         color: #ffffff;
     }
 
