@@ -3,7 +3,7 @@
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-product">
             {% for product in collections.all.products %}
-                <div class="pro-items">
+                <div class="items">
                     <img src="{{ product.featured_media | image_url }}" alt="" width="auto" height="auto">
                     <div class="item-title">
                         <div class="badge">
