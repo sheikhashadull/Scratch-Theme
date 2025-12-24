@@ -11,6 +11,14 @@
                             <span class="stockout">Sold</span>
                         </div>
                         <h3>{{ product.title }}</h3>
+                        <div class="rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+
                         <div class="price">
                             <span class="sale-price">{{ product.price | money }}</span>
                             <span class="regular-price">{{ product.compare_at_price | money }}</span>
@@ -113,6 +121,21 @@
         color: #888;
         text-decoration: line-through;
     }
+    .rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+    }
+
+    .star {
+    font-size: 14px;
+    color: #ddd; /* empty star */
+    }
+
+    .star.filled {
+    color: #f5a623; /* filled star */
+    }
+
 
 </style>
 
