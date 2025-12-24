@@ -29,6 +29,9 @@
       </div>
       <p class="description"> {{ product.description }}</p>
       <div class="product-form">
+        {% form 'product', product %}
+          
+        {% endform %}
       </div>
 
       <select class="variant-select">
