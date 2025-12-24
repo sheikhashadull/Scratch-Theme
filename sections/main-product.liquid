@@ -30,7 +30,7 @@
       </div>
       <p class="description">{{ product.description }}</p>
       <div class="product-form">
-        {% form 'product', product %}
+        {% form 'product', product, return_to: 'back' %}
           <input type="hidden" name="id" value="{{ current_variant.id }}">
           <input type="number" name="quantity" id="quantity" min="1" max="5" value="1" >
           <input type="submit" value="Add to Cart">
