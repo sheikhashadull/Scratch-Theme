@@ -1,9 +1,7 @@
 <section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <h2>SPOTLIGHT</h2>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                 <div class="featured-collection">
+        <div class="featured-collection">
             {% for item in collections %}
                 <div class="items">
                     {% if item.image.src %}
@@ -18,28 +16,8 @@
                 </div>
             {% endfor %}
         </div>
-            </div>
-        </div>
     </div>
 </section>
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      keyboard: {
-        enabled: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
 
 <style>
 .featured-collection {
