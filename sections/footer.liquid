@@ -7,34 +7,26 @@
 <section class="footer {{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <div class="footer-content">
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when "footer_info" %}
-                    <div class="info">
-                        <h3>{{ block.settings.footer_title }}</h3>
-                        {% form 'customer', class: 'newsletter' %}
-                            <input type="hidden" name="contact[tags]" value="newsletter">
-                            <input type="email" placeholder="Email" name="contact[email]" required>
-                            <button type="submit" aria-label="Subscribe" class="newsletter-btn">
-                                {% render 'icons', icon: 'rightarrow' %}
-                            </button>
-                        {% endform %}
-                    </div>
-                {% when "footer_links" %}
-                    <div class="links">
-                        <div class="link">
-                            <h5>header liquid</h5>
-                            <ul>
-                                {% for link in footerlinks.links %}
-                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                {% else %}
-                  <p>please add block form theme editor</p>
-              {% endcase %}
-            {% endfor %}
+            <div class="info">
+                <h3>{{ block.settings.footer_title }}</h3>
+                {% form 'customer', class: 'newsletter' %}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <input type="email" placeholder="Email" name="contact[email]" required>
+                    <button type="submit" aria-label="Subscribe" class="newsletter-btn">
+                        {% render 'icons', icon: 'rightarrow' %}
+                    </button>
+                {% endform %}
+            </div>
+            <div class="links">
+                <div class="link">
+                    <h5>header liquid</h5>
+                    <ul>
+                        {% for link in footerlinks.links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
         <span></span>
         <div class="copyright">
