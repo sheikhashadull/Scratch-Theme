@@ -12,10 +12,9 @@
       </div>
 
       <div class="thumbs">
-        <img src="https://via.placeholder.com/80" alt="">
-        <img src="https://via.placeholder.com/80" alt="">
-        <img src="https://via.placeholder.com/80" alt="">
-        <img src="https://via.placeholder.com/80" alt="">
+        {% for image in featured_media %}
+            <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto">
+        {% endfor %}
       </div>
     </div>
 
