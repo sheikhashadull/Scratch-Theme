@@ -1,0 +1,33 @@
+{% schema %}
+{
+    "name": "Products",
+    "settings": [
+        {
+            "type": "text",
+            "id": "featured-title",
+            "label": "Title",
+            "default": "Featured Collections"
+        },
+        {
+            "type": "collection_list",
+            "id": "collection_list",
+            "label": "Featured Collections",
+        },
+        {
+            "type": "range",
+            "id": "featured-paddingx",
+            "label": "Footer Padding",
+            "min": 10,
+            "max": 120,
+            "default": 10,
+            "step": 10,
+            "unit": "px"
+        },
+    ],
+    "presets": [
+        {
+            "name": "Products"
+        }
+    ]
+}
+{% endschema %}
