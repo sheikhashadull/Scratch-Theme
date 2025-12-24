@@ -12,7 +12,7 @@
                             {% elsif product.available == true%}
                                 <span class="tranding">Top Selling</span>
                             {% elsif product.compare_at_price > product.price and product.available == false%}
-                                <span class="stockout">Stockout</span>
+                                <span class="stockout">Sold</span>
                             {% endif %}
                         </div>
                         <h3>{{ product.title }}</h3>
