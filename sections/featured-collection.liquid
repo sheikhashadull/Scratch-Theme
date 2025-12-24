@@ -4,7 +4,9 @@
         <div class="featured-collection">
             {% for item in collections %}
                 <div class="items">
-                    <img src="" alt="">
+                    {% if item.image.src %}
+                        <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
+                    {% endif %}
                     <h3>{{ item.title }}</h3>
                     <a class="btn" href="{{ item.url }}">See more</a>
                 </div>
