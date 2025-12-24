@@ -2,21 +2,23 @@
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-collection">
-            <div class="items">
-                <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
-                <div class="item-title">
-                    <div class="badge">
-                        <span class="instock">Sale</span>
-                        <span class="stockout">Sold</span>
+            {% for product in collections.all.products %}
+                <div class="items">
+                    <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
+                    <div class="item-title">
+                        <div class="badge">
+                            <span class="instock">Sale</span>
+                            <span class="stockout">Sold</span>
+                        </div>
+                        <h3>{{ item.title }}</h3>
+                        <div class="price">
+                            <span class="sale-price"></span>
+                            <span class="regular-price"></span>
+                        </div>
+                        <a href="{{ item.url }}" class="btn">See Product</a>
                     </div>
-                    <h3>{{ item.title }}</h3>
-                    <div class="price">
-                        <span class="sale-price"></span>
-                        <span class="regular-price"></span>
-                    </div>
-                    <a href="{{ item.url }}" class="btn">See Product</a>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
