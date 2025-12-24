@@ -6,166 +6,49 @@
 <section class="product-section">
   <div class="page-width">
     <div class="product-wraper">
-    <div class="product-left">
-      <div class="main-image">
-        <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto" id="productimage">
-      </div>
-
-      <div class="thumbs">
-        {% for image in product.images %}
-            <img src="{{ image | image_url }}" alt="" width="auto" height="auto"
-                onclick="document.getElementById('productimage').src=this.src"
-            >
-        {% endfor %}
-      </div>
-    </div>
-
-    <!-- Right: Details -->
-    <div class="product-right">
-      <h1>{{ product.title }}</h1>
-
-      <div class="price">
-        <span class="sale-price">{{ product.price | money }}</span>
-        <span class="regular-price">{{ product.compare_at_price | money }}</span>
-      </div>
-      <p class="description"> {{ product.description }}</p>
-      
-      <select class="variant-select">
-          <option>Select Size</option>
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-        </select>
-        
-        <div class="product-form">
-          {% form 'product', product %}
-              <input type="hidden" name="id" value="{{ current_variant.id }}">
-              <input type="number" name="quantity" id="quantity" min="1" max="10" value="1">
-              <input type="submit" value="Add to Cart">
-              {{ form | payment_button }}
-          {% endform %}
+        <div class="product-left">
+        <div class="main-image">
+            <img src="{{ featured_media | image_url }}" alt="" width="auto" height="auto" id="productimage">
         </div>
-    </div>
+        <div class="thumbs">
+            {% for image in product.images %}
+                <img src="{{ image | image_url }}" alt="" width="auto" height="auto"
+                    onclick="document.getElementById('productimage').src=this.src"
+                >
+            {% endfor %}
+        </div>
+        </div>
+        <div class="product-right">
+        <h1>{{ product.title }}</h1>
+
+        <div class="price">
+            <span class="sale-price">{{ product.price | money }}</span>
+            <span class="regular-price">{{ product.compare_at_price | money }}</span>
+        </div>
+        <p class="description"> {{ product.description }}</p>
+        
+        <select class="variant-select">
+            <option>Select Size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            </select>
+            
+            <div class="product-form">
+            {% form 'product', product %}
+                <input type="hidden" name="id" value="{{ current_variant.id }}">
+                <input type="number" name="quantity" id="quantity" min="1" max="10" value="1">
+                <input type="submit" value="Add to Cart">
+                {{ form | payment_button }}
+            {% endform %}
+            </div>
+        </div>
     </div>
   </div>
 </section>
 
 <style>
-    * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.product-section {
-  padding: 60px 0;
-}
-
-/* Layout */
-.product-wraper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-/* LEFT SIDE */
-.product-left .main-image {
-  background: #f7f7f7;
-  padding: 20px;
-}
-
-.product-left .main-image img {
-  width: 100%;
-  display: block;
-}
-
-.product-left .thumbs {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.product-left .thumbs img {
-  width: 70px;
-  background: #f7f7f7;
-  padding: 6px;
-  cursor: pointer;
-  border: 1px solid #e5e5e5;
-  transition: border-color 0.2s ease;
-}
-
-.product-left .thumbs img:hover {
-  border-color: #111;
-}
-
-/* RIGHT SIDE */
-.product-right h1 {
-  font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
-.price {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.sale-price {
-  font-size: 22px;
-  font-weight: 600;
-  color: #111;
-}
-
-.regular-price {
-  font-size: 16px;
-  color: #999;
-  text-decoration: line-through;
-}
-
-.description {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-/* Variant */
-.variant-select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-}
-
-/* Product form */
-.product-form input[type="number"] {
-  width: 80px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin-right: 10px;
-}
-
-.product-form input[type="submit"] {
-  padding: 12px 25px;
-  background: #111;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.product-form input[type="submit"]:hover {
-  opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .product-wraper {
-    grid-template-columns: 1fr;
-  }
-}
-
+    
 </style>
 
 
