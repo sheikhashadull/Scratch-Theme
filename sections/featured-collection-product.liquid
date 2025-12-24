@@ -32,9 +32,16 @@
                         </div>
                     </div>
                 {% endfor %}
-                <div>
-                    {{ paginate | default_pagination }}
-                </div>
+                <div class="pagination">
+  <span class="page current">1</span>
+  <span class="page">
+    <a href="?page=2">2</a>
+  </span>
+  <span class="next">
+    <a href="?page=2">Next</a>
+  </span>
+</div>
+
             {% endpaginate %}
         </div>
     </div>
@@ -143,59 +150,7 @@
     .star.filled {
     color: #f5a623; /* filled star */
     }
-    .pagination {
-  width: 100%;
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.pagination ul {
-  display: flex;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pagination li {
-  display: inline-block;
-}
-
-.pagination a,
-.pagination span {
-  min-width: 38px;
-  height: 38px;
-  padding: 0 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #111;
-  background: #f2f2f2;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.pagination a:hover {
-  background: #111;
-  color: #fff;
-}
-
-/* Active page */
-.pagination .current {
-  background: #111;
-  color: #fff;
-  font-weight: 600;
-  cursor: default;
-}
-
-/* Previous / Next */
-.pagination .prev,
-.pagination .next {
-  font-weight: 500;
-}
-
+    
 
 
 </style>
