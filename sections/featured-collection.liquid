@@ -1,24 +1,10 @@
 <section class="{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     <div class="page-width">
         <h2>SPOTLIGHT</h2>
+        <div class="featured-collection">
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="featured-collection">
-            {% for item in collections %}
+                {% for item in collections %}
                 <div class="items">
                     {% if item.image.src %}
                         <img src="{{ item.image.src | image_url }}" alt="" width="auto" height="auto">
@@ -31,6 +17,13 @@
                     </div>
                 </div>
             {% endfor %}
+            </div>
+            
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+            
         </div>
     </div>
 </section>
