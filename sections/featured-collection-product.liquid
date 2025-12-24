@@ -8,9 +8,9 @@
                     <div class="item-title">
                         <div class="badge">
                             {% if product.compare_at_price > product.price and product.available == true %}
-                                <span class="instock">Best Seller</span>
+                                <span class="instock">Best Selling</span>
                             {% elsif product.available == true%}
-                                <span class="tranding">Tranding</span>
+                                <span class="tranding">Top Selling</span>
                             {% elsif product.compare_at_price > product.price and product.available == false%}
                                 <span class="stockout">Sold</span>
                             {% endif %}
