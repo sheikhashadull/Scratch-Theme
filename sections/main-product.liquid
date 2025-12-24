@@ -39,7 +39,7 @@
             {% if product.variants.size > 1 %}
                 <select class="variant-select">
                     {% for variant in product.variants %}
-                        <option>
+                        <option value="{{ variant.id }}">
                             {{ variant.title }}
                         </option>
                     {% endfor %}
