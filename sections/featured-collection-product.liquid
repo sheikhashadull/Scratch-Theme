@@ -2,28 +2,30 @@
     <div class="page-width">
         <h2>{{ section.settings.featured-title }}</h2>
         <div class="featured-product">
-            <div class="prod-items">
-                <img src="" alt="" width="auto" height="auto">
-                <div class="item-title">
-                    <div class="badge">
-                        <span class="instock">Sale</span>
-                        <span class="stockout">Sold</span>
+            {% for product in collections.all.products %}
+                <div class="prod-items">
+                    <img src="" alt="" width="auto" height="auto">
+                    <div class="item-title">
+                        <div class="badge">
+                            <span class="instock">Sale</span>
+                            <span class="stockout">Sold</span>
+                        </div>
+                        <h3>Product Title</h3>
+                        <div class="rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <div class="price">
+                            <span class="sale-price">$4.50</span>
+                            <span class="regular-price">$7.50</span>
+                        </div>
+                        <a href="" class="btn">See Product</a>
                     </div>
-                    <h3>Product Title</h3>
-                    <div class="rating">
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star filled">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <div class="price">
-                        <span class="sale-price">$4.50</span>
-                        <span class="regular-price">$7.50</span>
-                    </div>
-                    <a href="" class="btn">See Product</a>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
