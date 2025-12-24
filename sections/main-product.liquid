@@ -19,10 +19,10 @@
 
     <!-- Right: Details -->
     <div class="product-right">
-      <h1></h1>
+      <h1>{{ product.title }}</h1>
 
       <div class="price">
-        <span class="sale-price"></span>
+        <span class="sale-price">{{ product.price | money }}</span>
         <span class="regular-price"></span>
       </div>
       <p class="description"></p>
