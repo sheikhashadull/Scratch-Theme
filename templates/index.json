@@ -29,7 +29,7 @@
       "name": "Featured Product",
       "settings": {
         "featured-title": "Trending Products",
-        "collection": "product-2",
+        "collection": "all-collections",
         "pro-paddingx": 10
       }
     }
